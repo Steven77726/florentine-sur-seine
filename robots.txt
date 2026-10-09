@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://florentine-sur-seine.fr/sitemap.xml
