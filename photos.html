@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#65040d">
   <title>Photos de la péniche à Boulogne-Billancourt · Florentine sur Seine</title>
-  <meta name="description" content="Découvrez la péniche Florentine sur Seine en photo, au 52 quai du Point du Jour à Boulogne-Billancourt.">
+  <meta name="description" content="Découvrez en images la péniche Florentine sur Seine : diaporama haute définition des salons panoramiques, terrasse et piste festive au 52 quai du Point du Jour.">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2365040d'/%3E%3Ctext x='16' y='26' text-anchor='middle' font-family='Georgia,serif' font-size='29' fill='%23ffffff'%3EF%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="/site.css">
   <link rel="canonical" href="https://florentine-sur-seine.fr/photos.html">
@@ -13,10 +13,120 @@
   <meta property="og:locale" content="fr_FR">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Photos de la péniche à Boulogne-Billancourt · Florentine sur Seine">
-  <meta property="og:description" content="Découvrez en images la péniche Florentine sur Seine au 52 quai du Point du Jour à Boulogne-Billancourt.">
+  <meta property="og:description" content="Diaporama photos de la péniche Florentine sur Seine à Boulogne-Billancourt.">
   <meta property="og:url" content="https://florentine-sur-seine.fr/photos.html">
-  <meta property="og:image" content="https://florentine-sur-seine.fr/images/peniche-vue-du-quai.jpg">
+  <meta property="og:image" content="https://florentine-sur-seine.fr/images/peniche-salon-panoramique.jpg">
   <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://florentine-sur-seine.fr/"}, {"@type": "ListItem", "position": 2, "name": "Florentine en images.", "item": "https://florentine-sur-seine.fr/photos.html"}]}]}</script>
+  <style>
+    /* Diaporama Styles */
+    .diaporama-container {
+      max-width: 980px; margin: 30px 0 36px; display: flex; flex-direction: column; gap: 16px;
+    }
+    .diaporama-stage {
+      position: relative; width: 100%; border-radius: 8px; overflow: hidden;
+      background: #250104; border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+    }
+    .diaporama-viewport {
+      position: relative; width: 100%; aspect-ratio: 16 / 10; max-height: 560px;
+      display: flex; align-items: center; justify-content: center; cursor: zoom-in;
+      background: #180002; overflow: hidden; user-select: none;
+    }
+    .diaporama-img {
+      width: 100%; height: 100%; object-fit: cover; object-position: center;
+      transition: opacity .35s ease, transform .4s ease;
+    }
+    .diaporama-caption {
+      position: absolute; bottom: 0; left: 0; right: 0; padding: 32px 24px 20px;
+      background: linear-gradient(to top, rgba(24, 0, 2, 0.95) 0%, rgba(24, 0, 2, 0.6) 65%, transparent 100%);
+      display: flex; justify-content: space-between; align-items: flex-end; gap: 16px;
+    }
+    .diaporama-title {
+      font-family: var(--display-font); font-size: 1.5rem; font-weight: 400; margin: 0 0 4px; color: #ffffff;
+    }
+    .diaporama-desc {
+      font-size: .925rem; color: rgba(255, 255, 255, 0.88); margin: 0; line-height: 1.4;
+    }
+    .diaporama-badge-wrap {
+      display: flex; align-items: center; gap: 10px; flex-shrink: 0;
+    }
+    .diaporama-counter {
+      font-size: .85rem; letter-spacing: .08em; text-transform: uppercase;
+      color: var(--gold, #d5bb7d); background: rgba(0,0,0,0.6); padding: 5px 12px;
+      border-radius: 12px; border: 1px solid rgba(213,187,125,0.4); font-weight: 600;
+    }
+    .diaporama-play-toggle {
+      width: 34px; height: 34px; border-radius: 50%; background: rgba(0,0,0,0.6);
+      border: 1px solid rgba(255,255,255,0.3); color: #ffffff; display: flex;
+      align-items: center; justify-content: center; cursor: pointer; transition: all .2s;
+    }
+    .diaporama-play-toggle:hover {
+      background: #ffffff; color: #65040d;
+    }
+    .diaporama-play-toggle svg { width: 14px; height: 14px; }
+    .diaporama-arrow {
+      position: absolute; top: 50%; transform: translateY(-50%); width: 48px; height: 48px;
+      border-radius: 50%; background: rgba(35, 1, 5, 0.75); backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.25); color: #ffffff; display: flex;
+      align-items: center; justify-content: center; cursor: pointer; transition: all .2s ease; z-index: 5;
+    }
+    .diaporama-arrow:hover { background: #ffffff; color: #65040d; border-color: #ffffff; }
+    .diaporama-arrow.prev { left: 16px; }
+    .diaporama-arrow.next { right: 16px; }
+    .diaporama-arrow svg { width: 22px; height: 22px; }
+
+    /* Dots */
+    .diaporama-dots {
+      display: flex; justify-content: center; align-items: center; gap: 8px; padding: 4px 0;
+    }
+    .diaporama-dot {
+      width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.35);
+      border: 0; padding: 0; cursor: pointer; transition: all .25s ease;
+    }
+    .diaporama-dot:hover { background: rgba(255,255,255,0.7); }
+    .diaporama-dot.active {
+      width: 28px; border-radius: 5px; background: #ffffff; box-shadow: 0 0 8px rgba(255,255,255,0.5);
+    }
+
+    /* Mini thumbnails */
+    .diaporama-thumbnails {
+      display: flex; gap: 10px; overflow-x: auto; padding: 6px 2px 10px;
+      scrollbar-width: thin; scrollbar-color: rgba(255,255,255,0.3) transparent;
+    }
+    .diaporama-thumb {
+      flex: 0 0 88px; height: 58px; border-radius: 4px; overflow: hidden;
+      cursor: pointer; border: 2px solid transparent; opacity: 0.6;
+      transition: all .2s ease; background: #200003;
+    }
+    .diaporama-thumb:hover { opacity: 0.95; transform: translateY(-2px); border-color: rgba(255,255,255,0.4); }
+    .diaporama-thumb.active { opacity: 1; border-color: #ffffff; box-shadow: 0 0 10px rgba(255,255,255,0.5); }
+    .diaporama-thumb img { width: 100%; height: 100%; object-fit: cover; }
+
+    /* Lightbox Modal */
+    .lightbox-dialog {
+      width: min(94vw, 1100px); max-height: 92vh; padding: 0;
+      border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 8px;
+      background: #240104; color: #ffffff; overflow: hidden;
+    }
+    .lightbox-dialog::backdrop { background: rgba(20, 1, 3, 0.88); backdrop-filter: blur(10px); }
+    .lightbox-container { position: relative; display: flex; flex-direction: column; }
+    .lightbox-close-btn { position: absolute; top: 14px; right: 14px; z-index: 10; width: 44px; height: 44px; border-radius: 50%; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.3); color: #ffffff; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all .2s; }
+    .lightbox-close-btn:hover { background: #ffffff; color: #65040d; }
+    .lightbox-img-wrap { width: 100%; max-height: 75vh; display: flex; align-items: center; justify-content: center; background: #150002; overflow: hidden; }
+    .lightbox-img-wrap img { max-width: 100%; max-height: 75vh; object-fit: contain; }
+    .lightbox-footer { padding: 16px 24px; background: #3b0207; display: flex; justify-content: space-between; align-items: center; gap: 16px; border-top: 1px solid rgba(255,255,255,0.15); }
+    .lightbox-title { font-family: var(--display-font); font-size: 1.35rem; margin: 0 0 2px; color: #ffffff; }
+    .lightbox-desc { font-size: .875rem; color: rgba(255,255,255,0.8); margin: 0; }
+
+    @media (max-width: 640px) {
+      .diaporama-arrow { width: 38px; height: 38px; }
+      .diaporama-arrow.prev { left: 8px; }
+      .diaporama-arrow.next { right: 8px; }
+      .diaporama-title { font-size: 1.2rem; }
+      .diaporama-desc { font-size: .85rem; }
+      .diaporama-thumb { flex: 0 0 72px; height: 48px; }
+    }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#contenu">Aller au contenu</a>
@@ -36,23 +146,66 @@
       <h1>Florentine en images.</h1>
     </header>
     
-    <p class="lead">Un premier regard sur la péniche et son emplacement au bord du quai du Point du Jour, à Boulogne-Billancourt.</p>
-    <div style="display:flex; flex-direction:column; gap:32px;">
-      <figure class="photo-gallery">
-        <a href="/images/peniche-vue-du-quai.jpg" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir la photo complète de la péniche">
-          <img src="/images/peniche-vue-du-quai.jpg" width="1152" height="2048" alt="La péniche Florentine amarrée sur la Seine, avec sa passerelle depuis le quai à Boulogne-Billancourt" decoding="async">
-        </a>
-        <figcaption>La péniche, vue depuis le quai du Point du Jour à Boulogne-Billancourt. Cliquez sur la photo pour l’ouvrir en entier.</figcaption>
-      </figure>
-      <figure class="photo-gallery">
-        <a href="/FLO.jpg" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir le visuel Florentine">
-          <img src="/FLO.jpg" width="1157" height="2048" alt="Identité visuelle Florentine sur Seine — Péniche et bar festif sur l'eau" decoding="async" style="max-width:380px; height:auto; margin:0 auto; display:block;">
-        </a>
-        <figcaption style="text-align:center;">L'affiche et l'identité artistique Florentine sur Seine.</figcaption>
-      </figure>
-    </div>
+    <p class="lead">Découvrez les différents espaces de la péniche Florentine en diaporama : salons panoramiques avec vue sur la Seine, piste de danse festive, boiseries chaleureuses et amarrage privilégié au 52 quai du Point du Jour à Boulogne-Billancourt.</p>
+
+    <!-- Diaporama Module -->
+    <section class="diaporama-container" id="diaporama" aria-label="Diaporama photos de Florentine">
+      <div class="diaporama-stage">
+        <button type="button" class="diaporama-arrow prev" id="diaporama-prev" aria-label="Photo précédente">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+        <button type="button" class="diaporama-arrow next" id="diaporama-next" aria-label="Photo suivante">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+
+        <div class="diaporama-viewport" id="diaporama-viewport" title="Cliquez pour agrandir en plein écran">
+          <img src="/images/peniche-salon-panoramique.jpg" alt="Salon Panoramique" id="diaporama-img" class="diaporama-img" width="1280" height="800">
+          
+          <div class="diaporama-caption">
+            <div class="diaporama-text">
+              <h2 class="diaporama-title" id="diaporama-title">Salon Panoramique</h2>
+              <p class="diaporama-desc" id="diaporama-desc">Vue panoramique sur la Seine depuis les larges baies vitrées de la péniche.</p>
+            </div>
+            <div class="diaporama-badge-wrap">
+              <span class="diaporama-counter" id="diaporama-counter">1 / 7</span>
+              <button type="button" class="diaporama-play-toggle" id="play-toggle" aria-label="Mettre en pause ou relancer le diaporama" title="Pause / Lecture automatique">
+                <svg id="pause-icon" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg>
+                <svg id="play-icon" viewBox="0 0 24 24" fill="currentColor" style="display:none;"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination Dots -->
+      <div class="diaporama-dots" id="diaporama-dots" role="tablist" aria-label="Points de navigation du diaporama"></div>
+
+      <!-- Mini Thumbnails Bar -->
+      <div class="diaporama-thumbnails" id="diaporama-thumbs" aria-label="Vignettes du diaporama"></div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <dialog class="lightbox-dialog" id="lightbox-dialog">
+      <div class="lightbox-container">
+        <button type="button" class="lightbox-close-btn" id="lightbox-close" aria-label="Fermer la vue plein écran">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+        <div class="lightbox-img-wrap">
+          <img src="" alt="" id="lightbox-img">
+        </div>
+        <div class="lightbox-footer">
+          <div>
+            <h3 class="lightbox-title" id="lightbox-title"></h3>
+            <p class="lightbox-desc" id="lightbox-desc"></p>
+          </div>
+          <span class="diaporama-counter" id="lightbox-counter"></span>
+        </div>
+      </div>
+    </dialog>
+
     <div class="content-actions" style="margin-top:28px;">
-      <a class="content-button" href="/le-concept.html">Découvrir le concept</a>
+      <a class="content-button" href="/carte.html">Découvrir la carte</a>
+      <a class="content-button secondary" href="/le-concept.html">Découvrir le concept</a>
       <a href="https://www.instagram.com/florentine_sur_seine?stkn=MWxsM245engzbHlrOA%3D%3D&amp;utm_source=qr" target="_blank" rel="noopener noreferrer" style="color: #ffffff; text-decoration: underline; text-underline-offset: 4px; font-weight: 500;">Suivre Florentine sur Instagram</a>
     </div>
 
@@ -64,5 +217,239 @@
 <a href="/cookies.html">Cookies</a></nav>
     <p>L’abus d’alcool est dangereux pour la santé. À consommer avec modération.</p>
   </footer>
+
+  <script>
+    const SLIDES = [
+      {
+        title: 'Salon Panoramique',
+        desc: 'Vue panoramique sur la Seine depuis les larges baies vitrées de la péniche.',
+        src: '/images/peniche-salon-panoramique.jpg',
+        alt: 'Vue intérieure du salon panoramique de la péniche Florentine'
+      },
+      {
+        title: 'Ambiance Festive & Piste de Danse',
+        desc: 'Cadre feutré et chaleureux pour dîner, trinquer et danser au rythme des DJ sets.',
+        src: '/images/peniche-interieur-piste.jpg',
+        alt: 'Piste de danse et espace intérieur festif de Florentine'
+      },
+      {
+        title: 'Grand Salon Boisé',
+        desc: 'Mobilier raffiné en cuir et ambiance cosy au fil de l’eau.',
+        src: '/images/peniche-grand-salon.jpg',
+        alt: 'Grand salon chaleureux avec banquettes en cuir et boiseries'
+      },
+      {
+        title: 'Vue Extérieure sur la Seine',
+        desc: 'La péniche amarrée dans son écrin de verdure en bord de Seine à Boulogne.',
+        src: '/images/peniche-exterieur-vue-quai.jpg',
+        alt: 'Vue extérieure de la péniche Florentine sur la Seine'
+      },
+      {
+        title: 'Passerelle & Accès Privatif',
+        desc: 'Accès sécurisé et direct depuis le 52 quai du Point du Jour.',
+        src: '/images/peniche-quai-acces.jpg',
+        alt: 'Passerelle d accès à la péniche depuis le quai'
+      },
+      {
+        title: 'Vue d’Ensemble du Quai',
+        desc: 'La péniche Florentine vue depuis les quais de Boulogne-Billancourt.',
+        src: '/images/peniche-vue-du-quai.jpg',
+        alt: 'La péniche Florentine amarrée sur la Seine avec sa passerelle'
+      },
+      {
+        title: 'Affiche Artistique',
+        desc: 'L’univers graphique officiel de Florentine sur Seine.',
+        src: '/FLO.jpg',
+        alt: 'Identité visuelle et affiche artistique de Florentine sur Seine'
+      }
+    ];
+
+    let currentIndex = 0;
+    let isPlaying = true;
+    let timer = null;
+    const INTERVAL_MS = 5000;
+
+    const imgEl = document.getElementById('diaporama-img');
+    const titleEl = document.getElementById('diaporama-title');
+    const descEl = document.getElementById('diaporama-desc');
+    const counterEl = document.getElementById('diaporama-counter');
+    const dotsEl = document.getElementById('diaporama-dots');
+    const thumbsEl = document.getElementById('diaporama-thumbs');
+    const playToggleBtn = document.getElementById('play-toggle');
+    const pauseIcon = document.getElementById('pause-icon');
+    const playIcon = document.getElementById('play-icon');
+
+    const lightboxDialog = document.getElementById('lightbox-dialog');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxTitle = document.getElementById('lightbox-title');
+    const lightboxDesc = document.getElementById('lightbox-desc');
+    const lightboxCounter = document.getElementById('lightbox-counter');
+
+    function showSlide(index) {
+      if (index < 0) index = SLIDES.length - 1;
+      if (index >= SLIDES.length) index = 0;
+      currentIndex = index;
+
+      const slide = SLIDES[currentIndex];
+      imgEl.style.opacity = '0.25';
+      setTimeout(() => {
+        imgEl.src = slide.src;
+        imgEl.alt = slide.alt;
+        titleEl.textContent = slide.title;
+        descEl.textContent = slide.desc;
+        counterEl.textContent = `${currentIndex + 1} / ${SLIDES.length}`;
+        imgEl.style.opacity = '1';
+      }, 100);
+
+      // Update dots
+      document.querySelectorAll('.diaporama-dot').forEach((dot, idx) => {
+        if (idx === currentIndex) {
+          dot.classList.add('active');
+          dot.setAttribute('aria-selected', 'true');
+        } else {
+          dot.classList.remove('active');
+          dot.setAttribute('aria-selected', 'false');
+        }
+      });
+
+      // Update thumbs
+      document.querySelectorAll('.diaporama-thumb').forEach((thumb, idx) => {
+        if (idx === currentIndex) {
+          thumb.classList.add('active');
+          thumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        } else {
+          thumb.classList.remove('active');
+        }
+      });
+    }
+
+    function nextSlide() {
+      showSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+      showSlide(currentIndex - 1);
+    }
+
+    function startTimer() {
+      stopTimer();
+      if (isPlaying) {
+        timer = setInterval(nextSlide, INTERVAL_MS);
+      }
+    }
+
+    function stopTimer() {
+      if (timer) clearInterval(timer);
+      timer = null;
+    }
+
+    function togglePlay() {
+      isPlaying = !isPlaying;
+      if (isPlaying) {
+        pauseIcon.style.display = 'block';
+        playIcon.style.display = 'none';
+        startTimer();
+      } else {
+        pauseIcon.style.display = 'none';
+        playIcon.style.display = 'block';
+        stopTimer();
+      }
+    }
+
+    // Initialize dots & thumbnails
+    function buildControls() {
+      dotsEl.innerHTML = '';
+      thumbsEl.innerHTML = '';
+
+      SLIDES.forEach((slide, idx) => {
+        // Dot
+        const dot = document.createElement('button');
+        dot.className = `diaporama-dot ${idx === 0 ? 'active' : ''}`;
+        dot.setAttribute('role', 'tab');
+        dot.setAttribute('aria-label', `Afficher ${slide.title}`);
+        dot.addEventListener('click', () => {
+          showSlide(idx);
+          startTimer();
+        });
+        dotsEl.appendChild(dot);
+
+        // Thumbnail
+        const thumb = document.createElement('div');
+        thumb.className = `diaporama-thumb ${idx === 0 ? 'active' : ''}`;
+        thumb.setAttribute('role', 'button');
+        thumb.setAttribute('tabindex', '0');
+        thumb.setAttribute('aria-label', slide.title);
+        thumb.innerHTML = `<img src="${slide.src}" alt="${slide.alt}" loading="lazy">`;
+        thumb.addEventListener('click', () => {
+          showSlide(idx);
+          startTimer();
+        });
+        thumb.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            showSlide(idx);
+            startTimer();
+          }
+        });
+        thumbsEl.appendChild(thumb);
+      });
+    }
+
+    // Lightbox
+    function openLightbox(slide) {
+      lightboxImg.src = slide.src;
+      lightboxImg.alt = slide.alt;
+      lightboxTitle.textContent = slide.title;
+      lightboxDesc.textContent = slide.desc;
+      lightboxCounter.textContent = `${currentIndex + 1} / ${SLIDES.length}`;
+      if (!lightboxDialog.open) lightboxDialog.showModal();
+    }
+
+    document.getElementById('diaporama-prev').addEventListener('click', () => { prevSlide(); startTimer(); });
+    document.getElementById('diaporama-next').addEventListener('click', () => { nextSlide(); startTimer(); });
+    playToggleBtn.addEventListener('click', togglePlay);
+
+    document.getElementById('diaporama-viewport').addEventListener('click', () => {
+      openLightbox(SLIDES[currentIndex]);
+    });
+
+    document.getElementById('lightbox-close').addEventListener('click', () => lightboxDialog.close());
+    lightboxDialog.addEventListener('click', (e) => {
+      if (e.target === lightboxDialog) lightboxDialog.close();
+    });
+
+    // Keyboard support
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') { prevSlide(); startTimer(); }
+      if (e.key === 'ArrowRight') { nextSlide(); startTimer(); }
+    });
+
+    // Touch swipe support
+    let touchStartX = 0;
+    const viewport = document.getElementById('diaporama-viewport');
+    viewport.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      stopTimer();
+    }, { passive: true });
+    viewport.addEventListener('touchend', (e) => {
+      const touchEndX = e.changedTouches[0].screenX;
+      const diff = touchEndX - touchStartX;
+      if (Math.abs(diff) > 40) {
+        if (diff > 0) prevSlide();
+        else nextSlide();
+      }
+      startTimer();
+    }, { passive: true });
+
+    // Pause on hover
+    const stage = document.querySelector('.diaporama-stage');
+    stage.addEventListener('mouseenter', stopTimer);
+    stage.addEventListener('mouseleave', () => { if (isPlaying) startTimer(); });
+
+    // Start
+    buildControls();
+    showSlide(0);
+    startTimer();
+  </script>
 </body>
 </html>
