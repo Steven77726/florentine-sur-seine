@@ -324,10 +324,10 @@
         <span>92100 Boulogne-Billancourt</span>
       </a>
     <nav class="actions" aria-label="Réservation et contact">
-      <a class="action pending" id="reservation" role="link" aria-disabled="true" title="Bientôt sur Shotgun">
-        <span>Réserver</span><span class="booking-note">Bientôt sur Shotgun</span>
+      <a class="action" id="reservation" href="https://smartboard.shotgun.live/fr/my-page" target="_blank" rel="noopener noreferrer" title="Réserver sur Shotgun" aria-label="Réserver sur Shotgun">
+        <span>Réserver</span>
       </a>
-      <a class="action secondary" id="whatsapp" role="link" aria-disabled="true" title="Contact bientôt disponible">
+      <a class="action secondary" id="whatsapp" href="https://wa.me/33781660629" target="_blank" rel="noopener noreferrer" title="Contacter Florentine sur WhatsApp" aria-label="Contacter Florentine sur WhatsApp">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.5 8.5 0 0 1-12.8 7.4L3 21l1.7-5.1A8.5 8.5 0 1 1 21 11.5Z"/><path d="M8 7.5c-.5 1-.2 3.5 2 5.7 2.2 2.2 4.6 2.5 5.7 2l.6-1.8-2-1-.8 1c-1.2-.6-2.3-1.7-2.9-2.9l1-.8-1-2Z"/></svg>
         WhatsApp
       </a>
@@ -521,7 +521,7 @@
     detailsDialog.addEventListener('close', () => menuButtons.forEach((button) => button.setAttribute('aria-expanded', 'false')));
 
     // Set the organiser's destinations when supplied; do not send visitors to unrelated accounts.
-    const LINKS = { shotgun: null, whatsapp: '33781660629' };
+    const LINKS = { shotgun: 'https://smartboard.shotgun.live/fr/my-page', whatsapp: '33781660629' };
     function activateLink(id, destination, label) {
       const link = document.getElementById(id);
       link.href = destination;
