@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#f5e8d7">
+  <meta name="theme-color" content="#65040d">
   <meta name="description" content="Florentine sur Seine : péniche & bar festif à Boulogne-Billancourt (92). DJ sets, live music, vins fins, cocktails et finger food sur l'eau. Réservez votre soirée.">
   <title>Florentine sur Seine | Bar Festif & Péniche à Boulogne-Billancourt</title>
   <meta name="robots" content="index, follow">
@@ -23,14 +23,14 @@
   <meta name="twitter:title" content="Florentine sur Seine | Bar Festif & Péniche à Boulogne">
   <meta name="twitter:description" content="Soirées festives sur la Seine : DJ sets, vins fins, cocktails et dîners à Boulogne-Billancourt.">
   <meta name="twitter:image" content="https://florentine-sur-seine.fr/FLO.jpg">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23f5e8d7'/%3E%3Ctext x='16' y='26' text-anchor='middle' font-family='Georgia,serif' font-size='29' fill='%239f1711'%3EF%3C/text%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2365040d'/%3E%3Ctext x='16' y='26' text-anchor='middle' font-family='Georgia,serif' font-size='29' fill='%23ffffff'%3EF%3C/text%3E%3C/svg%3E">
   <style>
-    :root { color-scheme: light; --paper: #f5e8d7; --wine: #9f1711; --display-font: 'Times New Roman', Times, serif; }
+    :root { color-scheme: dark; --paper: #65040d; --wine: #ffffff; --display-font: 'Times New Roman', Times, serif; }
     * { box-sizing: border-box; }
     html { background: var(--paper); }
-    body { margin: 0; color: var(--wine); font-family: Arial, sans-serif; }
+    body { margin: 0; color: #ffffff; font-family: Arial, sans-serif; background: var(--paper); }
     button { font: inherit; color: inherit; cursor: pointer; -webkit-tap-highlight-color: transparent; }
-    button:focus-visible, a:focus-visible { outline: 2px solid var(--wine); outline-offset: 5px; }
+    button:focus-visible, a:focus-visible { outline: 2px solid #ffffff; outline-offset: 5px; }
     body:has(dialog[open]) { overflow: hidden; }
     .site-menu {
       position: fixed; z-index: 3; left: clamp(22px, 4vw, 62px); top: 50%;
@@ -39,10 +39,10 @@
     .menu-link {
       border: 0; background: transparent; padding: 10px 0; display: flex;
       align-items: baseline; min-height: 44px; text-align: left;
-      font-size: 1rem;
+      font-size: 1rem; color: #ffffff; text-decoration: none;
     }
     .menu-link .label { border-bottom: 1px solid transparent; padding-bottom: 5px; }
-    .menu-link:hover .label, .menu-link[aria-expanded="true"] .label { border-color: var(--wine); }
+    .menu-link:hover .label, .menu-link[aria-expanded="true"] .label { border-color: #ffffff; }
     .page {
       position: relative; display: grid; grid-template-columns: minmax(240px, .95fr) minmax(300px, 1fr);
       align-items: center; gap: clamp(35px, 5vw, 84px); row-gap: 18px; max-width: 1280px;
@@ -71,12 +71,12 @@
     .water-ring {
       position: absolute; border-radius: 50%;
       width: var(--diameter); height: var(--diameter);
-      border: 1px solid rgb(159 23 17 / 26%);
-      box-shadow: 0 0 10px rgb(159 23 17 / 8%), inset 0 0 12px rgb(255 255 255 / 75%);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.08), inset 0 0 12px rgba(255, 255, 255, 0.5);
       opacity: 0; transform: translate(-50%, -50%) scale(.04);
       animation: water-spread 1.8s cubic-bezier(.16, .5, .38, 1) var(--delay) forwards;
     }
-    .water-ring::after { content: ''; position: absolute; inset: 4px; border: 1px solid rgb(255 255 255 / 55%); border-radius: inherit; }
+    .water-ring::after { content: ''; position: absolute; inset: 4px; border: 1px solid rgba(255, 255, 255, 0.35); border-radius: inherit; }
     @keyframes water-spread {
       0% { opacity: 0; transform: translate(-50%, -50%) scale(.04); }
       14% { opacity: .85; }
@@ -88,44 +88,46 @@
       font-family: var(--display-font); font-weight: 400;
       font-size: clamp(1.5rem, 2.35vw, 2rem); line-height: 1.6;
       letter-spacing: .14em; text-transform: uppercase; margin: 0 0 26px;
+      color: #ffffff;
     }
-    .flavours { margin: 0; font-family: var(--display-font); font-size: 1rem; line-height: 2; letter-spacing: .12em; text-transform: uppercase; }
+    .flavours { margin: 0; font-family: var(--display-font); font-size: 1rem; line-height: 2; letter-spacing: .12em; text-transform: uppercase; color: #ffffff; }
     .soundtrack {
       display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
       font-family: var(--display-font); font-size: .875rem; letter-spacing: .16em; text-transform: uppercase;
-      margin: 30px 0 0; padding: 24px 0; border-block: 1px solid rgb(159 23 17 / 22%);
+      margin: 30px 0 0; padding: 24px 0; border-block: 1px solid rgba(255, 255, 255, 0.22);
+      color: #ffffff;
     }
-    .soundtrack .dot { font-size: 1rem; }
+    .soundtrack .dot { font-size: 1rem; color: #d5bb7d; }
     .address {
       display: inline-flex; flex-direction: column; gap: 2px; margin: 25px 0;
-      color: var(--wine); min-height: 44px; font-family: var(--display-font);
+      color: #ffffff; min-height: 44px; font-family: var(--display-font);
       font-size: .875rem; line-height: 1.8; letter-spacing: .1em; text-transform: uppercase;
-      text-decoration: none; -webkit-tap-highlight-color: rgb(159 23 17 / 12%);
+      text-decoration: none; -webkit-tap-highlight-color: rgba(255, 255, 255, 0.12);
     }
     .address span { border-bottom: 1px solid transparent; width: fit-content; }
-    .address:hover span:first-child { border-color: var(--wine); }
+    .address:hover span:first-child { border-color: #ffffff; }
     .actions {
       width: min(100%, 360px); display: grid;
       grid-template-columns: 1fr 1fr; gap: 10px;
     }
     .action {
       display: flex; justify-content: center; align-items: center; gap: 9px;
-      min-height: 52px; padding: 13px 12px; border: 1px solid var(--wine);
-      border-radius: 3px; font-size: 1rem; line-height: 1.35; font-weight: 500;
-      letter-spacing: .025em; text-decoration: none; color: var(--paper);
-      background: var(--wine); touch-action: manipulation;
+      min-height: 52px; padding: 13px 12px; border: 1px solid #ffffff;
+      border-radius: 4px; font-size: 1rem; line-height: 1.35; font-weight: 600;
+      letter-spacing: .025em; text-decoration: none; color: #65040d;
+      background: #ffffff; touch-action: manipulation;
       transition: background-color .18s ease, color .18s ease;
     }
-    .action.secondary { color: var(--wine); background: transparent; }
-    .action[href]:hover { color: var(--wine); background: transparent; }
-    .action.secondary[href]:hover { color: var(--paper); background: var(--wine); }
-    .action:focus-visible { outline: 2px solid var(--wine); outline-offset: 4px; }
-    .action[aria-disabled="true"] { opacity: .65; cursor: default; }
+    .action.secondary { color: #ffffff; background: transparent; border: 1px solid rgba(255, 255, 255, 0.7); }
+    .action[href]:hover { color: #ffffff; background: transparent; }
+    .action.secondary[href]:hover { color: #65040d; background: #ffffff; }
+    .action:focus-visible { outline: 2px solid #ffffff; outline-offset: 4px; }
+    .action[aria-disabled="true"] { opacity: .75; cursor: default; }
     .action.pending { flex-direction: column; gap: 4px; }
-    .booking-note { font-size: .875rem; line-height: 1.2; letter-spacing: 0; }
+    .booking-note { font-size: .875rem; line-height: 1.2; letter-spacing: 0; opacity: .85; }
     .action svg { width: 19px; height: 19px; flex: 0 0 auto; }
-    .instagram-join { grid-column: 1 / -1; justify-self: center; display: inline-flex; flex-direction: column; align-items: center; gap: 8px; padding: 8px 16px; color: var(--wine); font-family: var(--display-font); font-size: 1.125rem; line-height: 1.4; text-decoration: none; }
-    .instagram-join svg { width: 34px; height: 34px; }
+    .instagram-join { grid-column: 1 / -1; justify-self: center; display: inline-flex; flex-direction: column; align-items: center; gap: 8px; padding: 8px 16px; color: #ffffff; font-family: var(--display-font); font-size: 1.125rem; line-height: 1.4; text-decoration: none; }
+    .instagram-join svg { width: 34px; height: 34px; stroke: #ffffff; }
     .instagram-join:hover span { text-decoration: underline; text-underline-offset: 4px; }
     .sr-only {
       position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
@@ -133,48 +135,48 @@
     }
     .detail-dialog {
       width: min(600px, calc(100vw - 40px)); max-height: calc(100svh - 48px);
-      padding: 38px; color: var(--wine); background: var(--paper);
-      border: 1px solid rgb(159 23 17 / 35%); border-radius: 3px; overflow-y: auto;
+      padding: 38px; color: #ffffff; background: #52030a;
+      border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 6px; overflow-y: auto;
     }
-    .detail-dialog::backdrop { background: rgb(245 232 215 / 72%); backdrop-filter: blur(8px); }
-    .dialog-top { position: sticky; top: 0; z-index: 1; background: var(--paper); display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 36px; }
+    .detail-dialog::backdrop { background: rgba(25, 1, 3, 0.88); backdrop-filter: blur(8px); }
+    .dialog-top { position: sticky; top: 0; z-index: 2; background: #52030a; display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 36px; padding-bottom: 8px; border-bottom: 1px solid rgba(255, 255, 255, 0.15); }
     .dialog-tabs { display: flex; gap: 24px; }
     .dialog-tab {
-      border: 0; border-bottom: 1px solid transparent; padding: 12px 0;
-      background: transparent; min-height: 44px; font-size: 1rem; opacity: .6;
+      border: 0; border-bottom: 2px solid transparent; padding: 12px 0;
+      background: transparent; min-height: 44px; font-size: 1rem; color: #ffffff; opacity: .65; cursor: pointer;
     }
-    .dialog-tab[aria-selected="true"] { opacity: 1; border-color: var(--wine); }
-    .close-dialog { display: grid; place-items: center; width: 44px; height: 44px; border: 0; background: transparent; }
-    .close-dialog svg { width: 22px; height: 22px; }
-    .eyebrow { font-size: .875rem; letter-spacing: .14em; text-transform: uppercase; margin: 0 0 18px; }
-    .panel-title { font-family: var(--display-font); font-size: clamp(1.5rem, 4vw, 2.1rem); font-weight: 400; line-height: 1.6; letter-spacing: .12em; text-transform: uppercase; margin: 0 0 28px; }
-    .panel-copy { font-size: 1.0625rem; line-height: 1.8; margin: 0 0 22px; }
-    .concept-note { margin-top: 32px; padding-top: 24px; border-top: 1px solid rgb(159 23 17 / 22%); font-size: 1rem; line-height: 1.6; }
-    #carte-panel .panel-title { font-size: 2.5rem; line-height: 1.2; letter-spacing: 0; text-transform: none; margin-bottom: 12px; }
+    .dialog-tab[aria-selected="true"] { opacity: 1; border-color: #ffffff; font-weight: 700; }
+    .close-dialog { display: grid; place-items: center; width: 44px; height: 44px; border: 0; background: transparent; color: #ffffff; cursor: pointer; }
+    .close-dialog svg { width: 22px; height: 22px; stroke: #ffffff; }
+    .eyebrow { font-size: .875rem; letter-spacing: .14em; text-transform: uppercase; margin: 0 0 18px; color: rgba(255, 255, 255, 0.85); }
+    .panel-title { font-family: var(--display-font); font-size: clamp(1.5rem, 4vw, 2.1rem); font-weight: 400; line-height: 1.6; letter-spacing: .12em; text-transform: uppercase; margin: 0 0 28px; color: #ffffff; }
+    .panel-copy { font-size: 1.0625rem; line-height: 1.8; margin: 0 0 22px; color: #ffffff; }
+    .concept-note { margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.18); font-size: 1rem; line-height: 1.6; color: rgba(255, 255, 255, 0.85); }
+    #carte-panel .panel-title { font-size: 2.5rem; line-height: 1.2; letter-spacing: 0; text-transform: none; margin-bottom: 12px; color: #ffffff; }
     #carte-panel .eyebrow { font-weight: 400; letter-spacing: .1em; }
-    .card-categories { position: sticky; top: var(--dialog-header-height, 44px); z-index: 1; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; background: var(--paper); padding: 8px 0 12px; margin-bottom: 25px; border-bottom: 1px solid rgb(159 23 17 / 18%); }
-    .card-categories a { display: flex; align-items: center; justify-content: center; min-height: 44px; padding: 8px 2px; font-size: .875rem; color: var(--wine); text-decoration: none; border-bottom: 1px solid transparent; }
-    .card-categories a:hover, .card-categories a[aria-current="location"] { border-bottom-color: var(--wine); }
+    .card-categories { position: sticky; top: var(--dialog-header-height, 44px); z-index: 1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; background: #52030a; padding: 8px 0 12px; margin-bottom: 25px; border-bottom: 1px solid rgba(255, 255, 255, 0.18); }
+    .card-categories a { display: flex; align-items: center; justify-content: center; min-height: 44px; padding: 8px 4px; font-size: .95rem; color: #ffffff; text-decoration: none; border-bottom: 2px solid transparent; border-radius: 4px; }
+    .card-categories a:hover, .card-categories a[aria-current="location"] { border-bottom-color: #ffffff; background: rgba(255, 255, 255, 0.1); }
     .menu-section { scroll-margin-top: 125px; outline-offset: 5px; }
-    .menu-section + .menu-section { margin-top: 38px; padding-top: 24px; border-top: 1px solid rgb(159 23 17 / 18%); }
-    .menu-section-title { margin: 0 0 14px; font-family: var(--display-font); font-size: 1.75rem; font-weight: 400; line-height: 1.3; }
-    .menu-coming { margin: 0; font-size: 1rem; line-height: 1.5; color: #70544c; }
-    .wine-intro { margin: 0 0 24px; font-size: 1rem; line-height: 1.5; color: #70544c; }
+    .menu-section + .menu-section { margin-top: 38px; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.18); }
+    .menu-section-title { margin: 0 0 14px; font-family: var(--display-font); font-size: 1.75rem; font-weight: 400; line-height: 1.3; color: #ffffff; }
+    .menu-coming { margin: 0; font-size: 1.05rem; line-height: 1.5; color: #ffffff; background: rgba(255,255,255,0.08); padding: 18px 20px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.15); font-weight: 500; }
+    .wine-intro { margin: 0 0 24px; font-size: 1rem; line-height: 1.5; color: rgba(255, 255, 255, 0.8); }
     .wine-group + .wine-group { margin-top: 30px; }
     .wine-list { display: flex; flex-direction: column; gap: 24px; }
     .wine-category { display: flex; align-items: center; gap: 16px; margin-bottom: 13px; }
-    .wine-category::after { content: ''; height: 1px; flex: 1; background: rgb(159 23 17 / 17%); }
-    .wine-category :is(h3, h4) { margin: 0; font-size: .875rem; font-weight: 400; text-transform: uppercase; letter-spacing: .09em; }
-    .wine-name { font-family: var(--display-font); font-size: 1.5rem; font-weight: 400; line-height: 1.25; letter-spacing: 0; text-transform: none; margin: 0 0 2px; text-wrap: balance; }
-    .wine-origin { margin: 0; font-size: .875rem; line-height: 1.4; color: #70544c; }
-    .wine-description { margin: 3px 0 0; font-size: 1rem; font-weight: 400; line-height: 1.45; color: #45342d; }
-    .wine-note { display: inline-block; font-size: .875rem; font-style: italic; line-height: 1.4; margin-top: 4px; color: #70544c; }
+    .wine-category::after { content: ''; height: 1px; flex: 1; background: rgba(255, 255, 255, 0.18); }
+    .wine-category :is(h3, h4) { margin: 0; font-size: .875rem; font-weight: 400; text-transform: uppercase; letter-spacing: .09em; color: #ffffff; }
+    .wine-name { font-family: var(--display-font); font-size: 1.5rem; font-weight: 400; line-height: 1.25; letter-spacing: 0; text-transform: none; margin: 0 0 2px; text-wrap: balance; color: #ffffff; }
+    .wine-origin { margin: 0; font-size: .875rem; line-height: 1.4; color: rgba(255, 255, 255, 0.78); }
+    .wine-description { margin: 3px 0 0; font-size: 1rem; font-weight: 400; line-height: 1.45; color: rgba(255, 255, 255, 0.95); }
+    .wine-note { display: inline-block; font-size: .875rem; font-style: italic; line-height: 1.4; margin-top: 4px; color: #d5bb7d; }
     .wine-prices { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; margin: 9px 0 0; }
-    .wine-prices > div { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 10px; padding-top: 7px; border-top: 1px solid rgb(159 23 17 / 12%); }
-    .wine-prices dt { font-size: .875rem; line-height: 1.5; color: #70544c; }
-    .wine-prices dd { font-family: var(--display-font); font-size: 1.25rem; font-weight: 400; line-height: 1.4; margin: 0; font-variant-numeric: tabular-nums; }
+    .wine-prices > div { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 10px; padding-top: 7px; border-top: 1px solid rgba(255, 255, 255, 0.14); }
+    .wine-prices dt { font-size: .875rem; line-height: 1.5; color: rgba(255, 255, 255, 0.78); }
+    .wine-prices dd { font-family: var(--display-font); font-size: 1.25rem; font-weight: 400; line-height: 1.4; margin: 0; font-variant-numeric: tabular-nums; color: #ffffff; }
     .bottle-prices { grid-template-columns: 1fr; }
-    .wine-prices .price-pending { font-family: Arial, sans-serif; font-size: .875rem; line-height: 1.6; color: #70544c; }
+    .wine-prices .price-pending { font-family: Arial, sans-serif; font-size: .875rem; line-height: 1.6; color: rgba(255, 255, 255, 0.78); }
     [hidden] { display: none !important; }
     @media (max-width: 900px) {
       .site-menu { position: static; transform: none; flex-direction: row; gap: 30px; padding: max(18px, env(safe-area-inset-top)) 32px 0; }
@@ -193,7 +195,7 @@
       .actions {
         position: fixed; bottom: 0; left: 0; z-index: 4; width: 100%;
         padding: 12px 20px max(12px, env(safe-area-inset-bottom));
-        background: var(--paper); border-top: 1px solid rgb(159 23 17 / 18%);
+        background: #52030a; border-top: 1px solid rgba(255, 255, 255, 0.18);
       }
       .detail-dialog { width: calc(100vw - 28px); max-height: calc(100svh - 28px); padding: 24px; }
       .dialog-top { margin-bottom: 28px; }
@@ -208,14 +210,14 @@
     }
 
     /* Legal information */
-    .reservation-disclosure { max-width: 430px; margin: 18px 0 0; font-size: .875rem; line-height: 1.7; }
-    .reservation-disclosure a { color: var(--wine); text-underline-offset: 3px; }
-    .site-legal-footer { max-width: 1280px; margin: 0 auto; padding: 22px 50px 28px 160px; font-size: .875rem; line-height: 1.7; border-top: 1px solid rgb(159 23 17 / 18%); }
+    .reservation-disclosure { max-width: 430px; margin: 18px 0 0; font-size: .875rem; line-height: 1.7; color: rgba(255, 255, 255, 0.85); }
+    .reservation-disclosure a { color: #ffffff; text-underline-offset: 3px; }
+    .site-legal-footer { max-width: 1280px; margin: 0 auto; padding: 22px 50px 28px 160px; font-size: .875rem; line-height: 1.7; border-top: 1px solid rgba(255, 255, 255, 0.18); color: rgba(255, 255, 255, 0.75); }
     .site-legal-footer nav { display: flex; flex-wrap: wrap; gap: 4px 24px; margin-bottom: 12px; }
-    .site-legal-footer a { color: var(--wine); text-underline-offset: 4px; overflow-wrap: anywhere; }
-    .site-legal-footer nav a { display: inline-flex; align-items: center; min-height: 44px; }
+    .site-legal-footer a { color: #ffffff; text-underline-offset: 4px; overflow-wrap: anywhere; }
+    .site-legal-footer nav a { display: inline-flex; align-items: center; min-height: 44px; color: #ffffff; }
     .site-legal-footer p { margin: 8px 0 0; }
-    .menu-legal-note { margin: 10px 0 20px; font-size: .875rem; line-height: 1.6; color: #70544c; }
+    .menu-legal-note { margin: 10px 0 20px; font-size: .875rem; line-height: 1.6; color: rgba(255, 255, 255, 0.78); }
     @media (max-width: 900px) { .site-legal-footer { padding: 20px 32px 28px; } }
     @media (max-width: 640px) { .site-legal-footer { padding: 20px 24px calc(8rem + env(safe-area-inset-bottom)); } }
   </style>
@@ -283,7 +285,11 @@
             <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H1157V2048H0Z M65 322H758V1618H65Z"/>
           </clipPath>
           <filter id="ink" color-interpolation-filters="sRGB" x="0" y="0" width="100%" height="100%">
-            <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  6 -6 0 0 -0.7"/>
+            <feColorMatrix type="matrix" values="
+              0 0 0 0 1
+              0 0 0 0 1
+              0 0 0 0 1
+              6 -6 0 0 -0.7"/>
           </filter>
           <clipPath id="f"><path d="M80 322H310V798H80Z"/></clipPath>
           <clipPath id="l"><path d="M310 322H440V640L468 656L476 684V700L481 725L490 750L504 780L514 798H310Z"/></clipPath>
@@ -296,8 +302,8 @@
           <clipPath id="n2"><path d="M379 1233H565V1618H379Z"/></clipPath>
           <clipPath id="e2"><path d="M565 1233H758V1618H565Z"/></clipPath>
         </defs>
-        <rect width="1157" height="2048" fill="#f5e8d7"/>
-        <use href="#poster-art" clip-path="url(#fixed-art)"/>
+        <rect width="1157" height="2048" fill="#65040d"/>
+        <use href="#poster-art" clip-path="url(#fixed-art)" filter="url(#ink)"/>
         <g class="letter" style="--phase: 0s"><g clip-path="url(#f)"><use href="#poster-art" filter="url(#ink)"/></g></g>
         <g class="letter" style="--phase: -.65s"><g clip-path="url(#l)"><use href="#poster-art" filter="url(#ink)"/></g></g>
         <g class="letter" style="--phase: -1.3s"><g clip-path="url(#o)"><use href="#poster-art" filter="url(#ink)"/></g></g>
@@ -359,8 +365,6 @@
       <p class="menu-legal-note">Prix en euros TTC. Ventes assurées par Horizon Events. L’abus d’alcool est dangereux pour la santé. À consommer avec modération.</p>
       <nav class="card-categories" aria-label="Catégories de la carte">
         <a href="#menu-vins" aria-current="location">Vins</a>
-        <a href="#menu-cocktails">Cocktails</a>
-        <a href="#menu-soft">Soft</a>
         <a href="#menu-food">Food</a>
       </nav>
       <section class="menu-section" id="menu-vins" aria-labelledby="menu-vins-title" tabindex="-1">
@@ -435,17 +439,9 @@
           </div>
         </section>
       </section>
-      <section class="menu-section" id="menu-cocktails" aria-labelledby="menu-cocktails-title" tabindex="-1">
-        <h3 class="menu-section-title" id="menu-cocktails-title">Cocktails</h3>
-        <p class="menu-coming">Notre sélection de cocktails arrive bientôt.</p>
-      </section>
-      <section class="menu-section" id="menu-soft" aria-labelledby="menu-soft-title" tabindex="-1">
-        <h3 class="menu-section-title" id="menu-soft-title">Soft</h3>
-        <p class="menu-coming">Notre sélection de boissons sans alcool arrive bientôt.</p>
-      </section>
       <section class="menu-section" id="menu-food" aria-labelledby="menu-food-title" tabindex="-1">
         <h3 class="menu-section-title" id="menu-food-title">Food</h3>
-        <p class="menu-coming">Nos bouchées à partager arrivent bientôt.</p>
+        <p class="menu-coming">À venir</p>
       </section>
     </section>
   </dialog>
@@ -550,5 +546,5 @@
       }
     }
   </script>
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a47d553f9c95034e',t:'MTc5MTU0ODM1OQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
 </html>
