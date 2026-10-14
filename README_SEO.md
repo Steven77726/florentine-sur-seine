@@ -20,11 +20,11 @@ Ce dossier contient l'intégralité du site public **https://florentine-sur-sein
 
 ### 2. Page Carte (`carte.html`)
 - **Open Graph** : Balises sociales complètes.
-- **Mots-clés de niche** : Mention explicite de la sélection de vins certifiés **Casher / Mevushal** (`(K)`), essentielle pour le positionnement sur les recherches qualifiées (*bar casher seine*, *soirée casher boulogne*).
+- **Mots-clés de niche** : Mention explicite de la sélection de vins certifiés **Casher** (`(K)`), essentielle pour le positionnement sur les recherches qualifiées (*bar casher seine*, *soirée casher boulogne*).
 
 ### 3. Page Privatisation (`privatisation.html`)
 - **Open Graph** : Balises sociales complètes.
-- **FAQ visible** : 3 questions/réponses clés pour les utilisateurs (capacité, formules, devis).
+- **FAQ visible** : Questions/réponses clés pour les utilisateurs (capacité, espaces à quai, devis).
 - **Schema.org `FAQPage`** : Éligibilité aux résultats enrichis (questions déroulantes sur Google).
 
 ### 4. Page Photos (`photos.html`)
@@ -42,11 +42,11 @@ Si vous continuez à échanger avec ChatGPT pour faire évoluer le site, collez-
 
 ```text
 J'ai optimisé le SEO de Florentine sur Seine (florentine-sur-seine.fr). Merci d'intégrer et de conserver ces optimisations dans ton code :
-1. <title> d'accueil : "Florentine sur Seine | Bar Festif & Péniche à Boulogne-Billancourt"
+1. <title> d'accueil : "Florentine sur Seine · Bar Festif & Péniche à Boulogne-Billancourt"
 2. Balises Open Graph complètes (og:title, og:description, og:image, og:url, og:type) sur toutes les pages pour les aperçus WhatsApp et réseaux.
 3. Données structurées Schema.org BarOrPub / EventVenue sur l'accueil avec l'adresse (52 quai du Point du Jour, 92100 Boulogne-Billancourt) et les coordonnées GPS (lat: 48.829023, lon: 2.255293).
 4. Section FAQ avec données structurées FAQPage sur privatisation.html.
-5. Mention explicite des références certifiées Casher / Mevushal sur la carte des vins.
+5. Mention explicite des références certifiées Casher (K) sur la carte des vins.
 6. Galerie photos avec la photo de la péniche et l'affiche avec des balises alt optimisées.
 ```
 
