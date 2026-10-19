@@ -28,7 +28,7 @@
       box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
     }
     .diaporama-viewport {
-      position: relative; width: 100%; aspect-ratio: 16 / 10; max-height: 560px;
+      position: relative; width: 100%; aspect-ratio: 3 / 2; max-height: 640px;
       display: flex; align-items: center; justify-content: center; cursor: zoom-in;
       background: #180002; overflow: hidden; user-select: none;
     }
@@ -94,7 +94,7 @@
       scrollbar-width: thin; scrollbar-color: rgba(255,255,255,0.3) transparent;
     }
     .diaporama-thumb {
-      flex: 0 0 88px; height: 58px; border-radius: 4px; overflow: hidden;
+      flex: 0 0 96px; height: 64px; border-radius: 4px; overflow: hidden;
       cursor: pointer; border: 2px solid transparent; opacity: 0.6;
       transition: all .2s ease; background: #200003;
     }
@@ -104,7 +104,7 @@
 
     /* Lightbox Modal */
     .lightbox-dialog {
-      width: min(94vw, 1100px); max-height: 92vh; padding: 0;
+      width: min(96vw, 1360px); max-height: 94vh; padding: 0;
       border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 8px;
       background: #240104; color: #ffffff; overflow: hidden;
     }
@@ -112,8 +112,8 @@
     .lightbox-container { position: relative; display: flex; flex-direction: column; }
     .lightbox-close-btn { position: absolute; top: 14px; right: 14px; z-index: 10; width: 44px; height: 44px; border-radius: 50%; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.3); color: #ffffff; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all .2s; }
     .lightbox-close-btn:hover { background: #ffffff; color: #65040d; }
-    .lightbox-img-wrap { width: 100%; max-height: 75vh; display: flex; align-items: center; justify-content: center; background: #150002; overflow: hidden; }
-    .lightbox-img-wrap img { max-width: 100%; max-height: 75vh; object-fit: contain; }
+    .lightbox-img-wrap { width: 100%; max-height: 82vh; display: flex; align-items: center; justify-content: center; background: #150002; overflow: hidden; }
+    .lightbox-img-wrap img { max-width: 100%; max-height: 82vh; object-fit: contain; }
     .lightbox-footer { padding: 16px 24px; background: #3b0207; display: flex; justify-content: space-between; align-items: center; gap: 16px; border-top: 1px solid rgba(255,255,255,0.15); }
     .lightbox-title { font-family: var(--display-font); font-size: 1.35rem; margin: 0 0 2px; color: #ffffff; }
     .lightbox-desc { font-size: .875rem; color: rgba(255,255,255,0.8); margin: 0; }
@@ -146,7 +146,7 @@
       <h1>Florentine en images.</h1>
     </header>
     
-    <p class="lead">Découvrez les différents espaces de la péniche Florentine en diaporama : salons panoramiques avec vue sur la Seine, piste de danse festive, boiseries chaleureuses et amarrage privilégié au 52 quai du Point du Jour à Boulogne-Billancourt.</p>
+    <p class="lead">Découvrez en haute définition les deux salles fermées (320 m²), le salon panoramique vitré, le comptoir de bar et l’amarrage au 52 quai du Point du Jour à Boulogne-Billancourt.</p>
 
     <!-- Diaporama Module -->
     <section class="diaporama-container" id="diaporama" aria-label="Diaporama photos de Florentine">
@@ -158,13 +158,13 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
         </button>
 
-        <div class="diaporama-viewport" id="diaporama-viewport" title="Cliquez pour agrandir en plein écran">
-          <img src="/images/peniche-salon-panoramique.jpg" alt="Salon Panoramique" id="diaporama-img" class="diaporama-img" width="1280" height="800">
+        <div class="diaporama-viewport" id="diaporama-viewport" title="Cliquez pour agrandir en plein écran HD">
+          <img src="/images/peniche-salon-panoramique.jpg?v=hd" alt="Salon panoramique vitré de la péniche Florentine sur Seine à Boulogne-Billancourt" id="diaporama-img" class="diaporama-img" width="2048" height="1366" fetchpriority="high" decoding="async">
           
           <div class="diaporama-caption">
             <div class="diaporama-text">
-              <h2 class="diaporama-title" id="diaporama-title">Salon Panoramique</h2>
-              <p class="diaporama-desc" id="diaporama-desc">Vue panoramique sur la Seine depuis les larges baies vitrées de la péniche.</p>
+              <h2 class="diaporama-title" id="diaporama-title">Salon Panoramique Supérieur</h2>
+              <p class="diaporama-desc" id="diaporama-desc">Grand salon vitré baigné de lumière naturelle avec vue directe sur la Seine et le quai.</p>
             </div>
             <div class="diaporama-badge-wrap">
               <span class="diaporama-counter" id="diaporama-counter">1 / 7</span>
@@ -204,8 +204,8 @@
     </dialog>
 
     <div class="content-actions" style="margin-top:28px;">
-      <a class="content-button" href="/carte.html">Découvrir la carte</a>
-      <a class="content-button secondary" href="/le-concept.html">Découvrir le concept</a>
+      <a class="content-button" href="/privatisation.html">Privatiser la péniche</a>
+      <a class="content-button secondary" href="/carte.html">Découvrir la carte</a>
       <a href="https://www.instagram.com/florentine_sur_seine?stkn=MWxsM245engzbHlrOA%3D%3D&amp;utm_source=qr" target="_blank" rel="noopener noreferrer" style="color: #ffffff; text-decoration: underline; text-underline-offset: 4px; font-weight: 500;">Suivre Florentine sur Instagram</a>
     </div>
 
@@ -221,46 +221,46 @@
   <script>
     const SLIDES = [
       {
-        title: 'Salon Panoramique',
-        desc: 'Vue panoramique sur la Seine depuis les larges baies vitrées de la péniche.',
-        src: '/images/peniche-salon-panoramique.jpg',
-        alt: 'Vue intérieure du salon panoramique de la péniche Florentine'
+        title: 'Salon Panoramique Supérieur',
+        desc: 'Grand salon vitré baigné de lumière naturelle avec vue directe sur la Seine et le quai.',
+        src: '/images/peniche-salon-panoramique.jpg?v=hd',
+        alt: 'Salon panoramique vitré de la péniche Florentine sur Seine à Boulogne-Billancourt'
       },
       {
-        title: 'Ambiance Festive & Piste de Danse',
-        desc: 'Cadre feutré et chaleureux pour dîner, trinquer et danser au rythme des DJ sets.',
-        src: '/images/peniche-interieur-piste.jpg',
-        alt: 'Piste de danse et espace intérieur festif de Florentine'
+        title: 'Réception & Vue sur la Seine',
+        desc: 'Perspective lumineuse du pont supérieur en parquet massif, idéal pour vos cocktails, mariages et réceptions.',
+        src: '/images/peniche-salon-seine-lumineux.jpg?v=hd',
+        alt: 'Salle de réception lumineuse avec baies vitrées sur la Seine à Boulogne-Billancourt'
       },
       {
-        title: 'Grand Salon Boisé',
-        desc: 'Mobilier raffiné en cuir et ambiance cosy au fil de l’eau.',
-        src: '/images/peniche-grand-salon.jpg',
-        alt: 'Grand salon chaleureux avec banquettes en cuir et boiseries'
+        title: 'Grande Salle & Comptoir de Bar',
+        desc: 'Salle inférieure spacieuse au fil de l’eau avec hublots, suspensions chaleureuses et grand comptoir de bar.',
+        src: '/images/peniche-grand-salon.jpg?v=hd',
+        alt: 'Grande salle intérieure parquetée avec hublots et comptoir de bar sur la péniche Florentine'
       },
       {
-        title: 'Vue Extérieure sur la Seine',
-        desc: 'La péniche amarrée dans son écrin de verdure en bord de Seine à Boulogne.',
-        src: '/images/peniche-exterieur-vue-quai.jpg',
-        alt: 'Vue extérieure de la péniche Florentine sur la Seine'
+        title: 'Espace Festif, Piste & Sonorisation',
+        desc: 'Salle fermée équipée d’une sonorisation complète, de miroirs et d’une grande piste en parquet.',
+        src: '/images/peniche-interieur-piste.jpg?v=hd',
+        alt: 'Piste de danse en parquet, miroirs et espace festif intérieur de la péniche Florentine'
       },
       {
-        title: 'Passerelle & Accès Privatif',
-        desc: 'Accès sécurisé et direct depuis le 52 quai du Point du Jour.',
-        src: '/images/peniche-quai-acces.jpg',
-        alt: 'Passerelle d accès à la péniche depuis le quai'
+        title: 'Accueil & Vestiaire Boisé',
+        desc: 'Entrée chaleureuse de la péniche avec comptoir d’accueil et accès direct aux deux niveaux.',
+        src: '/images/peniche-accueil-comptoir.jpg?v=hd',
+        alt: 'Comptoir d accueil boisé et escalier intérieur de la péniche Florentine sur Seine'
       },
       {
-        title: 'Vue d’Ensemble du Quai',
-        desc: 'La péniche Florentine vue depuis les quais de Boulogne-Billancourt.',
-        src: '/images/peniche-vue-du-quai.jpg',
-        alt: 'La péniche Florentine amarrée sur la Seine avec sa passerelle'
+        title: 'La Péniche & sa Terrasse sur Quai',
+        desc: 'Florentine sur Seine amarrée au 52 quai du Point du Jour à Boulogne-Billancourt, avec 250 m² de terrasse sur quai.',
+        src: '/images/peniche-exterieur-vue-quai.jpg?v=hd',
+        alt: 'Vue extérieure de la péniche Florentine sur Seine amarrée au quai du Point du Jour à Boulogne'
       },
       {
-        title: 'Affiche Artistique',
-        desc: 'L’univers graphique officiel de Florentine sur Seine.',
-        src: '/FLO.jpg',
-        alt: 'Identité visuelle et affiche artistique de Florentine sur Seine'
+        title: 'Bord de Seine à Boulogne-Billancourt',
+        desc: 'Cadre privilégié en bord de Seine face à l’Île Seguin, avec parking privé de 25 places à proximité.',
+        src: '/images/peniche-quai-acces.jpg?v=hd',
+        alt: 'Vue sur la Seine et amarrage de la péniche Florentine à Boulogne-Billancourt'
       }
     ];
 
