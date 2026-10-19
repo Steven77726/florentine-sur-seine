@@ -76,6 +76,43 @@ a:focus-visible { outline: 2px solid #ffffff; outline-offset: 5px; }
 .content-page .card-categories { position: sticky; top: 0; z-index: 10; display: flex; gap: 12px 26px; flex-wrap: wrap; background: #65040d; padding: 14px 0; border-block: 1px solid var(--border); margin-bottom: 26px; }
 .card-categories a { min-height: 44px; display: inline-flex; align-items: center; font-size: .95rem; color: #ffffff; text-decoration: none; padding: 4px 12px; border-radius: 3px; border-bottom: 2px solid transparent; transition: all .15s ease; }
 .card-categories a:hover, .card-categories a[aria-current="location"] { border-bottom-color: #ffffff; background: rgba(255, 255, 255, 0.1); }
+.privatisation-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 0 32px;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+}
+.priv-tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 9px 18px;
+  border-radius: 6px;
+  font-size: .95rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(82, 3, 10, 0.7);
+  transition: all .18s ease;
+}
+.priv-tab:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: #ffffff;
+  transform: translateY(-1px);
+}
+.priv-tab.active, .priv-tab[aria-current="page"] {
+  background: #ffffff;
+  color: #65040d;
+  border-color: #ffffff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.28);
+}
 .menu-section { padding-top: 25px; scroll-margin-top: 86px; }
 .content-page .menu-section-title { font-size: 2rem; color: #ffffff; }
 .content-page .wine-intro { font-size: 1rem; color: var(--ink-muted); }
