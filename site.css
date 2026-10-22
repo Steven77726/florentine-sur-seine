@@ -134,8 +134,9 @@ a:focus-visible { outline: 2px solid #ffffff; outline-offset: 5px; }
 .wine-prices .price-pending { font-family: Arial, sans-serif; font-size: .875rem; color: var(--ink-muted); }
 .menu-legal-note { font-size: .875rem; color: var(--ink-muted) !important; }
 #menu-food-title { margin-bottom: 6px; }
-.food-brand { margin: 0 0 16px; }
-.food-logo { display: block; width: 76px; height: auto; }
+.food-brand { display: flex; align-items: center; gap: 10px; margin: 2px 0 18px; }
+.food-by { font-family: var(--display-font); font-style: italic; font-size: 1.25rem; color: rgba(255, 255, 255, 0.9); line-height: 1; }
+.food-logo { display: block; width: 108px; height: auto; }
 .menu-coming { font-size: 1.125rem; color: #ffffff; background: var(--surface); border: 1px solid var(--border); padding: 22px 26px; border-radius: 6px; display: inline-block; margin: 12px 0; font-weight: 500; }
 
 @media (max-width: 900px) {
