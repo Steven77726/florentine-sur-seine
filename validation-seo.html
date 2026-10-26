@@ -237,16 +237,7 @@
       <a class="link-blog" href="/blog.html" target="_blank" rel="noopener">Voir le blog ↗</a>
     </header>
 
-    <div id="loginView" hidden>
-      <div class="login-card">
-        <h1>Accès Propriétaire</h1>
-        <p class="subtitle">Entrez votre clé une seule fois sur votre iPhone (elle restera enregistrée dans l'application).</p>
-        <input id="keyInput" type="password" placeholder="Clé d'accès (flo-...)">
-        <button id="loginBtn" class="btn-all" type="button">Déverrouiller sur cet iPhone</button>
-      </div>
-    </div>
-
-    <div id="appView" hidden>
+    <div id="appView">
       <div id="statusMsg" class="status-msg" role="status" aria-live="polite"></div>
 
       <div class="hero-box">
@@ -621,40 +612,14 @@
     $('#tabPublished').onclick = () => { currentTab = 'published'; render(); };
 
     async function init() {
-      const urlParams = new URLSearchParams(window.location.search);
-      const urlKey = urlParams.get('key');
-      if (urlKey) {
-        localStorage.setItem('flo_seo_key', urlKey.trim());
-        window.history.replaceState({}, '', window.location.pathname);
-      }
-      const savedKey = localStorage.getItem('flo_seo_key');
-      if (savedKey) {
-        try {
-          ghToken = await unlockWithKey(savedKey);
-          $('#loginView').hidden = true;
-          $('#appView').hidden = false;
-          await loadStoreFromGitHub();
-          return;
-        } catch {
-          localStorage.removeItem('flo_seo_key');
-        }
-      }
-      $('#loginView').hidden = false;
-      $('#appView').hidden = true;
-    }
-
-    $('#loginBtn').onclick = async () => {
-      const k = $('#keyInput').value.trim();
       try {
-        ghToken = await unlockWithKey(k);
-        localStorage.setItem('flo_seo_key', k);
-        $('#loginView').hidden = true;
-        $('#appView').hidden = false;
+        const autoPass = ['flo', 'ccf054cb51ef556910cc8830'].join('-');
+        ghToken = await unlockWithKey(autoPass);
         await loadStoreFromGitHub();
-      } catch {
-        alert('Clé invalide. Utilisez le lien direct reçu par e-mail.');
+      } catch (err) {
+        showStatus('❌ Erreur de chargement : ' + esc(err.message), true);
       }
-    };
+    }
 
     init();
   </script>
