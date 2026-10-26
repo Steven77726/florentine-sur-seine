@@ -472,11 +472,11 @@
           "Conditions et prestations précises incluses dans le tarif de base à partir de 1 500 € TTC."
         ]
       },
-      "status": "brouillon",
+      "status": "publié",
       "createdAt": "2026-10-16T14:20:00+02:00",
-      "validatedAt": null,
-      "publishedAt": null,
-      "publicUrl": null
+      "validatedAt": "2026-10-26T13:34:21.788Z",
+      "publishedAt": "2026-10-26T13:34:21.788Z",
+      "publicUrl": "https://florentine-sur-seine.fr/blog/salle-de-mariage-boulogne-billancourt-peniche-a-quai.html"
     },
     {
       "id": "draft-20261016-03",
@@ -609,6 +609,12 @@
     }
   ],
   "logs": [
+    {
+      "id": "log-1793021661788",
+      "timestamp": "2026-10-26T13:34:21.788Z",
+      "type": "PUBLICATION_IPHONE_1CLIC",
+      "summary": "1 article(s) validé(s) et publié(s) en 1 clic depuis l’application iPhone."
+    },
     {
       "id": "log-1793021654425",
       "timestamp": "2026-10-26T13:34:14.423Z",
