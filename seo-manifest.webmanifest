@@ -1,0 +1,27 @@
+{
+  "name": "Validation SEO · Florentine",
+  "short_name": "Florentine SEO",
+  "description": "Validation et publication instantanée des brouillons SEO Florentine sur Seine",
+  "start_url": "/validation-seo.html",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#65040d",
+  "theme_color": "#65040d",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo-florentine.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
