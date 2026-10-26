@@ -601,14 +601,20 @@
         ],
         "toVerify": []
       },
-      "status": "brouillon",
+      "status": "publié",
       "createdAt": "2026-10-26T13:14:33.430Z",
-      "validatedAt": null,
-      "publishedAt": null,
-      "publicUrl": null
+      "validatedAt": "2026-10-26T13:34:14.423Z",
+      "publishedAt": "2026-10-26T13:34:14.423Z",
+      "publicUrl": "https://florentine-sur-seine.fr/blog/soiree-entreprise-seminaire-boulogne-billancourt-peniche.html"
     }
   ],
   "logs": [
+    {
+      "id": "log-1793021654425",
+      "timestamp": "2026-10-26T13:34:14.423Z",
+      "type": "PUBLICATION_IPHONE_1CLIC",
+      "summary": "1 article(s) validé(s) et publié(s) en 1 clic depuis l’application iPhone."
+    },
     {
       "id": "log-1793021432744-yapv",
       "timestamp": "2026-10-26T13:30:32.744Z",
