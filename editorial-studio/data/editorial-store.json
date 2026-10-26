@@ -207,11 +207,11 @@
           "Cet article avait été publié uniquement dans l'aperçu ChatGPT Sites et n'est pas encore en ligne sur florentine-sur-seine.fr. Vous pouvez coller votre texte exact ou valider cette version pour la publier réellement sur GitHub Pages."
         ]
       },
-      "status": "validé_chatgpt_a_synchroniser",
+      "status": "publié",
       "createdAt": "2026-10-16T09:00:00+02:00",
-      "validatedAt": "2026-10-16T10:00:00+02:00",
-      "publishedAt": null,
-      "publicUrl": null
+      "validatedAt": "2026-10-26T13:34:55.427Z",
+      "publishedAt": "2026-10-26T13:34:55.427Z",
+      "publicUrl": "https://florentine-sur-seine.fr/blog/anniversaire-peniche-boulogne-diner-assis-ou-cocktail.html"
     },
     {
       "id": "ext-20261016-02",
@@ -266,11 +266,11 @@
           "Cet article avait été publié uniquement dans l'aperçu ChatGPT Sites et n'est pas encore en ligne sur florentine-sur-seine.fr. Vous pouvez coller votre texte exact ou valider cette version pour la publier réellement sur GitHub Pages."
         ]
       },
-      "status": "validé_chatgpt_a_synchroniser",
+      "status": "publié",
       "createdAt": "2026-10-16T09:00:00+02:00",
-      "validatedAt": "2026-10-16T10:00:00+02:00",
-      "publishedAt": null,
-      "publicUrl": null
+      "validatedAt": "2026-10-26T13:34:55.427Z",
+      "publishedAt": "2026-10-26T13:34:55.427Z",
+      "publicUrl": "https://florentine-sur-seine.fr/blog/mariage-peniche-boulogne-preparer-repas-prestataire.html"
     },
     {
       "id": "ext-20261016-03",
@@ -324,11 +324,11 @@
           "Cet article avait été publié uniquement dans l'aperçu ChatGPT Sites et n'est pas encore en ligne sur florentine-sur-seine.fr. Vous pouvez coller votre texte exact ou valider cette version pour la publier réellement sur GitHub Pages."
         ]
       },
-      "status": "validé_chatgpt_a_synchroniser",
+      "status": "publié",
       "createdAt": "2026-10-16T09:00:00+02:00",
-      "validatedAt": "2026-10-16T10:00:00+02:00",
-      "publishedAt": null,
-      "publicUrl": null
+      "validatedAt": "2026-10-26T13:34:55.427Z",
+      "publishedAt": "2026-10-26T13:34:55.427Z",
+      "publicUrl": "https://florentine-sur-seine.fr/blog/conference-et-cocktail-boulogne-transition-fluide.html"
     },
     {
       "id": "draft-20261016-01",
@@ -609,6 +609,12 @@
     }
   ],
   "logs": [
+    {
+      "id": "log-1793021695427",
+      "timestamp": "2026-10-26T13:34:55.427Z",
+      "type": "PUBLICATION_IPHONE_1CLIC",
+      "summary": "3 article(s) validé(s) et publié(s) en 1 clic depuis l’application iPhone."
+    },
     {
       "id": "log-1793021674319",
       "timestamp": "2026-10-26T13:34:34.319Z",
