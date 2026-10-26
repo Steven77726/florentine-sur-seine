@@ -545,11 +545,11 @@
           "Vérifier avec le client les éventuelles options techniques (micros sans fil pour les discours, vidéoprojection) à mentionner dans le devis."
         ]
       },
-      "status": "brouillon",
+      "status": "publié",
       "createdAt": "2026-10-16T14:20:00+02:00",
-      "validatedAt": null,
-      "publishedAt": null,
-      "publicUrl": null
+      "validatedAt": "2026-10-26T13:34:34.319Z",
+      "publishedAt": "2026-10-26T13:34:34.319Z",
+      "publicUrl": "https://florentine-sur-seine.fr/blog/bar-mitsva-bat-mitsva-peniche-boulogne-billancourt.html"
     },
     {
       "id": "draft-20261026-3",
@@ -609,6 +609,12 @@
     }
   ],
   "logs": [
+    {
+      "id": "log-1793021674319",
+      "timestamp": "2026-10-26T13:34:34.319Z",
+      "type": "PUBLICATION_IPHONE_1CLIC",
+      "summary": "1 article(s) validé(s) et publié(s) en 1 clic depuis l’application iPhone."
+    },
     {
       "id": "log-1793021661788",
       "timestamp": "2026-10-26T13:34:21.788Z",
