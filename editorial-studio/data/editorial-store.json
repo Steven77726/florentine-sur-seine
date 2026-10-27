@@ -825,11 +825,11 @@
         ],
         "toVerify": []
       },
-      "status": "brouillon",
+      "status": "publié",
       "createdAt": "2026-10-27T10:58:52.768Z",
-      "validatedAt": null,
-      "publishedAt": null,
-      "publicUrl": null
+      "validatedAt": "2026-10-27T11:19:37.639Z",
+      "publishedAt": "2026-10-27T11:19:37.639Z",
+      "publicUrl": "https://florentine-sur-seine.fr/blog/soiree-dansante-mariage-peniche-boulogne-deux-salles.html"
     },
     {
       "id": "draft-20261027-5",
@@ -881,11 +881,11 @@
         ],
         "toVerify": []
       },
-      "status": "brouillon",
+      "status": "publié",
       "createdAt": "2026-10-27T10:58:52.774Z",
-      "validatedAt": null,
-      "publishedAt": null,
-      "publicUrl": null
+      "validatedAt": "2026-10-27T11:19:37.639Z",
+      "publishedAt": "2026-10-27T11:19:37.639Z",
+      "publicUrl": "https://florentine-sur-seine.fr/blog/fiancailles-fete-familiale-peniche-boulogne-billancourt.html"
     },
     {
       "id": "draft-20261027-6",
@@ -937,14 +937,20 @@
         ],
         "toVerify": []
       },
-      "status": "brouillon",
+      "status": "publié",
       "createdAt": "2026-10-27T10:58:52.774Z",
-      "validatedAt": null,
-      "publishedAt": null,
-      "publicUrl": null
+      "validatedAt": "2026-10-27T11:19:37.639Z",
+      "publishedAt": "2026-10-27T11:19:37.639Z",
+      "publicUrl": "https://florentine-sur-seine.fr/blog/cocktail-clients-soiree-partenaires-peniche-boulogne.html"
     }
   ],
   "logs": [
+    {
+      "id": "log-1793099977640",
+      "timestamp": "2026-10-27T11:19:37.639Z",
+      "type": "PUBLICATION_IPHONE_1CLIC",
+      "summary": "3 article(s) validé(s) et publié(s) en 1 clic depuis l’application iPhone."
+    },
     {
       "id": "log-1793098046053-jibd",
       "timestamp": "2026-10-27T10:47:26.053Z",
