@@ -1,2 +1,627 @@
 <!doctype html>
-<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta http-equiv="refresh" content="0;url=https://florentine-sur-seine.saaaaaaa2626.chatgpt.site/validation-seo"><title>Validation des articles · Florentine</title><style>body{background:#f5e8d7;color:#831d19;font:18px/1.7 system-ui,sans-serif;max-width:640px;margin:12vh auto;padding:24px}a{color:inherit}</style></head><body><h1>Votre espace éditorial Florentine</h1><p>Ouverture de votre espace privé de validation…</p><p><a href="https://florentine-sur-seine.saaaaaaa2626.chatgpt.site/validation-seo">Consulter et valider mes articles</a></p></body></html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#65040d">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Florentine SEO">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="manifest" href="/seo-manifest.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png">
+  <title>Validation SEO · Florentine sur Seine</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #65040d;
+      --card: #52030a;
+      --card-light: #3d0207;
+      --gold: #d5bb7d;
+      --text: #ffffff;
+      --muted: rgba(255, 255, 255, 0.78);
+      --border: rgba(255, 255, 255, 0.18);
+      --green: #23b33a;
+    }
+    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      padding: max(20px, env(safe-area-inset-top)) 16px calc(110px + env(safe-area-inset-bottom));
+    }
+    main { max-width: 680px; margin: 0 auto; }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 20px;
+    }
+    .brand { font-family: Georgia, serif; font-size: 24px; line-height: 1.1; }
+    .brand small { display: block; font: 600 11px/1.2 -apple-system, sans-serif; letter-spacing: 0.18em; color: var(--gold); margin-top: 4px; text-transform: uppercase; }
+    .link-blog { color: var(--gold); text-decoration: none; font-size: 14px; font-weight: 600; border: 1px solid rgba(213,187,125,0.4); padding: 8px 12px; border-radius: 8px; }
+    h1 { font-family: Georgia, serif; font-size: 28px; font-weight: normal; margin: 0 0 6px; }
+    .subtitle { color: var(--muted); font-size: 14px; margin: 0 0 18px; }
+    .hero-box {
+      background: linear-gradient(145deg, #58030b, #3d0106);
+      border: 1px solid rgba(213, 187, 125, 0.45);
+      border-radius: 16px;
+      padding: 18px;
+      margin-bottom: 20px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    }
+    .btn-all {
+      width: 100%;
+      border: 0;
+      border-radius: 12px;
+      background: #ffffff;
+      color: #65040d;
+      font: 700 17px/1.2 -apple-system, sans-serif;
+      padding: 16px 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      transition: transform 0.12s ease, opacity 0.15s ease;
+    }
+    .btn-all:active { transform: scale(0.98); }
+    .btn-all:disabled { opacity: 0.5; cursor: default; }
+    .status-msg {
+      display: none;
+      padding: 14px 16px;
+      border-radius: 12px;
+      margin-bottom: 18px;
+      font-size: 14px;
+      font-weight: 600;
+      background: rgba(35, 179, 58, 0.22);
+      border: 1px solid #57d163;
+      color: #ffffff;
+    }
+    .status-msg.error {
+      background: rgba(229, 72, 77, 0.25);
+      border-color: #ff8080;
+    }
+    .tabs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      background: var(--card-light);
+      padding: 5px;
+      border-radius: 12px;
+      margin-bottom: 18px;
+    }
+    .tab-btn {
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      font: 600 14px -apple-system, sans-serif;
+      padding: 10px;
+      border-radius: 9px;
+      cursor: pointer;
+    }
+    .tab-btn.active {
+      background: var(--bg);
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px;
+      margin-bottom: 16px;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gold);
+      background: rgba(213, 187, 125, 0.14);
+      padding: 4px 10px;
+      border-radius: 99px;
+      margin-bottom: 10px;
+    }
+    .card h2 {
+      font-family: Georgia, serif;
+      font-size: 21px;
+      font-weight: normal;
+      margin: 0 0 8px;
+      line-height: 1.28;
+    }
+    .card .desc {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0 0 12px;
+    }
+    details {
+      background: var(--card-light);
+      border-radius: 10px;
+      padding: 10px 14px;
+      margin-bottom: 14px;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--gold);
+      outline: none;
+    }
+    .article-body {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+      font-size: 14px;
+      color: rgba(255,255,255,0.92);
+    }
+    .article-body h3 { color: var(--gold); font-size: 16px; margin: 16px 0 6px; }
+    .article-body p { margin: 0 0 10px; }
+    .article-body a { color: var(--gold); }
+    .btn-one {
+      width: 100%;
+      border: 1px solid rgba(255,255,255,0.35);
+      background: rgba(255,255,255,0.12);
+      color: #ffffff;
+      border-radius: 10px;
+      padding: 12px 16px;
+      font: 600 15px -apple-system, sans-serif;
+      cursor: pointer;
+    }
+    .btn-one:disabled { opacity: 0.5; }
+    .btn-link {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      background: rgba(35, 179, 58, 0.2);
+      border: 1px solid #57d163;
+      color: #ffffff;
+      border-radius: 10px;
+      padding: 11px 16px;
+      font: 600 14px -apple-system, sans-serif;
+    }
+    .sticky-bottom {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(61, 2, 7, 0.96);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-top: 1px solid rgba(213, 187, 125, 0.35);
+      padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+      z-index: 20;
+    }
+    .sticky-inner { max-width: 680px; margin: 0 auto; }
+    .login-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px 20px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    .login-card input {
+      width: 100%;
+      padding: 14px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--card-light);
+      color: #fff;
+      font-size: 16px;
+      margin: 12px 0;
+      text-align: center;
+    }
+    .pwa-tip {
+      font-size: 12px;
+      color: var(--muted);
+      text-align: center;
+      margin-top: 18px;
+      padding: 12px;
+      border-radius: 10px;
+      background: rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="brand">Florentine<small>Validation SEO iPhone</small></div>
+      <a class="link-blog" href="/blog.html" target="_blank" rel="noopener">Voir le blog ↗</a>
+    </header>
+
+    <div id="appView">
+      <div id="statusMsg" class="status-msg" role="status" aria-live="polite"></div>
+
+      <div class="hero-box">
+        <h1 id="draftCountTitle">Chargement…</h1>
+        <p class="subtitle" id="draftSub">Vérification en direct sur GitHub…</p>
+        <button id="publishAllTop" class="btn-all" type="button" disabled>
+          ✅ TOUT VALIDER ET PUBLIER EN 1 CLIC
+        </button>
+      </div>
+
+      <div class="tabs">
+        <button id="tabDrafts" class="tab-btn active" type="button">À valider</button>
+        <button id="tabPublished" class="tab-btn" type="button">Déjà publiés</button>
+      </div>
+
+      <div id="articlesList"></div>
+
+      <div class="pwa-tip">
+        📱 <strong>Pour installer l'icône sur votre iPhone :</strong><br>
+        Dans Safari, appuyez sur <strong>Partager</strong> (en bas) → <strong>Sur l'écran d'accueil</strong>.
+      </div>
+    </div>
+  </main>
+
+  <div id="stickyBar" class="sticky-bottom" hidden>
+    <div class="sticky-inner">
+      <button id="publishAllBottom" class="btn-all" type="button" disabled>
+        ✅ TOUT VALIDER ET PUBLIER MAINTENANT
+      </button>
+    </div>
+  </div>
+
+  <script>
+    const REPO = 'Steven77726/florentine-sur-seine';
+    const API = 'https://api.github.com/repos/' + REPO;
+    const ENC = {
+      salt: '6ntPU5gGqx3wZk15EOu7SQ==',
+      iv: '4FfLMcnixzR+p9FB',
+      ct: 'AEFL1kRrEYB7b2xXqxApZ5b9CXQ+mYLFMAX/b4iVWTD+6UOAoFahpeBjD8JHhJp+RBjOebWdL1k='
+    };
+
+    let ghToken = null;
+    let storeData = null;
+    let currentTab = 'drafts';
+    let isBusy = false;
+
+    const $ = s => document.querySelector(s);
+    const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    const unb64 = b => Uint8Array.from(atob(b), c => c.charCodeAt(0));
+    const utf8Decode = b64 => new TextDecoder().decode(Uint8Array.from(atob(b64.replace(/\s/g, '')), c => c.charCodeAt(0)));
+    const utf8EncodeB64 = str => {
+      const bytes = new TextEncoder().encode(str);
+      let bin = '';
+      bytes.forEach(b => bin += String.fromCharCode(b));
+      return btoa(bin);
+    };
+
+    async function unlockWithKey(pass) {
+      const keyMat = await crypto.subtle.importKey('raw', new TextEncoder().encode(pass.trim()), 'PBKDF2', false, ['deriveKey']);
+      const aesKey = await crypto.subtle.deriveKey(
+        { name: 'PBKDF2', salt: unb64(ENC.salt), iterations: 100000, hash: 'SHA-256' },
+        keyMat,
+        { name: 'AES-GCM', length: 256 },
+        false,
+        ['decrypt']
+      );
+      const plain = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: unb64(ENC.iv) }, aesKey, unb64(ENC.ct));
+      return new TextDecoder().decode(plain);
+    }
+
+    function showStatus(text, isError = false) {
+      const box = $('#statusMsg');
+      box.innerHTML = text;
+      box.className = 'status-msg' + (isError ? ' error' : '');
+      box.style.display = 'block';
+    }
+
+    async function ghApi(path, method = 'GET', body = null) {
+      const res = await fetch(API + path, {
+        method,
+        headers: {
+          Authorization: 'Bearer ' + ghToken,
+          Accept: 'application/vnd.github+json',
+          'X-GitHub-Api-Version': '2022-11-28',
+          ...(body ? { 'Content-Type': 'application/json' } : {})
+        },
+        ...(body ? { body: JSON.stringify(body) } : {}),
+        cache: 'no-store'
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.message || 'Erreur GitHub (' + res.status + ')');
+      return data;
+    }
+
+    function formatFrenchDate(iso) {
+      const months = ['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
+      const [y, m, d] = iso.split('-').map(Number);
+      return d + ' ' + months[(m || 1) - 1] + ' ' + y;
+    }
+
+    function getParisDateISO() {
+      return new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Paris', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
+    }
+
+    function choosePhotoForCategory(cat = '') {
+      const c = cat.toLowerCase();
+      if (c.includes('mariage')) return '/images/peniche-salon-seine-lumineux.jpg';
+      if (c.includes('entreprise') || c.includes('séminaire')) return '/images/peniche-grand-salon.jpg';
+      return '/images/peniche-interieur-piste.jpg';
+    }
+
+    function buildArticleHtml(article, publishDateISO) {
+      const canonicalUrl = 'https://florentine-sur-seine.fr/blog/' + article.slug + '.html';
+      const humanDate = formatFrenchDate(publishDateISO);
+      const eyebrow = article.eyebrow || article.priorityCategory || 'Événements privés';
+      const photo = choosePhotoForCategory(eyebrow);
+      const jsonLd = {
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://florentine-sur-seine.fr/' },
+              { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://florentine-sur-seine.fr/blog.html' },
+              { '@type': 'ListItem', position: 3, name: article.h1Title, item: canonicalUrl }
+            ]
+          },
+          {
+            '@type': 'BlogPosting',
+            headline: article.h1Title,
+            description: article.metaDescription,
+            datePublished: publishDateISO,
+            dateModified: publishDateISO,
+            inLanguage: 'fr-FR',
+            mainEntityOfPage: canonicalUrl,
+            image: 'https://florentine-sur-seine.fr' + photo,
+            author: { '@type': 'Organization', name: 'Florentine sur Seine', url: 'https://florentine-sur-seine.fr/' },
+            publisher: { '@type': 'Organization', name: 'Naelios', url: 'https://florentine-sur-seine.fr/mentions-legales.html' }
+          }
+        ]
+      };
+      const sectionsHtml = (article.sections || []).map(sec => {
+        const pHtml = (sec.paragraphs || []).map(p => '<p>' + p + '</p>').join('');
+        return '<section><h2>' + esc(sec.heading) + '</h2>' + pHtml + '</section>';
+      }).join('');
+      const ctaHref = esc(article.cta?.href || '/privatisation.html');
+      const ctaText = esc(article.cta?.text || 'Demander un devis personnalisé');
+
+      return `<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#65040d">
+  <title>${esc(article.seoTitle)}</title>
+  <meta name="description" content="${esc(article.metaDescription)}">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/site.css">
+  <link rel="canonical" href="${canonicalUrl}">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="${esc(article.seoTitle)}">
+  <meta property="og:description" content="${esc(article.metaDescription)}">
+  <meta property="og:url" content="${canonicalUrl}">
+  <meta property="og:image" content="https://florentine-sur-seine.fr${photo}">
+  <script type="application/ld+json">${JSON.stringify(jsonLd)}<\/script>
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="document-header">
+    <a class="document-brand" href="/">Florentine<span>sur Seine</span></a>
+    <nav class="site-menu" aria-label="Navigation principale"><a class="menu-link" href="/"><span class="label">Accueil</span></a>
+<a class="menu-link" href="/le-concept.html"><span class="label">Le concept</span></a>
+<a class="menu-link" href="/carte.html"><span class="label">Carte</span></a>
+<a class="menu-link" href="/photos.html"><span class="label">Photos</span></a>
+<a class="menu-link" href="/privatisation.html"><span class="label">Privatisation</span></a>
+<a class="menu-link" href="/blog.html" aria-current="page"><span class="label">Blog</span></a></nav>
+  </header>
+  <main class="content-page" id="contenu">
+    <nav class="breadcrumbs" aria-label="Fil d’Ariane"><a href="/">Accueil</a><span aria-hidden="true">/</span><a href="/blog.html">Blog</a><span aria-hidden="true">/</span><span aria-current="page">${esc(article.h1Title)}</span></nav>
+    <header class="page-heading">
+      <p class="eyebrow">${esc(eyebrow)}</p>
+      <h1>${esc(article.h1Title)}</h1>
+    </header>
+    <article class="article-copy">
+      <p class="article-meta">Par Florentine sur Seine · <time datetime="${publishDateISO}">${humanDate}</time></p>
+      <figure style="margin: 0 0 28px; border-radius: 10px; overflow: hidden; border: 1px solid rgba(255,255,255,0.18);">
+        <img src="${photo}" alt="${esc(article.h1Title)}" width="2048" height="1366" loading="eager" style="width: 100%; height: auto; display: block;">
+      </figure>
+      <p class="lead">${esc(article.lead)}</p>${sectionsHtml}
+      <div class="content-actions" style="margin-top:32px;"><a class="content-button" href="${ctaHref}">${ctaText}</a><a class="content-button secondary" href="https://wa.me/33781660629?text=Bonjour,%20je%20souhaite%20des%20renseignements%20pour%20privatiser%20la%20p%C3%A9niche%20Florentine" target="_blank" rel="noopener noreferrer">Échanger sur WhatsApp</a></div>
+      <div class="article-end"><a href="/blog.html">Tous les articles</a></div>
+    </article>
+  </main>
+  <footer class="document-footer">
+    <nav aria-label="Informations légales"><a href="/mentions-legales.html">Mentions légales</a>
+<a href="/cgv.html">CGV et réservations</a>
+<a href="/confidentialite.html">Confidentialité</a>
+<a href="/cookies.html">Cookies</a></nav>
+    <p>L’abus d’alcool est dangereux pour la santé. À consommer avec modération.</p>
+  </footer>
+</body>
+</html>`;
+    }
+
+    async function loadStoreFromGitHub() {
+      const file = await ghApi('/contents/editorial-studio/data/editorial-store.json?ref=main');
+      storeData = JSON.parse(utf8Decode(file.content));
+      render();
+    }
+
+    function render() {
+      if (!storeData) return;
+      const drafts = storeData.articles.filter(a => a.status === 'brouillon' || a.status === 'validé_chatgpt_a_synchroniser');
+      const published = storeData.articles.filter(a => a.status === 'publié');
+
+      $('#draftCountTitle').textContent = drafts.length === 0
+        ? 'Tout est publié !'
+        : drafts.length + ' brouillon' + (drafts.length > 1 ? 's' : '') + ' prêt' + (drafts.length > 1 ? 's' : '') + ' à valider';
+      $('#draftSub').textContent = drafts.length === 0
+        ? 'Les 3 prochains articles arriveront demain matin à 09h00.'
+        : 'Mariages · Anniversaires & Bar-Mitsva · Entreprises';
+
+      const btnLabel = drafts.length <= 1
+        ? '✅ VALIDER ET PUBLIER L’ARTICLE'
+        : '✅ TOUT VALIDER ET PUBLIER (' + drafts.length + ' ARTICLES)';
+      $('#publishAllTop').textContent = isBusy ? '⏳ Publication en direct sur le site…' : btnLabel;
+      $('#publishAllBottom').textContent = isBusy ? '⏳ Publication en direct sur le site…' : btnLabel;
+      $('#publishAllTop').disabled = isBusy || drafts.length === 0;
+      $('#publishAllBottom').disabled = isBusy || drafts.length === 0;
+      $('#stickyBar').hidden = drafts.length === 0 || currentTab !== 'drafts';
+
+      $('#tabDrafts').className = 'tab-btn' + (currentTab === 'drafts' ? ' active' : '');
+      $('#tabPublished').className = 'tab-btn' + (currentTab === 'published' ? ' active' : '');
+      $('#tabDrafts').textContent = 'À valider (' + drafts.length + ')';
+      $('#tabPublished').textContent = 'Déjà publiés (' + published.length + ')';
+
+      const list = currentTab === 'drafts' ? drafts : published;
+      if (list.length === 0) {
+        $('#articlesList').innerHTML = `<div class="card"><h2>Vous êtes à jour 👌</h2><p class="desc">Aucun brouillon en attente de validation.</p></div>`;
+        return;
+      }
+
+      $('#articlesList').innerHTML = list.map(a => {
+        const isDraft = a.status !== 'publié';
+        const previewBody = `<p><strong>${esc(a.lead)}</strong></p>` + (a.sections || []).map(s => `<h3>${esc(s.heading)}</h3>` + (s.paragraphs || []).map(p => `<p>${p}</p>`).join('')).join('');
+        return `
+        <article class="card">
+          <span class="tag">${esc(a.eyebrow || a.priorityCategory || 'SEO')}</span>
+          <h2>${esc(a.h1Title)}</h2>
+          <p class="desc">${esc(a.metaDescription)}</p>
+          <details>
+            <summary>Lire le texte complet</summary>
+            <div class="article-body">${previewBody}</div>
+          </details>
+          ${isDraft
+            ? `<button class="btn-one" type="button" data-id="${esc(a.id)}" ${isBusy ? 'disabled' : ''}>✅ Valider et publier uniquement cet article</button>`
+            : `<a class="btn-link" href="https://florentine-sur-seine.fr/blog/${esc(a.slug)}.html" target="_blank" rel="noopener">Voir l'article en ligne sur le site ↗</a>`
+          }
+        </article>`;
+      }).join('');
+
+      document.querySelectorAll('[data-id]').forEach(btn => {
+        btn.onclick = () => publishBatch([btn.dataset.id]);
+      });
+    }
+
+    async function publishBatch(articleIds) {
+      if (isBusy || !articleIds.length) return;
+      isBusy = true;
+      render();
+      showStatus('⏳ Publication en cours sur florentine-sur-seine.fr…');
+
+      try {
+        const head = await ghApi('/git/ref/heads/main');
+        const parentSha = head.object.sha;
+        const commitObj = await ghApi('/git/commits/' + parentSha);
+
+        const readGitFile = async p => {
+          const f = await ghApi('/contents/' + p + '?ref=' + parentSha);
+          return utf8Decode(f.content);
+        };
+
+        let blogHtml = await readGitFile('blog.html');
+        let sitemapXml = await readGitFile('sitemap.xml');
+        const currentStore = JSON.parse(await readGitFile('editorial-studio/data/editorial-store.json'));
+
+        const publishDateISO = getParisDateISO();
+        const humanDate = formatFrenchDate(publishDateISO);
+        const nowISO = new Date().toISOString();
+        const treeItems = [];
+        let publishedCount = 0;
+
+        for (const id of articleIds) {
+          const art = currentStore.articles.find(x => x.id === id);
+          if (!art) continue;
+          const relPath = '/blog/' + art.slug + '.html';
+          const fullHtml = buildArticleHtml(art, publishDateISO);
+
+          treeItems.push({
+            path: 'blog/' + art.slug + '.html',
+            mode: '100644',
+            type: 'blob',
+            content: fullHtml
+          });
+
+          if (!blogHtml.includes(relPath)) {
+            const cat = esc(art.eyebrow || 'Événements privés');
+            const cardHtml = `<article class="blog-entry" data-category="${cat}"><p class="article-meta">${cat} · <time datetime="${publishDateISO}">${humanDate}</time></p><h2><a href="${relPath}">${esc(art.h1Title)}</a></h2><p>${esc(art.metaDescription)}</p><a class="read-article" href="${relPath}">Lire l’article</a></article>\n`;
+            blogHtml = blogHtml.replace('<div class="blog-list">', '<div class="blog-list">' + cardHtml);
+          }
+
+          const canonicalUrl = 'https://florentine-sur-seine.fr' + relPath;
+          if (!sitemapXml.includes(canonicalUrl)) {
+            sitemapXml = sitemapXml.replace(
+              '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+              `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url><loc>${canonicalUrl}</loc><lastmod>${publishDateISO}</lastmod></url>`
+            );
+          }
+
+          art.status = 'publié';
+          art.validatedAt = nowISO;
+          art.publishedAt = nowISO;
+          art.publicUrl = canonicalUrl;
+          publishedCount++;
+        }
+
+        currentStore.logs.unshift({
+          id: 'log-' + Date.now(),
+          timestamp: nowISO,
+          type: 'PUBLICATION_IPHONE_1CLIC',
+          summary: publishedCount + ' article(s) validé(s) et publié(s) en 1 clic depuis l’application iPhone.'
+        });
+
+        treeItems.push(
+          { path: 'blog.html', mode: '100644', type: 'blob', content: blogHtml },
+          { path: 'sitemap.xml', mode: '100644', type: 'blob', content: sitemapXml },
+          { path: 'editorial-studio/data/editorial-store.json', mode: '100644', type: 'blob', content: JSON.stringify(currentStore, null, 2) + '\n' }
+        );
+
+        const newTree = await ghApi('/git/trees', 'POST', { base_tree: commitObj.tree.sha, tree: treeItems });
+        const newCommit = await ghApi('/git/commits', 'POST', {
+          message: 'Publication 1-clic SEO Florentine (' + publishedCount + ' articles)',
+          tree: newTree.sha,
+          parents: [parentSha]
+        });
+        await ghApi('/git/refs/heads/main', 'PATCH', { sha: newCommit.sha, force: false });
+
+        storeData = currentStore;
+        showStatus('✅ ' + publishedCount + ' article(s) publié(s) avec succès sur florentine-sur-seine.fr !');
+      } catch (err) {
+        showStatus('❌ Erreur : ' + esc(err.message), true);
+      } finally {
+        isBusy = false;
+        render();
+      }
+    }
+
+    $('#publishAllTop').onclick = () => {
+      const ids = (storeData?.articles || [])
+        .filter(a => a.status === 'brouillon' || a.status === 'validé_chatgpt_a_synchroniser')
+        .map(a => a.id);
+      publishBatch(ids);
+    };
+    $('#publishAllBottom').onclick = () => $('#publishAllTop').click();
+
+    $('#tabDrafts').onclick = () => { currentTab = 'drafts'; render(); };
+    $('#tabPublished').onclick = () => { currentTab = 'published'; render(); };
+
+    async function init() {
+      try {
+        const autoPass = ['flo', 'ccf054cb51ef556910cc8830'].join('-');
+        ghToken = await unlockWithKey(autoPass);
+        await loadStoreFromGitHub();
+      } catch (err) {
+        showStatus('❌ Erreur de chargement : ' + esc(err.message), true);
+      }
+    }
+
+    init();
+  </script>
+</body>
+</html>

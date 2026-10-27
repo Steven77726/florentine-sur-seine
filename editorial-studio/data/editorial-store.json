@@ -657,11 +657,11 @@
         ],
         "toVerify": []
       },
-      "status": "brouillon",
+      "status": "publié",
       "createdAt": "2026-10-27T10:47:17.004Z",
-      "validatedAt": null,
-      "publishedAt": null,
-      "publicUrl": null
+      "validatedAt": "2026-10-27T10:47:26.044Z",
+      "publishedAt": "2026-10-27T10:47:26.045Z",
+      "publicUrl": "https://florentine-sur-seine.fr/blog/mariage-intimiste-peniche-boulogne-billancourt-seine.html"
     },
     {
       "id": "draft-20261027-2",
@@ -713,11 +713,11 @@
         ],
         "toVerify": []
       },
-      "status": "brouillon",
+      "status": "publié",
       "createdAt": "2026-10-27T10:47:17.005Z",
-      "validatedAt": null,
-      "publishedAt": null,
-      "publicUrl": null
+      "validatedAt": "2026-10-27T10:47:26.048Z",
+      "publishedAt": "2026-10-27T10:47:26.049Z",
+      "publicUrl": "https://florentine-sur-seine.fr/blog/anniversaire-30-ans-50-ans-peniche-boulogne-seine.html"
     },
     {
       "id": "draft-20261027-3",
@@ -769,14 +769,41 @@
         ],
         "toVerify": []
       },
-      "status": "brouillon",
+      "status": "publié",
       "createdAt": "2026-10-27T10:47:17.005Z",
-      "validatedAt": null,
-      "publishedAt": null,
-      "publicUrl": null
+      "validatedAt": "2026-10-27T10:47:26.052Z",
+      "publishedAt": "2026-10-27T10:47:26.053Z",
+      "publicUrl": "https://florentine-sur-seine.fr/blog/soiree-fin-annee-voeux-entreprise-peniche-boulogne.html"
     }
   ],
   "logs": [
+    {
+      "id": "log-1793098046053-jibd",
+      "timestamp": "2026-10-27T10:47:26.053Z",
+      "type": "PUBLICATION_REUSSIE",
+      "summary": "Article publié et vérifié (HTTP 200) : Soirée de fin d’année et vœux d’entreprise à Boulogne-Billancourt : privatiser une péniche sur la Seine",
+      "articleId": "draft-20261027-3",
+      "slug": "soiree-fin-annee-voeux-entreprise-peniche-boulogne",
+      "publicUrl": "https://florentine-sur-seine.fr/blog/soiree-fin-annee-voeux-entreprise-peniche-boulogne.html"
+    },
+    {
+      "id": "log-1793098046049-4q6o",
+      "timestamp": "2026-10-27T10:47:26.049Z",
+      "type": "PUBLICATION_REUSSIE",
+      "summary": "Article publié et vérifié (HTTP 200) : Fêter ses 30 ans ou ses 50 ans à Boulogne-Billancourt : privatiser une péniche festive sur la Seine",
+      "articleId": "draft-20261027-2",
+      "slug": "anniversaire-30-ans-50-ans-peniche-boulogne-seine",
+      "publicUrl": "https://florentine-sur-seine.fr/blog/anniversaire-30-ans-50-ans-peniche-boulogne-seine.html"
+    },
+    {
+      "id": "log-1793098046045-o74h",
+      "timestamp": "2026-10-27T10:47:26.045Z",
+      "type": "PUBLICATION_REUSSIE",
+      "summary": "Article publié et vérifié (HTTP 200) : Organiser un mariage intimiste à Boulogne-Billancourt : pourquoi privatiser une péniche à quai ?",
+      "articleId": "draft-20261027-1",
+      "slug": "mariage-intimiste-peniche-boulogne-billancourt-seine",
+      "publicUrl": "https://florentine-sur-seine.fr/blog/mariage-intimiste-peniche-boulogne-billancourt-seine.html"
+    },
     {
       "id": "log-1793098043208-fxvl",
       "timestamp": "2026-10-27T10:47:23.209Z",
