@@ -606,9 +606,191 @@
       "validatedAt": "2026-10-26T13:34:14.423Z",
       "publishedAt": "2026-10-26T13:34:14.423Z",
       "publicUrl": "https://florentine-sur-seine.fr/blog/soiree-entreprise-seminaire-boulogne-billancourt-peniche.html"
+    },
+    {
+      "id": "draft-20261027-1",
+      "priorityCategory": "1. Mariages",
+      "topicAndIntent": "Organiser un mariage intimiste (50 à 80 personnes) sur une péniche à Boulogne-Billancourt : comment profiter de la salle vitrée lumineuse sur la Seine pour le dîner assis tout en gardant la salle en cale sonorisée pour la soirée dansante.",
+      "targetAudience": "Couples recherchant une salle de mariage à taille humaine à Boulogne-Billancourt (92) avec vue sur la Seine et traiteur libre.",
+      "primaryKeyword": "mariage intimiste péniche Boulogne-Billancourt",
+      "seoTitle": "Mariage intimiste sur péniche à Boulogne (50 à 80 pers.) · Florentine",
+      "h1Title": "Organiser un mariage intimiste à Boulogne-Billancourt : pourquoi privatiser une péniche à quai ?",
+      "eyebrow": "Mariages",
+      "slug": "mariage-intimiste-peniche-boulogne-billancourt-seine",
+      "metaDescription": "Vous préparez un mariage de 50 à 80 invités à Boulogne-Billancourt ? Privatisez la péniche à quai Florentine : salle vitrée sur Seine, traiteur libre et parking.",
+      "lead": "Un mariage de 50 à 80 invités demande un lieu ni trop vaste ni trop étroit, capable de créer une atmosphère chaleureuse dès le vin d’honneur jusqu’à la piste de danse. Amarrée à quai fixe au 52 quai du Point du Jour à Boulogne-Billancourt, la péniche Florentine sur Seine accueille jusqu’à 80 personnes en dîner assis dans sa salle vitrée sur la Seine, complétée par une terrasse sur quai de 250 m² et une seconde salle dédiée à la fête.",
+      "sections": [
+        {
+          "heading": "Une jauge idéale jusqu’à 80 personnes en dîner assis",
+          "paragraphs": [
+            "Dans une trop grande salle de réception, un mariage de 60 ou 75 convives peut manquer de chaleur. À bord de Florentine sur Seine, la salle principale vitrée et lumineuse est dimensionnée pour accueillir jusqu’à 80 personnes en configuration dîner assis (ou jusqu’à 180 personnes si vous optez pour un format cocktail dînatoire, les capacités n’étant pas cumulables).",
+            "Vos proches profitent d’une vue directe sur la Seine tout au long du repas, dans un cadre élégant à quelques minutes de la mairie de Boulogne-Billancourt et de Paris 16e."
+          ]
+        },
+        {
+          "heading": "Trois espaces distincts pour rythmer votre réception",
+          "paragraphs": [
+            "Avec 320 m² intérieurs répartis en deux salles fermées et une terrasse sur quai de 250 m², votre mariage se déroule sans jamais avoir besoin de pousser les tables devant vos invités :",
+            "La terrasse sur quai accueille l’arrivée des invités et le cocktail, la salle vitrée reçoit le dîner assis, et la salle en cale au ras de l’eau — équipée d’une sonorisation complète — permet de lancer l’ouverture de bal et la soirée dansante jusqu’à 2 heures du matin selon les conditions convenues."
+          ]
+        },
+        {
+          "heading": "Location sèche dès 1 500 € TTC et libre choix du traiteur",
+          "paragraphs": [
+            "Florentine sur Seine est proposée en location sèche à partir de 1 500 € TTC sur devis, sans droit de bouchon. Grâce à sa cuisine équipée avec extraction professionnelle, votre traiteur (gastronomique, traditionnel ou casher) prépare et dresse votre repas dans d’excellentes conditions.",
+            "Par ailleurs, la péniche étant à quai fixe avec un parking privé de 25 places devant le bateau et le métro Marcel Sembat (ligne 9) à proximité, vos invités arrivent et repartent librement. Découvrez notre page <a href=\"/mariage-peniche-boulogne.html\">Mariage sur péniche à Boulogne</a> et demandez votre proposition sur <a href=\"/privatisation.html\">Privatisation</a>."
+          ]
+        }
+      ],
+      "internalLinks": [
+        "/mariage-peniche-boulogne.html",
+        "/privatisation.html"
+      ],
+      "cta": {
+        "type": "devis",
+        "text": "Demander un devis pour votre mariage à Boulogne",
+        "href": "/mariage-peniche-boulogne.html"
+      },
+      "privateNotes": {
+        "sources": [
+          "Données confirmées Florentine sur Seine (52 quai du Point du Jour 92100 Boulogne-Billancourt, quai fixe, 320 m² en 2 salles, terrasse 250 m², parking 25 places, dîner 80 / cocktail 180, dès 1 500 € TTC)."
+        ],
+        "toVerify": []
+      },
+      "status": "brouillon",
+      "createdAt": "2026-10-27T10:47:17.004Z",
+      "validatedAt": null,
+      "publishedAt": null,
+      "publicUrl": null
+    },
+    {
+      "id": "draft-20261027-2",
+      "priorityCategory": "2. Anniversaires & Fêtes privées",
+      "topicAndIntent": "Organiser ses 30 ans ou 50 ans sur une péniche à Boulogne-Billancourt : comment combiner cocktail dînatoire, bar à cocktails, discours et soirée dansante jusqu’à 2h du matin.",
+      "targetAudience": "Particuliers souhaitant privatiser une salle festive sur la Seine à Boulogne-Billancourt (92) pour fêter leurs 30 ans ou 50 ans.",
+      "primaryKeyword": "anniversaire 30 ans 50 ans péniche Boulogne",
+      "seoTitle": "Fêter ses 30 ans ou 50 ans sur une péniche à Boulogne (92)",
+      "h1Title": "Fêter ses 30 ans ou ses 50 ans à Boulogne-Billancourt : privatiser une péniche festive sur la Seine",
+      "eyebrow": "Anniversaires & Fêtes",
+      "slug": "anniversaire-30-ans-50-ans-peniche-boulogne-seine",
+      "metaDescription": "Privatisez la péniche Florentine à Boulogne-Billancourt pour vos 30 ans ou 50 ans : jusqu’à 180 personnes en soirée dansante, traiteur libre et parking 25 places.",
+      "lead": "Que l’on célèbre ses 30 ans entouré d’amis ou ses 50 ans avec toute sa famille, le choix du lieu détermine l’énergie de la fête. Amarrée au 52 quai du Point du Jour à Boulogne-Billancourt, la péniche à quai fixe Florentine sur Seine permet de privatiser 320 m² intérieurs et 250 m² de terrasse sur quai pour une soirée sur-mesure.",
+      "sections": [
+        {
+          "heading": "Cocktail dînatoire jusqu’à 180 personnes ou repas assis jusqu’à 80 personnes",
+          "paragraphs": [
+            "Pour un anniversaire de 30 ans ou de 50 ans, deux formats se distinguent : le cocktail dînatoire festif permettant d’accueillir jusqu’à 180 personnes, ou le dîner assis convivial réunissant jusqu’à 80 personnes dans la salle vitrée face à la Seine (capacités non cumulables).",
+            "La séparation en deux salles fermées permet à chacun de profiter de la soirée à son rythme : les invités qui souhaitent discuter profitent du salon panoramique ou de la terrasse sur quai, tandis que la fête bat son plein dans la salle en cale sonorisée."
+          ]
+        },
+        {
+          "heading": "Liberté de traiteur, sans droit de bouchon et options à la carte",
+          "paragraphs": [
+            "Accessible en location sèche à partir de 1 500 € TTC sur devis, Florentine sur Seine met à votre disposition une cuisine équipée avec extraction. Vous êtes libre de faire appel à votre propre traiteur (buffet, pièces cocktail, traiteur casher ou traditionnel) sans aucun droit de bouchon.",
+            "Selon vos envies, vous pouvez également ajouter sur devis un DJ, un bar à cocktails, les boissons, le personnel de service et la sécurité."
+          ]
+        },
+        {
+          "heading": "Accès facile depuis Paris 15e, Paris 16e et les Hauts-de-Seine",
+          "paragraphs": [
+            "Parce que la péniche reste à quai fixe sans navigation, vos invités arrivent et repartent librement tout au long de la soirée. Le parking privé de 25 places devant le bateau et la proximité du métro Marcel Sembat (ligne 9) facilitent la venue de tous vos proches.",
+            "Consultez les détails sur notre page <a href=\"/anniversaire-fete-peniche.html\">Anniversaire &amp; Bar-Mitsva sur péniche</a> et demandez votre devis personnalisé sur <a href=\"/privatisation.html\">Privatisation</a>."
+          ]
+        }
+      ],
+      "internalLinks": [
+        "/anniversaire-fete-peniche.html",
+        "/privatisation.html"
+      ],
+      "cta": {
+        "type": "devis",
+        "text": "Demander un devis pour votre anniversaire",
+        "href": "/anniversaire-fete-peniche.html"
+      },
+      "privateNotes": {
+        "sources": [
+          "Données confirmées Florentine sur Seine (52 quai du Point du Jour 92100 Boulogne-Billancourt)."
+        ],
+        "toVerify": []
+      },
+      "status": "brouillon",
+      "createdAt": "2026-10-27T10:47:17.005Z",
+      "validatedAt": null,
+      "publishedAt": null,
+      "publicUrl": null
+    },
+    {
+      "id": "draft-20261027-3",
+      "priorityCategory": "3. Événements d’entreprise",
+      "topicAndIntent": "Organiser une soirée de fin d’année ou une cérémonie de vœux d’entreprise à Boulogne-Billancourt sur une péniche à quai fixe : discours en salle vitrée, cocktail dînatoire jusqu’à 180 personnes et fête en cale sonorisée.",
+      "targetAudience": "Directions, RH et offices managers de Boulogne-Billancourt, Issy-les-Moulineaux et Paris 15e/16e organisant une soirée de fin d’année ou des vœux d’entreprise.",
+      "primaryKeyword": "soirée de fin d’année entreprise péniche Boulogne",
+      "seoTitle": "Soirée de fin d’année et vœux d’entreprise sur péniche à Boulogne (92)",
+      "h1Title": "Soirée de fin d’année et vœux d’entreprise à Boulogne-Billancourt : privatiser une péniche sur la Seine",
+      "eyebrow": "Événements d’entreprise",
+      "slug": "soiree-fin-annee-voeux-entreprise-peniche-boulogne",
+      "metaDescription": "Privatisez la péniche Florentine à Boulogne-Billancourt pour votre soirée de fin d’année ou vos vœux d’entreprise : jusqu’à 180 pers. en cocktail, parking 25 places.",
+      "lead": "Réunir ses équipes pour clôturer l’année ou présenter les vœux de l’entreprise demande un lieu chaleureux, valorisant et simple d’accès après une journée de bureau. Amarrée à quai fixe au 52 quai du Point du Jour à Boulogne-Billancourt, la péniche Florentine sur Seine offre 320 m² intérieurs en deux salles fermées et 250 m² de terrasse sur quai pour célébrer vos réussites au bord de l’eau.",
+      "sections": [
+        {
+          "heading": "Prise de parole et cocktail dînatoire jusqu’à 180 collaborateurs",
+          "paragraphs": [
+            "Une soirée de fin d’année ou de vœux commence souvent par un mot de la direction avant de laisser place aux échanges informels. Grâce à ses deux salles fermées totalisant 320 m² et sa sonorisation complète, Florentine sur Seine permet d’accueillir jusqu’à 100 personnes en format conférence, jusqu’à 80 personnes en dîner assis ou jusqu’à 180 personnes en cocktail dînatoire (capacités non cumulables, selon l’aménagement retenu).",
+            "La salle principale vitrée et lumineuse offre un panorama direct sur la Seine pour le discours et le cocktail, tandis que la salle en cale sonorisée permet de lancer la soirée dansante sans interrompre les conversations à l’étage."
+          ]
+        },
+        {
+          "heading": "Traiteur libre, cuisine avec extraction et bar sur mesure",
+          "paragraphs": [
+            "Proposée en location sèche à partir de 1 500 € TTC sur devis, la péniche dispose d’une cuisine équipée avec extraction professionnelle et d’un comptoir de bar. Vous pouvez ainsi faire intervenir le traiteur de votre choix sans droit de bouchon, ou demander sur devis une formule clé en main incluant boissons, bar à cocktails, DJ, personnel de service et sécurité.",
+            "Cette souplesse vous permet d’adapter précisément la réception au budget et à la culture de votre entreprise."
+          ]
+        },
+        {
+          "heading": "À quai fixe à Boulogne-Billancourt, avec parking privé de 25 places",
+          "paragraphs": [
+            "Contrairement à une croisière qui impose un horaire d’embarquement strict, le maintien à quai fixe permet à chaque collaborateur d’arriver et de repartir librement. Le métro Marcel Sembat (ligne 9) et le parking privé de 25 places devant le bateau facilitent l’accès depuis Boulogne-Billancourt, Issy-les-Moulineaux et Paris 15e ou 16e.",
+            "Découvrez nos configurations sur <a href=\"/seminaire-soiree-entreprise-boulogne.html\">Séminaire &amp; Soirée d’entreprise à Boulogne</a> et demandez votre devis sur <a href=\"/privatisation.html\">Privatisation</a>."
+          ]
+        }
+      ],
+      "internalLinks": [
+        "/seminaire-soiree-entreprise-boulogne.html",
+        "/privatisation.html"
+      ],
+      "cta": {
+        "type": "devis",
+        "text": "Demander un devis pour votre soirée d’entreprise",
+        "href": "/seminaire-soiree-entreprise-boulogne.html"
+      },
+      "privateNotes": {
+        "sources": [
+          "Données confirmées Florentine sur Seine (52 quai du Point du Jour 92100 Boulogne-Billancourt, quai fixe, 320 m² en 2 salles fermées, terrasse 250 m², parking 25 places, conférence 100 / cocktail 180 / dîner 80, dès 1 500 € TTC sur devis)."
+        ],
+        "toVerify": []
+      },
+      "status": "brouillon",
+      "createdAt": "2026-10-27T10:47:17.005Z",
+      "validatedAt": null,
+      "publishedAt": null,
+      "publicUrl": null
     }
   ],
   "logs": [
+    {
+      "id": "log-1793098043208-fxvl",
+      "timestamp": "2026-10-27T10:47:23.209Z",
+      "type": "EMAIL_ENVOYE",
+      "summary": "E-mail quotidien envoyé à stevenohayon@live.com (3 brouillons)",
+      "dateISO": "2026-10-27",
+      "recipient": "stevenohayon@live.com",
+      "sentVia": "Apple Mail (macOS)",
+      "draftIds": [
+        "draft-20261027-1",
+        "draft-20261027-2",
+        "draft-20261027-3"
+      ]
+    },
     {
       "id": "log-1793021695427",
       "timestamp": "2026-10-26T13:34:55.427Z",
