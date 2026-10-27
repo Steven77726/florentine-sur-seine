@@ -453,22 +453,46 @@
       render();
     }
 
+    function renderCard(a) {
+      const isDraft = a.status !== 'publié';
+      const pubDateISO = (a.publishedAt || a.createdAt || '').slice(0, 10);
+      const dateBadge = pubDateISO ? ' · ' + formatFrenchDate(pubDateISO) : '';
+      const previewBody = `<p><strong>${esc(a.lead)}</strong></p>` + (a.sections || []).map(s => `<h3>${esc(s.heading)}</h3>` + (s.paragraphs || []).map(p => `<p>${p}</p>`).join('')).join('');
+      return `
+      <article class="card">
+        <span class="tag">${esc(a.eyebrow || a.priorityCategory || 'SEO')}${esc(dateBadge)}</span>
+        <h2>${esc(a.h1Title)}</h2>
+        <p class="desc">${esc(a.metaDescription)}</p>
+        <details>
+          <summary>Lire le texte complet</summary>
+          <div class="article-body">${previewBody}</div>
+        </details>
+        ${isDraft
+          ? `<button class="btn-one" type="button" data-id="${esc(a.id)}" ${isBusy ? 'disabled' : ''}>✅ Valider et publier uniquement cet article</button>`
+          : `<a class="btn-link" href="https://florentine-sur-seine.fr/blog/${esc(a.slug)}.html" target="_blank" rel="noopener">✅ En ligne · Voir l'article sur le site ↗</a>`
+        }
+      </article>`;
+    }
+
     function render() {
       if (!storeData) return;
       const drafts = storeData.articles.filter(a => a.status === 'brouillon' || a.status === 'validé_chatgpt_a_synchroniser');
-      const published = storeData.articles.filter(a => a.status === 'publié');
+      const published = storeData.articles
+        .filter(a => a.status === 'publié')
+        .slice()
+        .sort((a, b) => String(b.publishedAt || b.createdAt || '').localeCompare(String(a.publishedAt || a.createdAt || '')));
 
       $('#draftCountTitle').textContent = drafts.length === 0
-        ? 'Tout est publié !'
+        ? 'Lot du jour publié ✅'
         : drafts.length + ' brouillon' + (drafts.length > 1 ? 's' : '') + ' prêt' + (drafts.length > 1 ? 's' : '') + ' à valider';
       $('#draftSub').textContent = drafts.length === 0
-        ? 'Les 3 prochains articles arriveront demain matin à 09h00.'
+        ? 'Les 3 articles du jour sont en ligne ci-dessous. Prochain lot demain à 09h00.'
         : 'Mariages · Anniversaires & Bar-Mitsva · Entreprises';
 
       const btnLabel = drafts.length <= 1
         ? '✅ VALIDER ET PUBLIER L’ARTICLE'
         : '✅ TOUT VALIDER ET PUBLIER (' + drafts.length + ' ARTICLES)';
-      $('#publishAllTop').textContent = isBusy ? '⏳ Publication en direct sur le site…' : btnLabel;
+      $('#publishAllTop').textContent = isBusy ? '⏳ Publication en direct sur le site…' : (drafts.length === 0 ? '✅ TOUS LES ARTICLES DU JOUR SONT PUBLIÉS' : btnLabel);
       $('#publishAllBottom').textContent = isBusy ? '⏳ Publication en direct sur le site…' : btnLabel;
       $('#publishAllTop').disabled = isBusy || drafts.length === 0;
       $('#publishAllBottom').disabled = isBusy || drafts.length === 0;
@@ -481,28 +505,18 @@
 
       const list = currentTab === 'drafts' ? drafts : published;
       if (list.length === 0) {
-        $('#articlesList').innerHTML = `<div class="card"><h2>Vous êtes à jour 👌</h2><p class="desc">Aucun brouillon en attente de validation.</p></div>`;
+        const latestThree = published.slice(0, 3);
+        $('#articlesList').innerHTML = `
+          <div class="card" style="border-color: rgba(87, 209, 99, 0.5); background: rgba(35, 179, 58, 0.14);">
+            <h2>✅ Les 3 articles du jour sont déjà en ligne !</h2>
+            <p class="desc" style="margin-bottom:0;">Retrouvez ci-dessous les 3 derniers articles validés et publiés aujourd’hui :</p>
+          </div>
+          ${latestThree.map(renderCard).join('')}
+        `;
         return;
       }
 
-      $('#articlesList').innerHTML = list.map(a => {
-        const isDraft = a.status !== 'publié';
-        const previewBody = `<p><strong>${esc(a.lead)}</strong></p>` + (a.sections || []).map(s => `<h3>${esc(s.heading)}</h3>` + (s.paragraphs || []).map(p => `<p>${p}</p>`).join('')).join('');
-        return `
-        <article class="card">
-          <span class="tag">${esc(a.eyebrow || a.priorityCategory || 'SEO')}</span>
-          <h2>${esc(a.h1Title)}</h2>
-          <p class="desc">${esc(a.metaDescription)}</p>
-          <details>
-            <summary>Lire le texte complet</summary>
-            <div class="article-body">${previewBody}</div>
-          </details>
-          ${isDraft
-            ? `<button class="btn-one" type="button" data-id="${esc(a.id)}" ${isBusy ? 'disabled' : ''}>✅ Valider et publier uniquement cet article</button>`
-            : `<a class="btn-link" href="https://florentine-sur-seine.fr/blog/${esc(a.slug)}.html" target="_blank" rel="noopener">Voir l'article en ligne sur le site ↗</a>`
-          }
-        </article>`;
-      }).join('');
+      $('#articlesList').innerHTML = list.map(renderCard).join('');
 
       document.querySelectorAll('[data-id]').forEach(btn => {
         btn.onclick = () => publishBatch([btn.dataset.id]);
