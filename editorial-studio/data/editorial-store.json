@@ -1002,11 +1002,11 @@
         ],
         "toVerify": []
       },
-      "status": "brouillon",
+      "status": "publié",
       "createdAt": "2026-10-28T08:08:51.790Z",
-      "validatedAt": null,
-      "publishedAt": null,
-      "publicUrl": null
+      "validatedAt": "2026-10-28T09:30:26.094Z",
+      "publishedAt": "2026-10-28T09:30:26.094Z",
+      "publicUrl": "https://florentine-sur-seine.fr/blog/ceremonie-laique-mariage-peniche-boulogne-seine.html"
     },
     {
       "id": "draft-20261028-2",
@@ -1069,11 +1069,11 @@
         ],
         "toVerify": []
       },
-      "status": "brouillon",
+      "status": "publié",
       "createdAt": "2026-10-28T08:08:51.790Z",
-      "validatedAt": null,
-      "publishedAt": null,
-      "publicUrl": null
+      "validatedAt": "2026-10-28T09:30:26.094Z",
+      "publishedAt": "2026-10-28T09:30:26.094Z",
+      "publicUrl": "https://florentine-sur-seine.fr/blog/bar-mitsva-anniversaire-festif-peniche-boulogne-seine.html"
     },
     {
       "id": "draft-20261028-3",
@@ -1135,14 +1135,20 @@
         ],
         "toVerify": []
       },
-      "status": "brouillon",
+      "status": "publié",
       "createdAt": "2026-10-28T08:08:51.790Z",
-      "validatedAt": null,
-      "publishedAt": null,
-      "publicUrl": null
+      "validatedAt": "2026-10-28T09:30:26.094Z",
+      "publishedAt": "2026-10-28T09:30:26.094Z",
+      "publicUrl": "https://florentine-sur-seine.fr/blog/cocktail-dinatoire-entreprise-networking-peniche-boulogne.html"
     }
   ],
   "logs": [
+    {
+      "id": "log-1793179826095",
+      "timestamp": "2026-10-28T09:30:26.094Z",
+      "type": "PUBLICATION_IPHONE_1CLIC",
+      "summary": "3 article(s) validé(s) et publié(s) en 1 clic depuis l’application iPhone."
+    },
     {
       "id": "log-1793174948541-ucdm",
       "timestamp": "2026-10-28T08:09:08.542Z",
