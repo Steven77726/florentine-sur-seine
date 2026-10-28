@@ -459,7 +459,7 @@
       const dateBadge = pubDateISO ? ' · ' + formatFrenchDate(pubDateISO) : '';
       const previewBody = `<p><strong>${esc(a.lead)}</strong></p>` + (a.sections || []).map(s => `<h3>${esc(s.heading)}</h3>` + (s.paragraphs || []).map(p => `<p>${p}</p>`).join('')).join('');
       return `
-      <article class="card">
+      <article class="card" id="article-${esc(a.id)}">
         <span class="tag">${esc(a.eyebrow || a.priorityCategory || 'SEO')}${esc(dateBadge)}</span>
         <h2>${esc(a.h1Title)}</h2>
         <p class="desc">${esc(a.metaDescription)}</p>
