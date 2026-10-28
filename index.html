@@ -201,6 +201,12 @@
     @media (max-width: 640px) { .site-legal-footer { padding: 20px 24px calc(8rem + env(safe-area-inset-bottom)); } }
   </style>
   <link rel="stylesheet" href="/site.css">
+  <style>
+    .actions .privatisation-action { grid-column: 1 / -1; }
+    @media (max-width: 640px) {
+      .page, .site-legal-footer { padding-bottom: calc(10rem + env(safe-area-inset-bottom)); }
+    }
+  </style>
   <link rel="canonical" href="https://florentine-sur-seine.fr/">
   <script type="application/ld+json">
   {
@@ -319,7 +325,7 @@
         <span>52 quai du Point du Jour</span>
         <span>92100 Boulogne-Billancourt</span>
       </a>
-    <nav class="actions" aria-label="Réservation et contact">
+    <nav class="actions" aria-label="Réservation, contact et privatisation">
       <a class="action" id="reservation" href="https://shotgun.live/events/florentine-sur-seine-opening" target="_blank" rel="noopener noreferrer" title="Réserver sur Shotgun" aria-label="Réserver sur Shotgun">
         <span>Réserver</span>
       </a>
@@ -327,6 +333,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.5 8.5 0 0 1-12.8 7.4L3 21l1.7-5.1A8.5 8.5 0 1 1 21 11.5Z"/><path d="M8 7.5c-.5 1-.2 3.5 2 5.7 2.2 2.2 4.6 2.5 5.7 2l.6-1.8-2-1-.8 1c-1.2-.6-2.3-1.7-2.9-2.9l1-.8-1-2Z"/></svg>
         WhatsApp
       </a>
+      <a class="action secondary privatisation-action" id="privatiser" href="/privatisation.html#demander-devis">Privatiser</a>
     </nav>
     </section>
     <a class="instagram-join" href="https://www.instagram.com/florentine_sur_seine?stkn=MWxsM245engzbHlrOA%3D%3D&amp;utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Rejoignez-nous sur Instagram : Florentine sur Seine">
