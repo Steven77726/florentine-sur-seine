@@ -1198,11 +1198,11 @@
         ],
         "toVerify": []
       },
-      "status": "brouillon",
+      "status": "publié",
       "createdAt": "2026-10-29T09:00:00.000Z",
-      "validatedAt": null,
-      "publishedAt": null,
-      "publicUrl": null
+      "validatedAt": "2026-10-29T10:16:32.438Z",
+      "publishedAt": "2026-10-29T10:16:32.438Z",
+      "publicUrl": "https://florentine-sur-seine.fr/blog/reception-apres-mairie-mariage-boulogne-peniche-seine.html"
     },
     {
       "id": "draft-20261029-2",
@@ -1261,11 +1261,11 @@
         ],
         "toVerify": []
       },
-      "status": "brouillon",
+      "status": "publié",
       "createdAt": "2026-10-29T09:00:00.000Z",
-      "validatedAt": null,
-      "publishedAt": null,
-      "publicUrl": null
+      "validatedAt": "2026-10-29T10:16:32.438Z",
+      "publishedAt": "2026-10-29T10:16:32.438Z",
+      "publicUrl": "https://florentine-sur-seine.fr/blog/fete-bar-mitsva-anniversaire-peniche-boulogne-seine.html"
     },
     {
       "id": "draft-20261029-3",
@@ -1324,14 +1324,20 @@
         ],
         "toVerify": []
       },
-      "status": "brouillon",
+      "status": "publié",
       "createdAt": "2026-10-29T09:00:00.000Z",
-      "validatedAt": null,
-      "publishedAt": null,
-      "publicUrl": null
+      "validatedAt": "2026-10-29T10:16:32.438Z",
+      "publishedAt": "2026-10-29T10:16:32.438Z",
+      "publicUrl": "https://florentine-sur-seine.fr/blog/journee-etude-cohesion-equipe-peniche-boulogne-billancourt.html"
     }
   ],
   "logs": [
+    {
+      "id": "log-1793268992439",
+      "timestamp": "2026-10-29T10:16:32.438Z",
+      "type": "PUBLICATION_IPHONE_1CLIC",
+      "summary": "3 article(s) validé(s) et publié(s) en 1 clic depuis l’application iPhone."
+    },
     {
       "id": "log-1793267692529-rovm",
       "timestamp": "2026-10-29T09:54:52.529Z",
