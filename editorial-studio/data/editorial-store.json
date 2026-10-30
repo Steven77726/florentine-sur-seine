@@ -1387,11 +1387,11 @@
         ],
         "toVerify": []
       },
-      "status": "brouillon",
+      "status": "publié",
       "createdAt": "2026-10-30T09:00:00.000Z",
-      "validatedAt": null,
-      "publishedAt": null,
-      "publicUrl": null
+      "validatedAt": "2026-10-30T09:34:48.880Z",
+      "publishedAt": "2026-10-30T09:34:48.880Z",
+      "publicUrl": "https://florentine-sur-seine.fr/blog/brunch-lendemain-mariage-peniche-boulogne-seine.html"
     },
     {
       "id": "draft-20261030-2",
@@ -1450,11 +1450,11 @@
         ],
         "toVerify": []
       },
-      "status": "brouillon",
+      "status": "publié",
       "createdAt": "2026-10-30T09:00:00.000Z",
-      "validatedAt": null,
-      "publishedAt": null,
-      "publicUrl": null
+      "validatedAt": "2026-10-30T09:34:48.880Z",
+      "publishedAt": "2026-10-30T09:34:48.880Z",
+      "publicUrl": "https://florentine-sur-seine.fr/blog/anniversaire-surprise-peniche-boulogne-billancourt.html"
     },
     {
       "id": "draft-20261030-3",
@@ -1513,14 +1513,20 @@
         ],
         "toVerify": []
       },
-      "status": "brouillon",
+      "status": "publié",
       "createdAt": "2026-10-30T09:00:00.000Z",
-      "validatedAt": null,
-      "publishedAt": null,
-      "publicUrl": null
+      "validatedAt": "2026-10-30T09:34:48.880Z",
+      "publishedAt": "2026-10-30T09:34:48.880Z",
+      "publicUrl": "https://florentine-sur-seine.fr/blog/anniversaire-entreprise-fete-succes-peniche-boulogne.html"
     }
   ],
   "logs": [
+    {
+      "id": "log-1793352888881",
+      "timestamp": "2026-10-30T09:34:48.880Z",
+      "type": "PUBLICATION_IPHONE_1CLIC",
+      "summary": "3 article(s) validé(s) et publié(s) en 1 clic depuis l’application iPhone."
+    },
     {
       "id": "log-1793351179633-cfxj",
       "timestamp": "2026-10-30T09:06:19.633Z",
