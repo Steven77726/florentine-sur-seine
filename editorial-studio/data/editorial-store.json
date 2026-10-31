@@ -1518,9 +1518,70 @@
       "validatedAt": "2026-10-30T09:34:48.880Z",
       "publishedAt": "2026-10-30T09:34:48.880Z",
       "publicUrl": "https://florentine-sur-seine.fr/blog/anniversaire-entreprise-fete-succes-peniche-boulogne.html"
+    },
+    {
+      "id": "draft-20261031-1",
+      "priorityCategory": "2. Anniversaires & Fêtes privées",
+      "topicAndIntent": "Privatiser une péniche à Boulogne-Billancourt pour fêter ses 60 ans ou un départ à la retraite entouré de sa famille et de ses amis.",
+      "targetAudience": "Particuliers et familles souhaitant organiser un anniversaire de 60 ans ou une fête de départ à la retraite en bord de Seine (92).",
+      "primaryKeyword": "anniversaire 60 ans départ retraite péniche Boulogne",
+      "seoTitle": "Fêter ses 60 ans ou son départ à la retraite sur péniche à Boulogne",
+      "h1Title": "Fêter ses 60 ans ou un départ à la retraite à Boulogne-Billancourt sur une péniche à quai",
+      "eyebrow": "Anniversaires & Fêtes",
+      "slug": "anniversaire-60-ans-depart-retraite-peniche-boulogne",
+      "metaDescription": "Organisez vos 60 ans ou votre fête de départ à la retraite sur la péniche Florentine à Boulogne : salle vitrée sur Seine, traiteur libre, terrasse et parking.",
+      "lead": "Célébrer ses 60 ans ou marquer un départ à la retraite est l’occasion de rassembler plusieurs générations ainsi que des amis et collègues de longue date. Amarrée au 52 quai du Point du Jour à Boulogne-Billancourt, la péniche Florentine sur Seine offre un cadre lumineux et convivial à quai fixe.",
+      "sections": [
+        {
+          "heading": "Dîner assis jusqu’à 80 personnes ou cocktail jusqu’à 180 personnes",
+          "paragraphs": [
+            "Avec 320 m² intérieurs répartis en deux salles fermées et une terrasse sur quai de 250 m², vous choisissez librement entre un repas assis face à la Seine (jusqu’à 80 personnes) ou un grand cocktail festif (jusqu’à 180 personnes, capacités non cumulables).",
+            "La sonorisation complète permet de diffuser vos discours, hommages et sélections musicales tout au long de la réception."
+          ]
+        },
+        {
+          "heading": "Location sèche dès 1 500 € TTC, libre de traiteur et stationnement privé",
+          "paragraphs": [
+            "La cuisine équipée avec extraction permet de faire appel au traiteur de votre choix sans droit de bouchon. Le parking privé de 25 places devant le bateau et l’absence de navigation facilitent l’accès de tous vos proches.",
+            "Consultez <a href=\"/anniversaire-fete-peniche.html\">Anniversaires &amp; Fêtes sur péniche</a> et demandez votre proposition sur <a href=\"/privatisation.html\">Privatisation</a>."
+          ]
+        }
+      ],
+      "internalLinks": [
+        "/anniversaire-fete-peniche.html",
+        "/privatisation.html"
+      ],
+      "cta": {
+        "type": "devis",
+        "text": "Demander un devis pour votre réception",
+        "href": "/anniversaire-fete-peniche.html"
+      },
+      "privateNotes": {
+        "sources": [
+          "Données confirmées Florentine sur Seine."
+        ],
+        "toVerify": []
+      },
+      "status": "brouillon",
+      "createdAt": "2026-10-31T08:02:51.068Z",
+      "validatedAt": null,
+      "publishedAt": null,
+      "publicUrl": null
     }
   ],
   "logs": [
+    {
+      "id": "log-1793433775205-n3vi",
+      "timestamp": "2026-10-31T08:02:55.206Z",
+      "type": "EMAIL_ENVOYE",
+      "summary": "E-mail quotidien envoyé à stevenohayon@live.com (1 brouillons)",
+      "dateISO": "2026-10-31",
+      "recipient": "stevenohayon@live.com",
+      "sentVia": "Apple Mail (macOS)",
+      "draftIds": [
+        "draft-20261031-1"
+      ]
+    },
     {
       "id": "log-1793352888881",
       "timestamp": "2026-10-30T09:34:48.880Z",
