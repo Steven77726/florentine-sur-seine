@@ -1564,8 +1564,8 @@
       },
       "status": "publié",
       "createdAt": "2026-10-31T08:02:51.068Z",
-      "validatedAt": "2026-11-01T08:51:04.349Z",
-      "publishedAt": "2026-11-01T08:51:04.349Z",
+      "validatedAt": "2026-11-01T08:51:10.596Z",
+      "publishedAt": "2026-11-01T08:51:10.596Z",
       "publicUrl": "https://florentine-sur-seine.fr/blog/anniversaire-60-ans-depart-retraite-peniche-boulogne.html"
     },
     {
@@ -1757,6 +1757,12 @@
     }
   ],
   "logs": [
+    {
+      "id": "log-1793523070596",
+      "timestamp": "2026-11-01T08:51:10.596Z",
+      "type": "PUBLICATION_IPHONE_1CLIC",
+      "summary": "1 article(s) validé(s) et publié(s) en 1 clic depuis l’application iPhone."
+    },
     {
       "id": "log-1793523064350",
       "timestamp": "2026-11-01T08:51:04.349Z",
