@@ -1758,6 +1758,18 @@
   ],
   "logs": [
     {
+      "id": "log-1793612540858-h9en",
+      "timestamp": "2026-11-02T09:42:20.858Z",
+      "type": "EMAIL_ENVOYE",
+      "summary": "E-mail quotidien envoyé à stevenohayon@live.com (1 brouillons)",
+      "dateISO": "2026-11-02",
+      "recipient": "stevenohayon@live.com",
+      "sentVia": "Apple Mail (macOS)",
+      "draftIds": [
+        "draft-20261031-1"
+      ]
+    },
+    {
       "id": "log-1793609108174",
       "timestamp": "2026-11-02T08:45:08.174Z",
       "type": "PUBLICATION_IPHONE_1CLIC",
