@@ -1939,11 +1939,11 @@
         ],
         "toVerify": []
       },
-      "status": "brouillon",
+      "status": "publié",
       "createdAt": "2026-11-03T09:25:46.486Z",
-      "validatedAt": null,
-      "publishedAt": null,
-      "publicUrl": null
+      "validatedAt": "2026-11-03T09:47:57.227Z",
+      "publishedAt": "2026-11-03T09:47:57.227Z",
+      "publicUrl": "https://florentine-sur-seine.fr/blog/mariage-printemps-ete-terrasse-peniche-boulogne.html"
     },
     {
       "id": "draft-20261103-2",
@@ -1999,11 +1999,11 @@
         ],
         "toVerify": []
       },
-      "status": "brouillon",
+      "status": "publié",
       "createdAt": "2026-11-03T09:25:46.490Z",
-      "validatedAt": null,
-      "publishedAt": null,
-      "publicUrl": null
+      "validatedAt": "2026-11-03T09:47:57.227Z",
+      "publishedAt": "2026-11-03T09:47:57.227Z",
+      "publicUrl": "https://florentine-sur-seine.fr/blog/anniversaire-20-ans-25-ans-peniche-boulogne-seine.html"
     },
     {
       "id": "draft-20261103-3",
@@ -2058,14 +2058,20 @@
         ],
         "toVerify": []
       },
-      "status": "brouillon",
+      "status": "publié",
       "createdAt": "2026-11-03T09:25:46.490Z",
-      "validatedAt": null,
-      "publishedAt": null,
-      "publicUrl": null
+      "validatedAt": "2026-11-03T09:47:57.227Z",
+      "publishedAt": "2026-11-03T09:47:57.227Z",
+      "publicUrl": "https://florentine-sur-seine.fr/blog/petit-dejeuner-entreprise-conference-peniche-boulogne.html"
     }
   ],
   "logs": [
+    {
+      "id": "log-1793699277228",
+      "timestamp": "2026-11-03T09:47:57.227Z",
+      "type": "PUBLICATION_IPHONE_1CLIC",
+      "summary": "3 article(s) validé(s) et publié(s) en 1 clic depuis l’application iPhone."
+    },
     {
       "id": "log-1793697966887-tvor",
       "timestamp": "2026-11-03T09:26:06.887Z",
