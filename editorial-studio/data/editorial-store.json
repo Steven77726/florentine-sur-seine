@@ -3260,11 +3260,11 @@
         ],
         "toVerify": []
       },
-      "status": "brouillon",
+      "status": "publié",
       "createdAt": "2026-11-12T09:30:00.000Z",
-      "validatedAt": null,
-      "publishedAt": null,
-      "publicUrl": null
+      "validatedAt": "2026-11-12T11:36:24.487Z",
+      "publishedAt": "2026-11-12T11:36:24.487Z",
+      "publicUrl": "https://florentine-sur-seine.fr/blog/mariage-boheme-chic-peniche-boulogne-seine.html"
     },
     {
       "id": "draft-20261112-2",
@@ -3316,11 +3316,11 @@
         ],
         "toVerify": []
       },
-      "status": "brouillon",
+      "status": "publié",
       "createdAt": "2026-11-12T09:31:00.000Z",
-      "validatedAt": null,
-      "publishedAt": null,
-      "publicUrl": null
+      "validatedAt": "2026-11-12T11:36:24.487Z",
+      "publishedAt": "2026-11-12T11:36:24.487Z",
+      "publicUrl": "https://florentine-sur-seine.fr/blog/bar-mitsva-samedi-soir-apres-chabbat-peniche-boulogne.html"
     },
     {
       "id": "draft-20261112-3",
@@ -3372,14 +3372,20 @@
         ],
         "toVerify": []
       },
-      "status": "brouillon",
+      "status": "publié",
       "createdAt": "2026-11-12T09:32:00.000Z",
-      "validatedAt": null,
-      "publishedAt": null,
-      "publicUrl": null
+      "validatedAt": "2026-11-12T11:36:24.487Z",
+      "publishedAt": "2026-11-12T11:36:24.487Z",
+      "publicUrl": "https://florentine-sur-seine.fr/blog/diner-affaires-reception-vip-peniche-boulogne.html"
     }
   ],
   "logs": [
+    {
+      "id": "log-1794483384489",
+      "timestamp": "2026-11-12T11:36:24.487Z",
+      "type": "PUBLICATION_IPHONE_1CLIC",
+      "summary": "3 article(s) validé(s) et publié(s) en 1 clic depuis l’application iPhone."
+    },
     {
       "id": "log-1794478744388-3qdc",
       "timestamp": "2026-11-12T10:19:04.388Z",
