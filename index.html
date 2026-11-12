@@ -201,6 +201,12 @@
     @media (max-width: 640px) { .site-legal-footer { padding: 20px 24px calc(8rem + env(safe-area-inset-bottom)); } }
   </style>
   <link rel="stylesheet" href="/site.css">
+  <style>
+    .actions .privatisation-action { grid-column: 1 / -1; }
+    @media (max-width: 640px) {
+      .page, .site-legal-footer { padding-bottom: calc(10rem + env(safe-area-inset-bottom)); }
+    }
+  </style>
   <link rel="canonical" href="https://florentine-sur-seine.fr/">
   <script type="application/ld+json">
   {
@@ -221,6 +227,7 @@
         "image": "https://florentine-sur-seine.fr/FLO.jpg",
         "description": "Bar festif et péniche événementielle sur la Seine à Boulogne-Billancourt. DJ sets, live music, cocktails, vins fins et dîners festifs sur 2 niveaux avec terrasse fumoir et parking privé.",
         "url": "https://florentine-sur-seine.fr/",
+        "telephone": "+33781660629",
         "priceRange": "€€",
         "address": {
           "@type": "PostalAddress",
@@ -318,11 +325,15 @@
         <span>52 quai du Point du Jour</span>
         <span>92100 Boulogne-Billancourt</span>
       </a>
-    <nav class="actions" aria-label="Réservation et privatisation">
+    <nav class="actions" aria-label="Réservation, contact et privatisation">
       <a class="action" id="reservation" role="link" aria-disabled="true" title="Réserver sur Shotgun" aria-label="Réserver sur Shotgun">
         <span>Réserver</span>
       </a>
-      <a class="action secondary" id="privatiser" href="/privatisation.html#demander-devis">Privatiser</a>
+      <a class="action secondary" id="whatsapp" href="https://wa.me/33781660629" target="_blank" rel="noopener noreferrer" title="Contacter Florentine sur WhatsApp (07 81 66 06 29)" aria-label="Contacter Florentine sur WhatsApp au 07 81 66 06 29">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.5 8.5 0 0 1-12.8 7.4L3 21l1.7-5.1A8.5 8.5 0 1 1 21 11.5Z"/><path d="M8 7.5c-.5 1-.2 3.5 2 5.7 2.2 2.2 4.6 2.5 5.7 2l.6-1.8-2-1-.8 1c-1.2-.6-2.3-1.7-2.9-2.9l1-.8-1-2Z"/></svg>
+        WhatsApp
+      </a>
+      <a class="action secondary privatisation-action" id="privatiser" href="/privatisation.html#demander-devis">Privatiser</a>
     </nav>
     </section>
     <a class="instagram-join" href="https://www.instagram.com/florentine_sur_seine?stkn=MWxsM245engzbHlrOA%3D%3D&amp;utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Rejoignez-nous sur Instagram : Florentine sur Seine">
@@ -494,10 +505,9 @@
     detailsDialog.addEventListener('close', () => menuButtons.forEach((button) => button.setAttribute('aria-expanded', 'false')));
 
     // Set the organiser's destinations when supplied; do not send visitors to unrelated accounts.
-    const LINKS = { shotgun: null };
+    const LINKS = { shotgun: null, whatsapp: '33781660629' };
     function activateLink(id, destination, label) {
       const link = document.getElementById(id);
-      if (!link) return;
       link.href = destination;
       link.target = '_blank';
       link.rel = 'noopener noreferrer';
@@ -511,6 +521,12 @@
       const url = new URL(LINKS.shotgun);
       if (url.protocol === 'https:' && (url.hostname === 'shotgun.live' || url.hostname.endsWith('.shotgun.live'))) {
         activateLink('reservation', url.href, 'Réserver sur Shotgun');
+      }
+    }
+    if (LINKS.whatsapp) {
+      const digits = LINKS.whatsapp.replace(/\D/g, '');
+      if (/^[1-9]\d{7,14}$/.test(digits)) {
+        activateLink('whatsapp', 'https://wa.me/' + digits, 'Contacter Florentine sur WhatsApp (07 81 66 06 29)');
       }
     }
   </script>
