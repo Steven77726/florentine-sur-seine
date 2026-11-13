@@ -3549,6 +3549,20 @@
   ],
   "logs": [
     {
+      "id": "log-1794560659454-wv4w",
+      "timestamp": "2026-11-13T09:04:19.454Z",
+      "type": "EMAIL_ENVOYE",
+      "summary": "E-mail quotidien envoyé à stevenohayon@live.com (3 brouillons)",
+      "dateISO": "2026-11-13",
+      "recipient": "stevenohayon@live.com",
+      "sentVia": "Apple Mail (macOS)",
+      "draftIds": [
+        "draft-20261113-1",
+        "draft-20261113-2",
+        "draft-20261113-3"
+      ]
+    },
+    {
       "id": "log-1794556874333-s1pp",
       "timestamp": "2026-11-13T08:01:14.333Z",
       "type": "GENERATION_IGNOREE",
