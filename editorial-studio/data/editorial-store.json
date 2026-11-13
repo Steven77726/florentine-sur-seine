@@ -3428,11 +3428,11 @@
         ],
         "toVerify": []
       },
-      "status": "brouillon",
+      "status": "publié",
       "createdAt": "2026-11-13T09:03:37.589Z",
-      "validatedAt": null,
-      "publishedAt": null,
-      "publicUrl": null
+      "validatedAt": "2026-11-13T11:25:50.877Z",
+      "publishedAt": "2026-11-13T11:25:50.877Z",
+      "publicUrl": "https://florentine-sur-seine.fr/blog/lieu-mariage-parking-prive-boulogne-peniche.html"
     },
     {
       "id": "draft-20261113-2",
@@ -3484,11 +3484,11 @@
         ],
         "toVerify": []
       },
-      "status": "brouillon",
+      "status": "publié",
       "createdAt": "2026-11-13T09:03:37.593Z",
-      "validatedAt": null,
-      "publishedAt": null,
-      "publicUrl": null
+      "validatedAt": "2026-11-13T11:25:50.877Z",
+      "publishedAt": "2026-11-13T11:25:50.877Z",
+      "publicUrl": "https://florentine-sur-seine.fr/blog/cocktail-dinatoire-bar-mitsva-peniche-boulogne.html"
     },
     {
       "id": "draft-20261113-3",
@@ -3540,14 +3540,20 @@
         ],
         "toVerify": []
       },
-      "status": "brouillon",
+      "status": "publié",
       "createdAt": "2026-11-13T09:03:37.593Z",
-      "validatedAt": null,
-      "publishedAt": null,
-      "publicUrl": null
+      "validatedAt": "2026-11-13T11:25:50.877Z",
+      "publishedAt": "2026-11-13T11:25:50.877Z",
+      "publicUrl": "https://florentine-sur-seine.fr/blog/inauguration-entreprise-nouveaux-locaux-peniche-boulogne.html"
     }
   ],
   "logs": [
+    {
+      "id": "log-1794569150879",
+      "timestamp": "2026-11-13T11:25:50.877Z",
+      "type": "PUBLICATION_IPHONE_1CLIC",
+      "summary": "3 article(s) validé(s) et publié(s) en 1 clic depuis l’application iPhone."
+    },
     {
       "id": "log-1794560659454-wv4w",
       "timestamp": "2026-11-13T09:04:19.454Z",
