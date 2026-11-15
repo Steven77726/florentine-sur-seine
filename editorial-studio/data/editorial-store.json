@@ -3796,11 +3796,11 @@
         ],
         "toVerify": []
       },
-      "status": "brouillon",
+      "status": "publié",
       "createdAt": "2026-11-15T08:15:00.000Z",
-      "validatedAt": null,
-      "publishedAt": null,
-      "publicUrl": null
+      "validatedAt": "2026-11-15T11:15:55.129Z",
+      "publishedAt": "2026-11-15T11:15:55.129Z",
+      "publicUrl": "https://florentine-sur-seine.fr/blog/mariage-interculturel-peniche-boulogne-seine.html"
     },
     {
       "id": "draft-20261115-2",
@@ -3860,11 +3860,11 @@
         ],
         "toVerify": []
       },
-      "status": "brouillon",
+      "status": "publié",
       "createdAt": "2026-11-15T08:20:00.000Z",
-      "validatedAt": null,
-      "publishedAt": null,
-      "publicUrl": null
+      "validatedAt": "2026-11-15T11:15:55.129Z",
+      "publishedAt": "2026-11-15T11:15:55.129Z",
+      "publicUrl": "https://florentine-sur-seine.fr/blog/bar-mitsva-jeudi-matin-tefilline-peniche-boulogne.html"
     },
     {
       "id": "draft-20261115-3",
@@ -3924,14 +3924,20 @@
         ],
         "toVerify": []
       },
-      "status": "brouillon",
+      "status": "publié",
       "createdAt": "2026-11-15T08:25:00.000Z",
-      "validatedAt": null,
-      "publishedAt": null,
-      "publicUrl": null
+      "validatedAt": "2026-11-15T11:15:55.129Z",
+      "publishedAt": "2026-11-15T11:15:55.129Z",
+      "publicUrl": "https://florentine-sur-seine.fr/blog/conference-de-presse-peniche-boulogne.html"
     }
   ],
   "logs": [
+    {
+      "id": "log-1794741355130",
+      "timestamp": "2026-11-15T11:15:55.129Z",
+      "type": "PUBLICATION_IPHONE_1CLIC",
+      "summary": "3 article(s) validé(s) et publié(s) en 1 clic depuis l’application iPhone."
+    },
     {
       "id": "log-1794737773340-q0gm",
       "timestamp": "2026-11-15T10:16:13.341Z",
