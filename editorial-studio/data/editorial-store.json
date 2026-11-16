@@ -3987,11 +3987,11 @@
         ],
         "toVerify": []
       },
-      "status": "brouillon",
+      "status": "publié",
       "createdAt": "2026-11-16T09:24:43.855Z",
-      "validatedAt": null,
-      "publishedAt": null,
-      "publicUrl": null
+      "validatedAt": "2026-11-16T15:04:48.664Z",
+      "publishedAt": "2026-11-16T15:04:48.664Z",
+      "publicUrl": "https://florentine-sur-seine.fr/blog/mariage-coucher-du-soleil-peniche-boulogne.html"
     },
     {
       "id": "draft-20261116-2",
@@ -4050,11 +4050,11 @@
         ],
         "toVerify": []
       },
-      "status": "brouillon",
+      "status": "publié",
       "createdAt": "2026-11-16T09:24:43.860Z",
-      "validatedAt": null,
-      "publishedAt": null,
-      "publicUrl": null
+      "validatedAt": "2026-11-16T15:04:48.664Z",
+      "publishedAt": "2026-11-16T15:04:48.664Z",
+      "publicUrl": "https://florentine-sur-seine.fr/blog/anniversaire-a-theme-peniche-boulogne-billancourt.html"
     },
     {
       "id": "draft-20261116-3",
@@ -4113,14 +4113,20 @@
         ],
         "toVerify": []
       },
-      "status": "brouillon",
+      "status": "publié",
       "createdAt": "2026-11-16T09:24:43.860Z",
-      "validatedAt": null,
-      "publishedAt": null,
-      "publicUrl": null
+      "validatedAt": "2026-11-16T15:04:48.664Z",
+      "publishedAt": "2026-11-16T15:04:48.664Z",
+      "publicUrl": "https://florentine-sur-seine.fr/blog/showroom-ephemere-peniche-boulogne-billancourt.html"
     }
   ],
   "logs": [
+    {
+      "id": "log-1794841488665",
+      "timestamp": "2026-11-16T15:04:48.664Z",
+      "type": "PUBLICATION_IPHONE_1CLIC",
+      "summary": "3 article(s) validé(s) et publié(s) en 1 clic depuis l’application iPhone."
+    },
     {
       "id": "log-1794821095006-vpc3",
       "timestamp": "2026-11-16T09:24:55.007Z",
