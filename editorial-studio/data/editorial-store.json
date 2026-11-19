@@ -4176,11 +4176,11 @@
         ],
         "toVerify": []
       },
-      "status": "publié",
+      "status": "brouillon",
       "createdAt": "2026-11-17T09:13:32.128Z",
-      "validatedAt": "2026-11-18T08:30:21.235Z",
-      "publishedAt": "2026-11-18T08:30:21.235Z",
-      "publicUrl": "https://florentine-sur-seine.fr/blog/mariage-en-semaine-peniche-boulogne-seine.html"
+      "validatedAt": null,
+      "publishedAt": null,
+      "publicUrl": null
     },
     {
       "id": "draft-20261117-2",
@@ -4239,11 +4239,11 @@
         ],
         "toVerify": []
       },
-      "status": "publié",
+      "status": "brouillon",
       "createdAt": "2026-11-17T09:13:32.128Z",
-      "validatedAt": "2026-11-18T08:30:21.235Z",
-      "publishedAt": "2026-11-18T08:30:21.235Z",
-      "publicUrl": "https://florentine-sur-seine.fr/blog/diner-assis-bar-mitsva-peniche-boulogne.html"
+      "validatedAt": null,
+      "publishedAt": null,
+      "publicUrl": null
     },
     {
       "id": "draft-20261117-3",
@@ -4302,19 +4302,27 @@
         ],
         "toVerify": []
       },
-      "status": "publié",
+      "status": "brouillon",
       "createdAt": "2026-11-17T09:13:32.128Z",
-      "validatedAt": "2026-11-18T08:30:21.235Z",
-      "publishedAt": "2026-11-18T08:30:21.235Z",
-      "publicUrl": "https://florentine-sur-seine.fr/blog/formation-masterclass-entreprise-peniche-boulogne.html"
+      "validatedAt": null,
+      "publishedAt": null,
+      "publicUrl": null
     }
   ],
   "logs": [
     {
-      "id": "log-1794990621237",
-      "timestamp": "2026-11-18T08:30:21.235Z",
-      "type": "PUBLICATION_IPHONE_1CLIC",
-      "summary": "3 article(s) validé(s) et publié(s) en 1 clic depuis l’application iPhone."
+      "id": "log-1795080174436-btxd",
+      "timestamp": "2026-11-19T09:22:54.436Z",
+      "type": "EMAIL_ENVOYE",
+      "summary": "E-mail quotidien envoyé à stevenohayon@live.com (3 brouillons)",
+      "dateISO": "2026-11-19",
+      "recipient": "stevenohayon@live.com",
+      "sentVia": "Apple Mail (macOS)",
+      "draftIds": [
+        "draft-20261117-1",
+        "draft-20261117-2",
+        "draft-20261117-3"
+      ]
     },
     {
       "id": "log-1794990287546-qujw",
