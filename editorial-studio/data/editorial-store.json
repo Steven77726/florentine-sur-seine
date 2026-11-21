@@ -4365,11 +4365,11 @@
         ],
         "toVerify": []
       },
-      "status": "brouillon",
+      "status": "publié",
       "createdAt": "2026-11-19T09:25:00.000Z",
-      "validatedAt": null,
-      "publishedAt": null,
-      "publicUrl": null
+      "validatedAt": "2026-11-21T13:18:17.802Z",
+      "publishedAt": "2026-11-21T13:18:17.802Z",
+      "publicUrl": "https://florentine-sur-seine.fr/blog/mariage-musique-live-dj-peniche-boulogne.html"
     },
     {
       "id": "draft-20261119-2",
@@ -4428,11 +4428,11 @@
         ],
         "toVerify": []
       },
-      "status": "brouillon",
+      "status": "publié",
       "createdAt": "2026-11-19T09:25:00.000Z",
-      "validatedAt": null,
-      "publishedAt": null,
-      "publicUrl": null
+      "validatedAt": "2026-11-21T13:18:17.802Z",
+      "publishedAt": "2026-11-21T13:18:17.802Z",
+      "publicUrl": "https://florentine-sur-seine.fr/blog/anniversaire-en-journee-terrasse-peniche-boulogne.html"
     },
     {
       "id": "draft-20261119-3",
@@ -4491,14 +4491,20 @@
         ],
         "toVerify": []
       },
-      "status": "brouillon",
+      "status": "publié",
       "createdAt": "2026-11-19T09:25:00.000Z",
-      "validatedAt": null,
-      "publishedAt": null,
-      "publicUrl": null
+      "validatedAt": "2026-11-21T13:18:17.802Z",
+      "publishedAt": "2026-11-21T13:18:17.802Z",
+      "publicUrl": "https://florentine-sur-seine.fr/blog/journee-integration-collaborateurs-peniche-boulogne.html"
     }
   ],
   "logs": [
+    {
+      "id": "log-1795267097803",
+      "timestamp": "2026-11-21T13:18:17.802Z",
+      "type": "PUBLICATION_IPHONE_1CLIC",
+      "summary": "3 article(s) validé(s) et publié(s) en 1 clic depuis l’application iPhone."
+    },
     {
       "id": "log-1795163658736-f80y",
       "timestamp": "2026-11-20T08:34:18.739Z",
