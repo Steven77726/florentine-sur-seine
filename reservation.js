@@ -4,6 +4,7 @@
   if (!form) return;
   const date = form.elements.date;
   const money = value => new Intl.NumberFormat('fr-FR', {style:'currency',currency:'EUR',maximumFractionDigits:0}).format(value);
+  const rentalPrice = (value,slot) => { if(!value) return null; const weekday=new Date(value+'T12:00:00').getDay(); const high=weekday>=4&&weekday<=6; return slot==='journee'?(high?2000:1800):(high?2800:2500); };
   const iso = d => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
   const today = new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Paris',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
   date.min = today;
@@ -18,7 +19,7 @@
     const length = new Date(month.getFullYear(),month.getMonth()+1,0).getDate();
     for(let day=1;day<=length;day++) {
       const value=iso(new Date(month.getFullYear(),month.getMonth(),day));
-      const button=document.createElement('button');button.type='button';button.textContent=day;
+      const button=document.createElement('button');button.type='button';const label=document.createElement('span');label.className='calendar-date';label.textContent=day;const price=document.createElement('strong');price.className='calendar-price';price.textContent=money(rentalPrice(value,form.elements.slot.value));button.append(label,price);
       button.disabled=value<today;button.setAttribute('aria-pressed',String(value===date.value));
       button.setAttribute('aria-label',new Date(`${value}T12:00:00`).toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long',year:'numeric'}));
       button.addEventListener('click',()=>{date.value=value;calendarRender();update();});grid.append(button);
@@ -32,10 +33,12 @@
   const formattedDate=()=>date.value?new Date(`${date.value}T12:00:00`).toLocaleDateString('fr-FR',{day:'numeric',month:'long',year:'numeric'}):'Date à choisir';
   const slotLabel=()=>form.elements.slot.value==='soiree'?'Soirée de 20h à 2h du matin · mise en place dès 18h':'Journée · horaires à convenir';
   function update() {
+    calendarRender();
     const enabled=form.elements.extras.value==='oui';document.getElementById('paid-options').hidden=!enabled;
     form.querySelectorAll('input[name="option"]').forEach(el=>{el.disabled=!enabled; if(!enabled)el.checked=false;});
     const selected=selectedOptions();const total=selected.reduce((sum,el)=>sum+Number(el.dataset.price),0);
     document.getElementById('extras-total').textContent=money(total);
+    document.getElementById('rental-total').textContent=date.value?money(rentalPrice(date.value,form.elements.slot.value)):'Choisissez une date';
     document.getElementById('selection-summary').textContent=`${formattedDate()} · ${slotLabel()}${form.elements.guests.value?' · '+form.elements.guests.value+' personnes':''}${selected.length?' · '+selected.map(el=>el.dataset.label).join(', '):' · Sans option'}`;
   }
   form.addEventListener('input',()=>{form.elements.email.required=false;update();});
@@ -47,7 +50,7 @@
       ...(form.elements.email.value.trim()?[`E-mail : ${form.elements.email.value.trim()}`]:[]),
       `Date souhaitée : ${formattedDate()}`,`Créneau : ${slotLabel()}`,`Nombre de personnes : ${form.elements.guests.value}`,
       '', 'Options :',...(selected.length?selected.map(el=>`- ${el.dataset.label} : ${money(Number(el.dataset.price))}`):['Aucune option']),
-      `Total des options : ${money(total)}`,'Location : sur devis. Total de l’événement à confirmer.',
+      `Total des options : ${money(total)}`,`Location affichée : ${date.value?money(rentalPrice(date.value,form.elements.slot.value)):'date à choisir'}. Disponibilité et montant final à confirmer par devis.`,
       ...(form.elements.comment.value.trim()?['',`Commentaire : ${form.elements.comment.value.trim()}`]:[]),
       '', 'Merci de me confirmer la disponibilité et de m’adresser votre proposition.'].join('\n');
   }
