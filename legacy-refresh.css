@@ -1,0 +1,24 @@
+/* Uniformisation des pages historiques avec l'identité Florentine 2026 */
+:root{--paper:#0a111a;--wine:#f3f7fc;--ink:#eef4fa;--ink-muted:#b8c9db;--border:rgba(210,228,248,.24);--border-subtle:rgba(210,228,248,.13);--surface:#142333;--surface-card:#101b29;--gold:#c7d7e8;--display-font:Georgia,'Times New Roman',serif}
+html,body{background:#0a111a!important;color:#edf3fa}
+body{background:radial-gradient(ellipse at 74% -5%,#253b53,#0a111a 63%)!important}
+.document-header{max-width:1200px;border-bottom-color:#42576d;padding:12px 28px;gap:25px}
+.document-brand{font-family:Georgia,serif;font-size:1.35rem;letter-spacing:.02em}
+.document-brand span{font-size:.63rem;color:#b9cce0}
+.document-header .site-menu{display:flex;flex-wrap:wrap;gap:6px 24px;justify-content:flex-end}
+.document-header .site-menu .menu-link{font-size:.74rem!important;text-transform:uppercase;letter-spacing:.09em;min-height:36px;color:#d3e0ee}
+.document-header .site-menu .menu-link:hover{color:white}
+.content-page{max-width:1160px;padding:46px 30px 80px}
+.content-page h1{font-family:Georgia,serif;font-size:clamp(2.5rem,5.2vw,5rem);letter-spacing:-.045em;line-height:1.07}
+.content-page h2{font-family:Georgia,serif;letter-spacing:-.025em}
+.content-page .lead{color:#cbdae9;max-width:870px}
+.breadcrumbs{color:#aebfd0}
+.copy-section,.blog-entry,.article-copy section{border-color:rgba(195,215,237,.22)}
+.content-button{border-radius:0;background:#e4edf7;color:#122235;border-color:#e4edf7;font-size:.88rem}
+.content-button.secondary{border-radius:0;border-color:#92a8bd}
+.content-button:hover{color:#e4edf7}
+.content-button.secondary:hover{color:#152435}
+.blog-entry{padding:26px 0}
+.blog-entry h2{font-size:clamp(1.35rem,2vw,2rem)}
+.document-footer{background:#0b141e!important;border-top:1px solid rgba(195,215,237,.2)}
+@media(max-width:740px){.document-header{padding:14px 16px;display:flex;flex-direction:column;gap:10px}.document-header .site-menu{display:flex!important;width:100%;gap:7px 15px;justify-content:center;padding:0!important}.document-header .site-menu .menu-link{min-width:0;font-size:.65rem!important;letter-spacing:.03em}.content-page{padding:25px 16px 65px}}
