@@ -25,3 +25,5 @@
 @media(max-width:950px){.collection-boat-body{grid-template-columns:1fr;gap:4px}.collection-bookings{grid-template-columns:1fr}.collection-day{min-height:64px}.collection-day .p{font-size:.76rem}}
 @media(max-width:600px){.collection h2{font-size:2.5rem}.collection-gallery .gallery-frame{aspect-ratio:4/3}.collection-boat{margin-top:44px}.collection-specs{gap:6px}.collection-spec{padding:11px 6px}.collection-spec strong{font-size:.85rem}.collection-spec span{font-size:.66rem}.collection-calendar-bar strong{font-size:.9rem}.collection-gallery .gallery-controls{bottom:10px;right:10px}}
 @media(prefers-reduced-motion:reduce){.collection-btn{transition:none}}
+
+@media(max-width:600px){.collection-day .p{font-size:clamp(.51rem,2.2vw,.62rem);letter-spacing:-.045em}.collection-day{padding:4px 0}.collection-booking{padding:15px}}
