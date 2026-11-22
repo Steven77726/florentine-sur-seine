@@ -268,6 +268,36 @@
   </script>
   <link rel="stylesheet" href="/collection.css?v=20261122">
   <script defer src="/collection.js?v=20261122"></script>
+<style id="compact-hero-style">
+html{scroll-behavior:smooth}
+.compact-brand{position:absolute;top:14px;left:clamp(20px,3vw,42px);z-index:8;display:block;width:112px;height:76px}
+.compact-brand img{display:block;width:100%;height:100%;object-fit:contain}
+.site-menu{position:absolute;top:26px;left:auto;right:clamp(20px,3vw,44px);transform:none;flex-direction:row;gap:clamp(10px,1.3vw,22px);flex-wrap:wrap;justify-content:end}
+.site-menu .menu-link{font-size:.82rem;padding:9px 0;min-height:36px}
+.page{display:flex;flex-direction:column;align-items:stretch;justify-content:center;max-width:none;min-height:100svh;padding:108px clamp(22px,5vw,78px) 24px;gap:14px}
+.page .poster,.page .instagram-join{display:none}
+.page .water-ripples{z-index:0}
+.page .editorial{position:relative;z-index:1;max-width:none;text-align:center;margin:0 auto}
+.page .slogan{font-size:clamp(1.7rem,3.3vw,3rem);line-height:1.15;letter-spacing:.1em;margin:0 0 5px}
+.page .address{display:flex;flex-direction:row;justify-content:center;gap:14px;margin:3px 0 7px;font-size:.8rem;min-height:0;letter-spacing:.05em}
+.page .address span+span:before{content:"·";margin-right:14px;color:#aebccd}
+.page .actions{display:flex;justify-content:center;width:auto;gap:9px}
+.page .action{min-height:38px;padding:8px 14px;font-size:.82rem}
+.page #reservation{display:none!important}
+.hero-boats{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(9px,1.6vw,22px);width:min(1250px,100%);margin:10px auto 0}
+.hero-boat{position:relative;display:block;min-height:0;aspect-ratio:1.2/1;overflow:hidden;border-radius:8px;background:linear-gradient(150deg,#2b3a4d,#101c2c);border:1px solid #596b83;text-decoration:none;color:#fff;transition:transform .2s,border-color .2s}
+.hero-boat:hover{transform:translateY(-3px);border-color:#d9e5f3}
+.hero-boat-featured{border:2px solid #c4d5e8}
+.hero-boat img{display:block;width:100%;height:100%;object-fit:cover}
+.hero-no-photo{height:100%;display:grid;place-items:center;letter-spacing:.2em;font-family:Georgia,serif;font-size:clamp(1.1rem,2.5vw,2rem);color:#d5dfeb}
+.hero-boat-info{position:absolute;left:0;right:0;bottom:0;display:flex;flex-direction:column;gap:6px;padding:clamp(14px,2vw,24px);background:linear-gradient(transparent,rgba(4,10,18,.94) 50%);text-shadow:0 1px 3px #000}
+.hero-boat-info strong{font-family:Georgia,serif;font-weight:400;font-size:clamp(1.1rem,2.1vw,1.9rem)}
+.hero-boat-info small{color:#e4ebf5;font-size:clamp(.65rem,1vw,.84rem)}
+@media(max-width:900px){.site-menu{position:absolute;padding:0;top:86px;left:12px;right:12px;gap:14px;justify-content:center}.page{padding-top:142px}.compact-brand{left:50%;transform:translateX(-50%);top:7px;width:88px;height:73px}.hero-boats{gap:9px}.page .slogan{font-size:clamp(1.5rem,4vw,2.2rem)}}
+@media(max-width:640px){.page{padding:136px 12px 16px;min-height:100svh;gap:9px}.page .slogan{font-size:1.5rem;margin:0}.page .address{font-size:.68rem;flex-direction:column;gap:0;line-height:1.45;margin:6px 0}.page .address span+span:before{content:none}.page .actions{position:relative;left:auto;bottom:auto;z-index:1;background:none;border:0;padding:0;gap:6px;flex-wrap:wrap}.page .action{font-size:.72rem;padding:7px 9px;min-height:36px}.hero-boats{gap:6px}.hero-boat{aspect-ratio:.78/1}.hero-boat-info{padding:8px 5px 10px}.hero-boat-info strong{font-size:.9rem}.hero-boat-info small{font-size:.62rem;line-height:1.35}.hero-no-photo{letter-spacing:.05em;font-size:.92rem}.site-menu{top:78px;gap:4px 12px;left:8px;right:8px}.site-menu .menu-link{min-height:26px;padding:3px 0;font-size:.68rem}.compact-brand{width:78px;height:68px}.site-legal-footer{padding-bottom:22px}}
+@media(max-height:700px) and (min-width:641px){.page{padding-top:88px}.hero-boat{aspect-ratio:1.65/1}.page .slogan{font-size:1.8rem}}
+@media(prefers-reduced-motion:reduce){.hero-boat{transition:none}}
+</style>
 </head>
 <body>
   <nav class="site-menu" aria-label="Navigation principale">
@@ -328,9 +358,6 @@
         <span>2 péniches à Bercy</span>
       </a>
     <nav class="actions" aria-label="Réservation, contact et privatisation">
-      <a class="action" id="reservation" role="link" aria-disabled="true" title="Réserver sur Shotgun" aria-label="Réserver sur Shotgun">
-        <span>Réserver</span>
-      </a>
       <a class="action secondary" id="whatsapp" href="https://wa.me/33663659679" target="_blank" rel="noopener noreferrer" title="Contacter Florentine sur WhatsApp (06 63 65 96 79)" aria-label="Contacter Florentine sur WhatsApp au 06 63 65 96 79">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.5 8.5 0 0 1-12.8 7.4L3 21l1.7-5.1A8.5 8.5 0 1 1 21 11.5Z"/><path d="M8 7.5c-.5 1-.2 3.5 2 5.7 2.2 2.2 4.6 2.5 5.7 2l.6-1.8-2-1-.8 1c-1.2-.6-2.3-1.7-2.9-2.9l1-.8-1-2Z"/></svg>
         WhatsApp
@@ -342,6 +369,12 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg>
       <span>Rejoignez-nous</span>
     </a>
+<a class="compact-brand" href="/" aria-label="Florentine sur Seine, accueil"><img src="/logo-florentine.png" alt="Florentine sur Seine" width="110" height="75"></a>
+<section class="hero-boats" aria-label="Nos trois péniches à privatiser">
+<a class="hero-boat hero-boat-featured" href="#florentine"><img src="/images/peniche-salon-panoramique.jpg" alt="Florentine sur Seine, salon panoramique" width="840" height="560" fetchpriority="high"><span class="hero-boat-info"><strong>Florentine sur Seine</strong><small>Boulogne-Billancourt · Notre péniche phare</small></span></a>
+<a class="hero-boat" href="#mistinguett"><span class="hero-no-photo">MISTINGUETT</span><span class="hero-boat-info"><strong>Mistinguett</strong><small>Bercy, Paris 12e · Deux niveaux</small></span></a>
+<a class="hero-boat" href="#alize"><span class="hero-no-photo">ALIZÉ</span><span class="hero-boat-info"><strong>Alizé</strong><small>Bercy, Paris 12e · Rooftop</small></span></a>
+</section>
   </main>
   <section class="collection" id="nos-peniches" aria-labelledby="collection-title"><div class="collection-inner">
 <header><p class="eyebrow">Florentine sur Seine · Collection événementielle</p><h2 id="collection-title">Votre événement sur la Seine.</h2><p class="intro">Anniversaire, mariage, bar-mitsva, bat-mitsva, soirée privée ou événement d'entreprise : choisissez votre péniche à Boulogne-Billancourt ou à Paris. Trois lieux, une expérience sur mesure.</p><nav class="collection-links" aria-label="Accès rapide"><a class="collection-btn secondary" href="#florentine">Découvrir nos péniches</a><a class="collection-btn secondary" href="#calendriers">Tarifs et dates</a><a class="collection-btn secondary" href="https://wa.me/33663659679?text=Bonjour%2C%20je%20souhaite%20organiser%20une%20visite%20de%20la%20p%C3%A9niche%20Florentine%20sur%20Seine.%20Pouvez-vous%20me%20proposer%20un%20cr%C3%A9neau%20%3F" target="_blank" rel="noopener noreferrer">Organiser une visite</a></nav></header>
