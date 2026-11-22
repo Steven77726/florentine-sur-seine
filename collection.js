@@ -6,6 +6,34 @@ const today=parisToday();
 const iso=(y,m,d)=>y+'-'+String(m+1).padStart(2,'0')+'-'+String(d).padStart(2,'0');
 const price=(str,slot)=>{const d=new Date(str+'T12:00:00Z').getUTCDay();const peak=d>=4&&d<=6;return slot==='journee'?(peak?2000:1800):(peak?2800:2500)};
 const details={florentine:{name:'Florentine sur Seine',address:'Boulogne-Billancourt'},mistinguett:{name:'Mistinguett',address:'Paris 12e'},alize:{name:'Alizé',address:'Paris 12e'}};
+document.querySelectorAll('[data-hero-gallery]').forEach(g=>{
+  let photos=[];try{photos=JSON.parse(g.getAttribute('data-hero-gallery')||'[]')}catch(e){}
+  if(!photos.length)return;
+  const img=g.querySelector('.hero-boat-image'),counter=g.querySelector('.hero-gallery-count');if(!img||!counter)return;
+  let current=0,gestureX=null;
+  const show=(next)=>{
+    current=(next+photos.length)%photos.length;
+    img.src=photos[current].src;
+    img.alt=photos[current].alt||'Photo de la péniche Florentine';
+    counter.textContent=(current+1)+' / '+photos.length;
+  };
+  const prev=()=>show(current-1),next=()=>show(current+1);
+  g.querySelector('[data-hero-prev]')?.addEventListener('click',prev);
+  g.querySelector('[data-hero-next]')?.addEventListener('click',next);
+  g.setAttribute('tabindex','0');
+  g.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'){e.preventDefault();prev()}else if(e.key==='ArrowRight'){e.preventDefault();next()}});
+  g.addEventListener('touchstart',e=>{gestureX=e.changedTouches[0]?.clientX??null},{passive:true});
+  g.addEventListener('touchend',e=>{if(gestureX===null)return;const delta=(e.changedTouches[0]?.clientX??gestureX)-gestureX;if(Math.abs(delta)>35)(delta<0?next:prev)();gestureX=null},{passive:true});
+  g.addEventListener('wheel',e=>{if(Math.abs(e.deltaX)>Math.abs(e.deltaY)&&Math.abs(e.deltaX)>12){e.preventDefault();(e.deltaX>0?next:prev)()}},{passive:false});
+  img.addEventListener('click',()=>{
+    const dialog=document.getElementById('collection-lightbox'),large=dialog?.querySelector('img');
+    if(!dialog||!large)return;
+    large.src=photos[current].src;large.alt=photos[current].alt||'Photo de Florentine';
+    if(!dialog.open)dialog.showModal();
+  });
+  img.style.cursor='zoom-in';
+  show(0);
+});
 document.querySelectorAll('[data-gallery]').forEach(g=>{
   let imgs=[];try{imgs=JSON.parse(g.dataset.gallery||'[]')}catch(e){}
   if(!imgs.length)return;
