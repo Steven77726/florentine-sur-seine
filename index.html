@@ -352,13 +352,32 @@ html{scroll-behavior:smooth}
 @media (max-width:900px){.compact-brand{width:130px!important;height:90px!important;left:12px!important;top:6px!important}.site-menu{left:140px;right:10px;top:26px}.page{padding-top:135px!important}.page .hero-boats{gap:9px}.hero-boat-content h3{font-size:1.15rem}.hero-boat-content{padding:11px}}
 @media (max-width:640px){.compact-brand{width:104px!important;height:72px!important;left:5px!important;top:5px!important}.site-menu{left:112px!important;right:5px!important;top:12px!important;justify-content:end!important}.site-menu .menu-link{font-size:.64rem}.page{padding-top:113px!important}.page .hero-boats{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:5px}.hero-boat-media{aspect-ratio:5/6}.hero-boat-content{padding:8px 5px;gap:5px}.hero-boat-content h3{font-size:.85rem}.hero-boat-place{font-size:.62rem}.hero-boat-points{gap:7px}.hero-boat-points li{font-size:.65rem;padding-left:12px}.hero-boat-watermark{font-size:.75rem;letter-spacing:.02em}.hero-image-note{font-size:.57rem;text-align:center;padding:0 4px}.hero-boat-explore{font-size:.62rem;padding-top:7px}.hero-gallery-tools{right:3px;bottom:3px;gap:2px;padding:2px}.hero-gallery-tools button{width:25px;height:25px;font-size:1rem}.hero-gallery-count{min-width:31px;font-size:.57rem}}
 @media (prefers-reduced-motion:reduce){.compact-brand img{animation:none}}
+
+/* Accueil : visuels en pleine surface, texte directement sur photo */
+.page .hero-boats{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:clamp(8px,1.5vw,20px)!important}
+.page .hero-boat-card{display:block;min-width:0;align-self:stretch;background:#122036;border:1px solid #49627c;overflow:hidden}
+.page .hero-boat-card-featured{border:2px solid #c0d4e8}
+.page .hero-boat-media{position:relative;isolation:isolate;aspect-ratio:1/1;min-height:0;height:100%;background:#172636;overflow:hidden}
+.page .hero-boat-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0}
+.page .hero-boat-overlay{position:absolute;inset:0;z-index:1;display:flex;flex-direction:column;justify-content:end;padding:clamp(13px,2vw,25px);background:linear-gradient(180deg,rgba(3,9,16,.02) 0%,rgba(3,9,16,.13) 28%,rgba(3,9,16,.65) 56%,rgba(3,9,16,.98) 100%);pointer-events:none}
+.page .hero-boat-overlay a{pointer-events:auto}
+.page .hero-boat-content{display:none}
+.page .hero-boat-overlay h3{font-family:Georgia,serif;font-weight:400;font-size:clamp(1.25rem,2.1vw,2.15rem);margin:0;color:#fff}
+.page .hero-boat-overlay .hero-boat-place{font-size:.78rem;color:#e2edfa;margin:3px 0 9px}
+.page .hero-boat-overlay .hero-boat-points{display:grid;gap:7px;margin:0 0 12px}
+.page .hero-boat-overlay .hero-boat-points li{font-size:clamp(.75rem,.95vw,.95rem);color:#fff;line-height:1.28}
+.page .hero-boat-overlay .hero-boat-explore{border-top:1px solid rgba(255,255,255,.3);padding-top:10px;color:#fff;text-decoration:none;font-size:.85rem}
+.page .hero-boat-media .hero-gallery-tools{z-index:3;right:8px;top:8px;bottom:auto}
+.page .hero-boat-empty{position:relative;display:block}
+.page .hero-boat-empty .hero-boat-watermark{position:absolute;left:0;right:0;top:25%;text-align:center}
+@media(max-width:640px){.page .hero-boat-media{aspect-ratio:3/5}.page .hero-boat-overlay{padding:7px 5px 10px}.page .hero-boat-overlay h3{font-size:.85rem}.page .hero-boat-overlay .hero-boat-place{font-size:.62rem;margin:3px 0 8px}.page .hero-boat-overlay .hero-boat-points{gap:7px;margin:0 0 8px}.page .hero-boat-overlay .hero-boat-points li{font-size:.65rem;line-height:1.3}.page .hero-boat-overlay .hero-boat-explore{font-size:.65rem;padding-top:8px}.page .hero-boat-media .hero-gallery-tools{top:4px;right:4px}}
+/* Trois lieux principaux côte à côte, événements en grille aérée */
+@media(min-width:901px){.home-collection .collection-inner{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}.home-collection .collection-inner > .collection-boat{min-width:0}.home-collection .collection-boat .collection-gallery,.home-collection .collection-boat .collection-photo-alt{aspect-ratio:4/3}.home-collection .collection-boat .collection-specs{grid-template-columns:repeat(3,minmax(0,1fr))}}
 </style>
 </head>
 <body>
   <nav class="site-menu" aria-label="Navigation principale">
     <a class="menu-link" href="/" aria-current="page"><span class="label">Accueil</span></a>
-    <a class="menu-link" href="/le-concept.html"><span class="label">Le concept</span></a>
-    <a class="menu-link" href="/carte.html"><span class="label">Carte</span></a>
     <a class="menu-link" href="/photos.html"><span class="label">Photos</span></a>
     <a class="menu-link" href="/peniches.html"><span class="label">Nos péniches</span></a>
     <a class="menu-link" href="/blog.html"><span class="label">Blog</span></a>
@@ -426,21 +445,18 @@ html{scroll-behavior:smooth}
     </a>
 <a class="compact-brand" href="/" aria-label="Florentine sur Seine, accueil"><img src="/logo-florentine.png" alt="Florentine sur Seine" width="178" height="118"></a>
 <section class="hero-boats" aria-label="Nos trois péniches à privatiser">
-  <article class="hero-boat-card hero-boat-card-featured">
-    <div class="hero-boat-media" data-hero-gallery="[{&quot;src&quot;:&quot;/images/peniche-salon-panoramique.jpg&quot;,&quot;alt&quot;:&quot;Salon panoramique vitré de Florentine&quot;},{&quot;src&quot;:&quot;/images/peniche-grand-salon.jpg&quot;,&quot;alt&quot;:&quot;Grand salon de réception de Florentine&quot;},{&quot;src&quot;:&quot;/images/peniche-interieur-piste.jpg&quot;,&quot;alt&quot;:&quot;Piste de danse Florentine&quot;},{&quot;src&quot;:&quot;/images/peniche-accueil-comptoir.jpg&quot;,&quot;alt&quot;:&quot;Bar de la péniche Florentine&quot;},{&quot;src&quot;:&quot;/images/peniche-salon-seine-lumineux.jpg&quot;,&quot;alt&quot;:&quot;Salon lumineux au bord de Seine&quot;},{&quot;src&quot;:&quot;/images/peniche-exterieur-vue-quai.jpg&quot;,&quot;alt&quot;:&quot;Extérieur de Florentine&quot;},{&quot;src&quot;:&quot;/images/peniche-quai-acces.jpg&quot;,&quot;alt&quot;:&quot;Accès à Florentine depuis le quai&quot;}]" aria-label="Galerie de photos Florentine">
-      <img class="hero-boat-image" src="/images/peniche-salon-panoramique.jpg" alt="Salon panoramique vitré de Florentine" width="840" height="560" fetchpriority="high">
-      <div class="hero-gallery-tools"><button type="button" data-hero-prev aria-label="Photo précédente de Florentine">‹</button><span class="hero-gallery-count">1 / 7</span><button type="button" data-hero-next aria-label="Photo suivante de Florentine">›</button></div>
-    </div>
-    <div class="hero-boat-content"><h3>Florentine sur Seine</h3><p class="hero-boat-place">Boulogne-Billancourt</p><ul class="hero-boat-points"><li>Jusqu’à 180 personnes en cocktail</li><li>Son et lumières professionnels</li><li>Deux salles vitrées sur la Seine</li></ul><a class="hero-boat-explore" href="#florentine">Découvrir la péniche et ses photos <span aria-hidden="true">→</span></a></div>
-  </article>
-  <article class="hero-boat-card">
-    <div class="hero-boat-media hero-boat-empty"><span class="hero-boat-watermark">MISTINGUETT</span><span class="hero-image-note">Galerie photo dans la fiche du lieu</span></div>
-    <div class="hero-boat-content"><h3>Mistinguett</h3><p class="hero-boat-place">Bercy · Paris 12e</p><ul class="hero-boat-points"><li>340 m² d’espaces événementiels</li><li>80 personnes en dîner assis</li><li>Deux niveaux modulables</li></ul><a class="hero-boat-explore" href="#mistinguett">Découvrir la péniche <span aria-hidden="true">→</span></a></div>
-  </article>
-  <article class="hero-boat-card">
-    <div class="hero-boat-media hero-boat-empty"><span class="hero-boat-watermark">ALIZÉ</span><span class="hero-image-note">Galerie photo dans la fiche du lieu</span></div>
-    <div class="hero-boat-content"><h3>Alizé</h3><p class="hero-boat-place">Bercy · Paris 12e</p><ul class="hero-boat-points"><li>450 m² de surface communiquée</li><li>Jusqu’à 170 personnes assises</li><li>Rooftop et espaces de réception</li></ul><a class="hero-boat-explore" href="#alize">Découvrir la péniche <span aria-hidden="true">→</span></a></div>
-  </article>
+<article class="hero-boat-card hero-boat-card-featured" id="home-florentine">
+<div class="hero-boat-media " data-hero-gallery="[{&quot;src&quot;:&quot;/images/peniche-salon-panoramique.jpg&quot;,&quot;alt&quot;:&quot;Grand salon de Florentine sur Seine&quot;},{&quot;src&quot;:&quot;/images/peniche-grand-salon.jpg&quot;,&quot;alt&quot;:&quot;Salle de réception Florentine&quot;},{&quot;src&quot;:&quot;/images/peniche-interieur-piste.jpg&quot;,&quot;alt&quot;:&quot;Piste de danse Florentine&quot;},{&quot;src&quot;:&quot;/images/peniche-exterieur-vue-quai.jpg&quot;,&quot;alt&quot;:&quot;Florentine depuis le quai&quot;}]" ><img class="hero-boat-image" src="/images/peniche-salon-panoramique.jpg" alt="Florentine sur Seine" width="820" height="650" loading="eager" decoding="async">
+<div class="hero-gallery-tools"><button type="button" data-hero-prev aria-label="Photo précédente Florentine sur Seine">‹</button><span class="hero-gallery-count">1 / 4</span><button type="button" data-hero-next aria-label="Photo suivante Florentine sur Seine">›</button></div>
+<div class="hero-boat-overlay"><h3>Florentine sur Seine</h3><p class="hero-boat-place">Boulogne-Billancourt</p><ul class="hero-boat-points"><li>180 personnes en cocktail</li><li>Son et lumières professionnels</li><li>Deux salons sur la Seine</li></ul><a class="hero-boat-explore" href="#florentine">Voir la péniche <span aria-hidden="true">→</span></a></div></div></article>
+<article class="hero-boat-card " id="home-mistinguett">
+<div class="hero-boat-media "  ><img class="hero-boat-image" src="https://images.kactus.com/cpdxicj5kk1qvgz7frnw32yq7raj?compress=true&amp;fm=auto&amp;q=80&amp;s=318f8f8a839135438f8e872f46dbb035&amp;w=580" alt="Mistinguett" width="820" height="650" loading="lazy" decoding="async">
+
+<div class="hero-boat-overlay"><h3>Mistinguett</h3><p class="hero-boat-place">Bercy · Paris 12e</p><ul class="hero-boat-points"><li>Deux niveaux modulables</li><li>80 personnes en dîner assis</li><li>Terrasse panoramique</li></ul><a class="hero-boat-explore" href="#mistinguett">Voir la péniche <span aria-hidden="true">→</span></a></div></div></article>
+<article class="hero-boat-card " id="home-alize">
+<div class="hero-boat-media hero-boat-empty"  aria-label="Visuels à compléter"><span class="hero-boat-watermark">Alizé</span>
+
+<div class="hero-boat-overlay"><h3>Alizé</h3><p class="hero-boat-place">Bercy · Paris 12e</p><ul class="hero-boat-points"><li>170 invités assis</li><li>Rooftop panoramique</li><li>Trois niveaux événementiels</li></ul><a class="hero-boat-explore" href="#alize">Voir la péniche <span aria-hidden="true">→</span></a></div></div></article>
 </section>
   </main>
   <section class="collection home-collection" id="nos-peniches" aria-labelledby="collection-title"><div class="collection-inner">
