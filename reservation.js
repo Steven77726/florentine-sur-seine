@@ -70,7 +70,7 @@
       window.location.href='mailto:contact@florentine-sur-seine.com?subject='+encodeURIComponent('Demande de privatisation Florentine — '+formattedDate())+'&body='+encodeURIComponent(body);
     } else {
       document.getElementById('send-feedback').textContent='Le récapitulatif s’ouvre dans WhatsApp. Appuyez sur « Envoyer » pour transmettre votre demande.';
-      window.open('https://wa.me/33781660629?text='+encodeURIComponent(body),'_blank','noopener,noreferrer');
+      window.open('https://wa.me/33663659679?text='+encodeURIComponent(body),'_blank','noopener,noreferrer');
     }
   });
   calendarRender();update();
