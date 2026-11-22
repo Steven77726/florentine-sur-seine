@@ -357,3 +357,29 @@ a:focus-visible { outline: 2px solid #ffffff; outline-offset: 5px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 @media print { .document-header, .document-footer, .breadcrumbs, .content-actions, .skip-link { display: none; } .content-page { max-width: none; padding: 0; } body { color: #000; background: #fff; } }
+
+/* Refonte globale : aucune page éditoriale au thème rouge historique */
+:root{--paper:#09111b;--wine:#eef4fb;--ink:#f4f7fb;--ink-muted:#b9cadb;--border:rgba(201,221,241,.27);--border-subtle:rgba(201,221,241,.17);--surface:#142435;--surface-card:#101c2b;--gold:#bed0e3;--display-font:Georgia,'Times New Roman',serif}
+html{background:#09111b!important}
+body{background:radial-gradient(ellipse at 82% 0%,#24364b,#09111b 65%)!important;color:#eaf2fb!important}
+.document-header{max-width:1210px;border-bottom:1px solid #3e566d;padding:15px 30px!important}
+.document-brand{font-family:Georgia,serif;font-weight:400;font-size:1.5rem;color:#f2f6fc}
+.document-brand span{font-size:.67rem;color:#bed0e3}
+.document-header .site-menu{display:flex!important;flex-wrap:wrap!important;justify-content:flex-end!important;gap:7px 21px!important;width:auto!important;padding:0!important}
+.document-header .menu-link{font-size:.74rem!important;letter-spacing:.08em;text-transform:uppercase;color:#d5e1ee;min-height:37px}
+.document-header .menu-link[href="/le-concept.html"],.document-header .menu-link[href="/carte.html"]{display:none!important}
+.content-page{max-width:1130px;padding:42px 26px 70px}
+.content-page h1{font-family:Georgia,serif;letter-spacing:-.045em;line-height:1.08;font-size:clamp(2.45rem,5.3vw,4.8rem)}
+.content-page h2,.content-page h3{font-family:Georgia,serif;letter-spacing:-.02em}
+.content-page p,.article-copy p{color:#d2dfed!important}
+.content-page .lead{color:#cfdeec!important}
+.breadcrumbs,.article-meta{color:#b9c9d9!important}
+.blog-entry,.copy-section,.article-copy section{border-color:rgba(199,216,234,.23)!important}
+.content-button,.priv-tab{border-radius:0!important}
+.content-button{background:#e6eef8!important;color:#162638!important;border-color:#e6eef8!important;font-size:.84rem}
+.content-button.secondary{background:transparent!important;color:#edf4fb!important;border-color:#7d92a8!important}
+.content-button:hover{filter:brightness(1.13)}
+.privatisation-card,.blog-entry,.faq-item{border-color:rgba(205,220,239,.28)!important}
+.document-footer{background:#0b1623!important;color:#bdcdde;border-top:1px solid rgba(207,224,243,.2)}
+a{color:inherit}
+@media(max-width:700px){.document-header{padding:13px 16px!important;flex-direction:column;gap:10px}.document-header .site-menu{width:100%!important;justify-content:center!important;gap:5px 14px!important}.document-header .menu-link{font-size:.66rem!important;min-height:32px!important;letter-spacing:.02em}.content-page{padding:24px 16px 56px}}
