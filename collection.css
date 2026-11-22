@@ -47,3 +47,28 @@
 .collection-gallery .gallery-frame{min-height:270px}
 .collection .collection-specs{align-items:stretch}
 @media(min-width:901px){.collection-inner > .collection-boat#florentine,.collection-inner > .collection-boat#mistinguett,.collection-inner > .collection-boat#alize{scroll-margin-top:40px}}
+
+/* Calendriers dépliables intégrés à chaque fiche de péniche */
+.offer-calendar-accordion{margin-top:22px;border:1px solid rgba(197,215,235,.42);background:#101b28;max-width:100%;min-width:0}
+.offer-calendar-accordion > summary{cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 15px;color:#f3f6fb;font-size:.83rem;font-weight:700;letter-spacing:.04em;list-style:none;transition:background .2s}
+.offer-calendar-accordion > summary::-webkit-details-marker{display:none}
+.offer-calendar-accordion > summary:hover,.offer-calendar-accordion[open] > summary{background:#223347}
+.offer-calendar-accordion > summary:focus-visible{outline:2px solid #e8eef6;outline-offset:3px}
+.offer-accordion-chevron{font-size:1.55rem;line-height:1;transition:transform .25s ease}
+.offer-calendar-accordion[open] .offer-accordion-chevron{transform:rotate(180deg)}
+.offer-calendar-content{border-top:1px solid rgba(197,215,235,.25);padding:12px;min-width:0}
+.offer-calendar-content .collection-booking{width:100%;min-width:0;max-width:none;margin:0;padding:8px 0;border:0;background:transparent;box-shadow:none}
+.offer-calendar-content .collection-booking > h3{font-size:1.2rem!important;line-height:1.25;margin:0 0 8px}
+.offer-calendar-content .collection-booking > p{font-size:.8rem}
+.offer-calendar-content .collection-week{font-size:.7rem}
+.offer-calendar-content .collection-day{min-width:0;min-height:48px;padding:5px 0}
+.offer-calendar-content .collection-day .n{font-size:.78rem}
+.offer-calendar-content .collection-day .p{font-size:clamp(.54rem,.74vw,.72rem);letter-spacing:-.035em}
+.offer-calendar-content .collection-calendar-bar{gap:6px}
+.offer-calendar-content .collection-calendar-bar strong{font-size:.92rem}
+.offer-calendar-content .collection-booking-actions{grid-template-columns:1fr;gap:8px}
+.offer-calendar-content .collection-booking-actions a{font-size:.77rem;padding:11px 7px}
+.offer-calendar-content > .collection-note{font-size:.72rem;line-height:1.6;margin:12px 0 0}
+.home-collection .collection-inner > .collection-boat .offer-calendar-accordion{grid-column:1/-1;width:100%}
+@media(min-width:901px){.home-collection .collection-inner > .collection-boat .offer-calendar-accordion{margin-top:20px}.offer-calendar-content .collection-day{min-height:54px}}
+@media(max-width:640px){.offer-calendar-accordion{margin-top:18px}.offer-calendar-accordion > summary{padding:13px;font-size:.78rem}.offer-calendar-content{padding:8px}.offer-calendar-content .collection-day{min-height:48px}.offer-calendar-content .collection-day .p{font-size:.62rem}.offer-calendar-content .collection-booking-actions{grid-template-columns:1fr}}
