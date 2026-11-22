@@ -53,11 +53,39 @@
  body{padding-bottom:calc(75px + env(safe-area-inset-bottom))}
 }
 @media(min-width:671px){.mobile-priv-cta{display:none}}
+
+/* Accueil immersif sur iPhone : les fiches existantes restent intactes */
+.mobile-hero-brand,.mobile-hero-price,.mobile-hero-arrow,.mobile-hero-whatsapp{display:none}
+@media(max-width:670px){
+ html{scroll-padding-top:18px}
+ #offres{scroll-margin-top:14px}
+ .crumb{display:none}
+ .priv-hero{position:relative;display:flex;flex-direction:column;justify-content:center;min-height:calc(100svh - 100px);margin:0 -17px;background:#08121e;overflow:hidden;border:0;border-radius:0}
+ .priv-hero-image{position:absolute;inset:0;height:100%;min-height:100%;border-radius:0;z-index:0}
+ .priv-hero-image img{filter:brightness(.52) saturate(.85);object-position:center}
+ .priv-hero-image:after{background:linear-gradient(180deg,rgba(5,13,23,.62),rgba(5,13,23,.28) 40%,rgba(5,13,23,.9));border:0}
+ .priv-hero-copy{position:relative;z-index:1;align-items:center;text-align:center;background:transparent;padding:32px 23px 68px;border-radius:0}
+ .mobile-hero-brand{display:block;width:min(48vw,185px);height:auto;max-height:142px;object-fit:contain;animation:florentineFloat 5s ease-in-out infinite;filter:drop-shadow(0 8px 16px rgba(0,0,0,.35));margin:0 auto 15px}
+ .priv-hero .eyebrow{font-size:.68rem;letter-spacing:.18em;color:#edf4fb}
+ .priv-hero h1{font-size:clamp(2.3rem,10.5vw,3.55rem);margin:13px 0 16px;color:#fff}
+ .priv-hero-copy>p:not(.eyebrow):not(.mobile-hero-price){font-size:.96rem;line-height:1.5;color:#edf3f8}
+ .mobile-hero-price{display:block!important;color:#fff!important;font-size:1.35rem!important;font-weight:700;margin:15px 0 0}
+ .priv-hero .lead-links{display:grid;grid-template-columns:1fr 1fr;gap:9px;width:100%;margin-top:25px}
+ .priv-hero .lead-links .btn{font-size:.75rem;min-height:49px;padding:10px 8px}
+ .priv-hero .lead-links .btn:first-child{grid-column:1/-1}
+ .mobile-hero-whatsapp{display:inline-flex!important}
+ .mobile-hero-arrow{display:flex;position:absolute;bottom:15px;left:50%;transform:translateX(-50%);z-index:2;align-items:center;justify-content:center;flex-direction:column;gap:0;text-decoration:none;color:white;font-size:.72rem;letter-spacing:.07em;animation:florentineArrow 2s ease-in-out infinite}
+ .mobile-hero-arrow span{font-size:1.7rem;line-height:1.1}
+ .priv-nav{margin-top:17px}
+}
+@keyframes florentineFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@keyframes florentineArrow{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,6px)}}
+@media(prefers-reduced-motion:reduce){.mobile-hero-brand,.mobile-hero-arrow{animation:none}}
 </style>
 <link rel="stylesheet" href="/stable-navigation.css?v=20261122f"></head><body>
 <header class="top"><a href="/" aria-label="Accueil"><img src="/logo-florentine.png" alt="Florentine sur Seine" width="110" height="83"></a><nav aria-label="Navigation principale"><a href="/">Accueil</a><a href="/photos.html">Photos</a><a href="/peniches.html">Nos péniches</a><a href="/privatisation.html">Privatisation</a><a href="/blog.html">Blog</a><a href="/devis-peniche.html">Devis</a></nav></header>
 <main><div class="wrap"><p class="crumb"><a href="/">Accueil</a> / Privatisation</p>
-<section class="priv-hero"><div class="priv-hero-copy"><p class="eyebrow">Florentine sur Seine · Collection événementielle</p><h1>Votre événement. <em>La Seine en décor.</em></h1><p>Trois péniches à privatiser à Paris-Bercy et Boulogne-Billancourt pour les anniversaires, mariages, fêtes privées et événements professionnels. Une expérience à imaginer sur mesure.</p><div class="lead-links"><a class="btn" href="#offres">Découvrir les offres</a><a class="btn alt" href="/devis-peniche.html">Demander mon devis</a></div></div><div class="priv-hero-image"><img src="/images/peniche-salon-panoramique.jpg" alt="Salon de la péniche Florentine à Boulogne-Billancourt" width="1000" height="900"></div></section>
+<section class="priv-hero"><div class="priv-hero-copy"><img class="mobile-hero-brand" src="/logo-florentine.png" alt="Florentine sur Seine" width="185" height="140"><p class="eyebrow">Florentine sur Seine · Collection événementielle</p><h1>Votre événement. <em>La Seine en décor.</em></h1><p>Trois péniches, trois styles différents à Paris-Bercy et Boulogne-Billancourt pour vos événements privés et professionnels.</p><p class="mobile-hero-price">À partir de 1 800 €</p><div class="lead-links"><a class="btn" href="#offres">Voir les péniches</a><a class="btn alt" href="/devis-peniche.html">Demander un devis</a><a class="btn alt mobile-hero-whatsapp" href="https://wa.me/33663659679?text=Bonjour%2C%20je%20souhaite%20privatiser%20une%20p%C3%A9niche." target="_blank" rel="noopener noreferrer">WhatsApp</a></div></div><div class="priv-hero-image"><img src="/images/peniche-salon-panoramique.jpg" alt="Salon panoramique de la péniche Florentine" width="1000" height="900"></div><a class="mobile-hero-arrow" href="#offres" aria-label="Descendre vers les trois péniches">Découvrir les offres <span aria-hidden="true">⌄</span></a></section>
 <nav class="priv-nav" aria-label="Accès aux offres"><a href="#offres">Les trois péniches</a><a href="#tarifs-florentine">Tarifs Florentine</a><a href="#prestations">Équipements et options</a><a href="/photos.html">Photos</a><a href="/devis-peniche.html">Devis personnalisé</a></nav>
 <section class="section" id="offres"><p class="eyebrow">Choisissez votre lieu</p><h2>Trois péniches, trois univers.</h2><p>Florentine sur Seine à Boulogne-Billancourt est notre coup de cœur. Mistinguett et Alizé permettent d'organiser votre événement dans Paris, du côté de Bercy et du port de la Râpée.</p>
 <div class="priv-cards"><article class="priv-card primary"><span class="tag">01 / Notre coup de cœur · Boulogne</span><h3>Florentine</h3><p>52 quai du Point du Jour · aux portes de Paris</p><p class="priv-price">À partir de <strong>1 800 €</strong></p><ul><li>Jusqu'à 180 invités en cocktail selon configuration</li><li>80 personnes en dîner assis</li><li>Deux salons vitrés, son et lumières</li><li>Péniche amarrée, sans navigation</li></ul><a class="btn" href="#tarifs-florentine">Voir les tarifs par date</a><a class="btn alt" href="/privatisation-peniche-florentine-boulogne.html">Découvrir Florentine</a></article>
