@@ -2,3 +2,17 @@
 
 /* Prix lisibles directement sur chaque jour du calendrier */
 .booking-calendar{max-width:760px;width:100%;margin:20px auto}.calendar-week,.calendar-days{gap:6px}.calendar-days button{min-height:74px;padding:7px 2px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:5px;border-radius:9px}.calendar-date{font-size:1rem;line-height:1}.calendar-price{font-size:clamp(.60rem,1.5vw,.88rem);white-space:nowrap;color:#fff;font-weight:750}.calendar-days button[aria-pressed=true] .calendar-price{color:#65040d}.calendar-days button:disabled .calendar-price{opacity:.6}@media(max-width:520px){.calendar-week,.calendar-days{gap:3px}.calendar-days button{min-height:64px;padding:5px 0}.calendar-price{font-size:10px;letter-spacing:-.5px}}
+
+/* Palette 2026 : formulaire de privatisation sans aucun élément rouge */
+#booking-form{background:#132338!important;border:1px solid #526d85!important;border-radius:0!important;color:#e8f2fb}
+#booking-form input:not([type=radio]):not([type=checkbox]),#booking-form textarea{border-color:#7890a7!important;border-radius:0!important;background:#0e1a28!important;color:#fff!important;color-scheme:dark!important}
+#booking-form input[type=radio],#booking-form input[type=checkbox]{accent-color:#b7cde4!important}
+#booking-form .slot-card{border-color:#647c95!important;border-radius:0!important;background:#101d2d!important}
+#booking-form .slot-card:has(input:checked){background:#e6edf6!important;color:#122236!important;border-color:#e6edf6!important}
+#booking-form .options-toggle label{border-radius:0!important}
+#booking-form .booking-summary{background:#1d3248!important;color:#fff!important;border:1px solid #6f88a2;border-radius:0!important}
+#booking-form .booking-summary h3,#booking-form .booking-summary p,#booking-form .booking-summary .booking-note{color:#ecf5ff!important}
+#booking-form .booking-calendar button{border-radius:0!important}
+#booking-form .calendar-days button[aria-pressed=true]{background:#e6edf6!important;color:#18283a!important}
+#booking-form .calendar-days button[aria-pressed=true] .calendar-price{color:#18283a!important}
+#booking-form .booking-note{color:#c4d6e8!important}
