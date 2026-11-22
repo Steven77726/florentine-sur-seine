@@ -75,6 +75,17 @@ document.querySelectorAll('[data-gallery]').forEach(g=>{
   render();
 });
 
+// Les liens "voir les prix" ouvrent automatiquement le bon panneau.
+document.addEventListener('click',e=>{
+ const link=e.target.closest('a[href^="#calendar-"]');
+ if(!link)return;
+ const target=document.querySelector(link.getAttribute('href'));
+ if(target?.matches('details.offer-calendar-accordion'))target.open=true;
+});
+if(location.hash.startsWith('#calendar-')){
+ const target=document.getElementById(location.hash.slice(1));
+ if(target?.matches('details.offer-calendar-accordion'))target.open=true;
+}
 document.querySelectorAll('[data-booking]').forEach(card=>{
  const boat=card.dataset.booking,info=details[boat];if(!info)return;
  let slot='soiree',selected='',month=new Date(today+'T12:00:00Z');month.setUTCDate(1);
