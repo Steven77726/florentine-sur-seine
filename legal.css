@@ -38,3 +38,10 @@ li { margin-bottom: 8px; color: #ffffff; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 @media print { .legal-header, .legal-nav, .legal-footer, .skip { display: none; } main { max-width: none; padding: 0; } body { color: #000; background: #fff; } }
+
+/* Identité visuelle unifiée : documents légaux */
+:root{--paper:#0a111b;--wine:#f0f5fb;--ink:#ecf2fa;--surface:#122236;--border:rgba(211,226,241,.28)}
+html,body{background:#0a111b!important;color:#e9f1fa!important}
+body{background:radial-gradient(ellipse at 80% 0%,#1e334b,#0a111b 65%)!important}
+.legal-header{border-bottom-color:#465c73}.brand{font-family:Georgia,'Times New Roman',serif}.legal-nav a{color:#d5e3f0}.legal-nav a:hover{color:#fff}.legal-footer{background:#0c1825!important;border-top:1px solid #455b71}
+main h1,main h2{font-family:Georgia,'Times New Roman',serif;letter-spacing:-.025em}
