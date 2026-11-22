@@ -9,7 +9,27 @@
     "pauseReason": "",
     "maxDraftsPerDay": 3,
     "githubRepo": "Steven77726/florentine-sur-seine",
-    "githubBranch": "main"
+    "githubBranch": "main",
+    "editorialPositioning": "Florentine sur Seine est une collection de trois péniches événementielles : Florentine à Boulogne-Billancourt (coup de cœur et priorité éditoriale), Mistinguett et Alizé dans le secteur Paris-Bercy / port de la Râpée. L'objectif éditorial est de générer des demandes de devis qualifiées.",
+    "seoEditorialRules": {
+      "cadence": "Préparer au maximum 3 brouillons utiles par jour, sans publication automatique ni contenu fabriqué uniquement pour atteindre le quota.",
+      "uniqueness": "Avant tout brouillon, comparer la requête, l'intention et les titres aux articles existants et au sitemap. Si le sujet existe déjà, proposer l'amélioration de l'article existant plutôt qu'un nouvel URL.",
+      "angleDistribution": [
+        "Florentine Boulogne : location, capacité, accessibilité et coup de cœur argumenté avec informations vérifiées",
+        "Comparatif honnête des 3 péniches et usages à Paris-Bercy vs Boulogne",
+        "Réponse pratique à une question de client sur budget, organisation, traiteur, calendrier, devis"
+      ],
+      "favFeature": "Mettre en avant Florentine à Boulogne-Billancourt comme coup de cœur de l'éditeur (recommandation commerciale assumée, jamais fausse note/avis Google). Rappeler la situation exacte et les avantages vérifiables.",
+      "links": [
+        "/privatisation-peniche-florentine-boulogne.html",
+        "/privatisation-peniche-mistinguett-paris-bercy.html",
+        "/privatisation-peniche-alize-paris-bercy.html",
+        "/peniches.html",
+        "/devis-peniche.html"
+      ],
+      "publication": "Chaque brouillon soumis à validation avant publication. Mettre à jour dateModified seulement quand le contenu change substantiellement. 1 canonique par URL, H1 descriptif, titre unique, meta description utile, données structurées sincères.",
+      "forbidden": "Ne jamais inventer de disponibilité, de partenariat traiteur, de certification casher, de note Google ou d'avis client. Ne pas annoncer les prix Mistinguett ou Alizé sans devis. N'affirmer aucune jauge cocktail Alizé non confirmée."
+    }
   },
   "venueFacts": {
     "name": "Florentine sur Seine",
@@ -27,18 +47,37 @@
       "note": "Capacités à confirmer selon l'aménagement retenu ; ne jamais les additionner."
     },
     "kitchen": "Cuisine avec extraction permettant l'accueil d'un prestataire de cuisine extérieur",
-    "bar": "Comptoir de bar disponible ; boissons, équipements et personnel à confirmer",
+    "bar": "Bar à cocktails et bartender confirmé possibles sur devis au tarif par personne ; ne pas confondre avec la location de bar vide.",
     "availability": "Privatisation envisageable tous les jours, sous réserve de disponibilité",
-    "pricing": "À partir de 1 500 € TTC, sur devis (prestations comprises à confirmer selon le projet, ne rien inventer)",
+    "pricing": "Location Florentine (tarifs affichés sous réserve de devis et disponibilité) : dimanche–mercredi 1 800 € journée / 2 500 € soirée ; jeudi–samedi 2 000 € journée / 2 800 € soirée. Options non comprises. Mistinguett et Alizé : tarifs sur devis.",
     "forbiddenMentions": [
-      "casher",
-      "kosher",
-      "mevoushal",
-      "située dans Paris",
+      "affirmation d'une péniche Florentine dans Paris intra-muros",
+      "croisière ou navigation de Florentine",
       "soirées publiques tous les jours",
-      "croisière",
-      "navigation"
-    ]
+      "partenariat traiteur garanti",
+      "certification casher garantie sans document",
+      "fausses notes Google / faux avis",
+      "tarif fixe Mistinguett ou Alizé",
+      "disponibilité en temps réel sans calendrier connecté"
+    ],
+    "catering": "Prestations casher à étudier sur demande : options pizzas/antipasti (Momento envisagé sous réserve de disponibilité et certification), viande/burgers (LAKAM envisagé sous réserve de disponibilité et certification). Ne pas promettre une collaboration ou une certification vérifiée, séparer lacté et carné.",
+    "favourite": "Florentine à Boulogne-Billancourt : notre coup de cœur (mise en avant éditoriale/commerciale, pas un avis indépendant).",
+    "otherBoats": {
+      "mistinguett": {
+        "area": "Paris-Bercy, secteur port de la Râpée",
+        "levels": 2,
+        "areaM2": 340,
+        "seated": 80,
+        "pricing": "Sur devis, configuration à confirmer"
+      },
+      "alize": {
+        "area": "Paris-Bercy, secteur port de la Râpée",
+        "areaM2": 450,
+        "seated": 170,
+        "rooftop": "Rooftop aménagé",
+        "pricing": "Sur devis, jauge cocktail à confirmer"
+      }
+    }
   },
   "existingPages": [
     {
@@ -46,18 +85,6 @@
       "path": "/",
       "file": "index.html",
       "title": "Florentine sur Seine · Bar Festif & Péniche à Boulogne-Billancourt"
-    },
-    {
-      "url": "https://florentine-sur-seine.fr/le-concept.html",
-      "path": "/le-concept.html",
-      "file": "le-concept.html",
-      "title": "Le Concept · Bar Festif sur la Seine à Boulogne-Billancourt · Florentine"
-    },
-    {
-      "url": "https://florentine-sur-seine.fr/carte.html",
-      "path": "/carte.html",
-      "file": "carte.html",
-      "title": "Carte des vins et food · Florentine sur Seine"
     },
     {
       "url": "https://florentine-sur-seine.fr/photos.html",
@@ -77,6 +104,36 @@
       "path": "/blog.html",
       "file": "blog.html",
       "title": "Blog : sorties sur la Seine et événements sur péniche · Florentine sur Seine"
+    },
+    {
+      "url": "https://florentine-sur-seine.fr/peniches.html",
+      "path": "/peniches.html",
+      "file": "peniches.html",
+      "title": "Les trois péniches Florentine, Mistinguett et Alizé"
+    },
+    {
+      "url": "https://florentine-sur-seine.fr/devis-peniche.html",
+      "path": "/devis-peniche.html",
+      "file": "devis-peniche.html",
+      "title": "Devis intelligent pour privatiser une péniche"
+    },
+    {
+      "url": "https://florentine-sur-seine.fr/privatisation-peniche-florentine-boulogne.html",
+      "path": "/privatisation-peniche-florentine-boulogne.html",
+      "file": "privatisation-peniche-florentine-boulogne.html",
+      "title": "Florentine à Boulogne-Billancourt - notre coup de cœur"
+    },
+    {
+      "url": "https://florentine-sur-seine.fr/privatisation-peniche-mistinguett-paris-bercy.html",
+      "path": "/privatisation-peniche-mistinguett-paris-bercy.html",
+      "file": "privatisation-peniche-mistinguett-paris-bercy.html",
+      "title": "Mistinguett Paris-Bercy"
+    },
+    {
+      "url": "https://florentine-sur-seine.fr/privatisation-peniche-alize-paris-bercy.html",
+      "path": "/privatisation-peniche-alize-paris-bercy.html",
+      "file": "privatisation-peniche-alize-paris-bercy.html",
+      "title": "Alizé Paris-Bercy"
     }
   ],
   "rejectedTopics": [],
