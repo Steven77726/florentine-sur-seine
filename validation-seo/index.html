@@ -383,7 +383,8 @@
         const pHtml = (sec.paragraphs || []).map(p => '<p>' + p + '</p>').join('');
         return '<section><h2>' + esc(sec.heading) + '</h2>' + pHtml + '</section>';
       }).join('');
-      const ctaHref = esc(article.cta?.href || '/privatisation.html');
+      const ctaTarget = article.cta?.href || '/devis-peniche.html';
+      const ctaHref = esc(['/le-concept.html','/carte.html','/privatisation.html'].includes(ctaTarget) ? '/devis-peniche.html' : ctaTarget);
       const ctaText = esc(article.cta?.text || 'Demander un devis personnalisé');
 
       return `<!doctype html>
@@ -414,8 +415,8 @@
   <header class="document-header">
     <a class="document-brand" href="/">Florentine<span>sur Seine</span></a>
     <nav class="site-menu" aria-label="Navigation principale"><a class="menu-link" href="/"><span class="label">Accueil</span></a>
-<a class="menu-link" href="/le-concept.html"><span class="label">Le concept</span></a>
-<a class="menu-link" href="/carte.html"><span class="label">Carte</span></a>
+<a class="menu-link" href="/peniches.html"><span class="label">Nos péniches</span></a>
+<a class="menu-link" href="/devis-peniche.html"><span class="label">Devis</span></a>
 <a class="menu-link" href="/photos.html"><span class="label">Photos</span></a>
 <a class="menu-link" href="/privatisation.html"><span class="label">Privatisation</span></a>
 <a class="menu-link" href="/blog.html" aria-current="page"><span class="label">Blog</span></a></nav>
@@ -432,7 +433,12 @@
         <img src="${photo}" alt="${esc(article.h1Title)}" width="2048" height="1366" loading="eager" style="width: 100%; height: auto; display: block;">
       </figure>
       <p class="lead">${esc(article.lead)}</p>${sectionsHtml}
-      <div class="content-actions" style="margin-top:32px;"><a class="content-button" href="${ctaHref}">${ctaText}</a><a class="content-button secondary" href="https://wa.me/33663659679?text=Bonjour,%20je%20souhaite%20des%20renseignements%20pour%20privatiser%20la%20p%C3%A9niche%20Florentine" target="_blank" rel="noopener noreferrer">Échanger sur WhatsApp</a></div>
+      <aside class="editorial-pick" style="margin:32px 0;padding:22px;border:1px solid rgba(221,232,244,.4);background:#162433;">
+        <p style="font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;margin:0 0 8px;">Notre coup de cœur · Boulogne-Billancourt</p>
+        <h2 style="margin:0 0 12px;">Florentine sur Seine : notre adresse signature</h2>
+        <p>Deux salons vitrés, son et lumière, jusqu’à 80 personnes assises ou 180 en cocktail selon configuration. Découvrez <a href="/privatisation-peniche-florentine-boulogne.html">Florentine à Boulogne</a>, ou comparez avec <a href="/privatisation-peniche-mistinguett-paris-bercy.html">Mistinguett</a> et <a href="/privatisation-peniche-alize-paris-bercy.html">Alizé</a> à Paris-Bercy. Les prix et disponibilités restent à confirmer par devis.</p>
+      </aside>
+            <div class="content-actions" style="margin-top:32px;"><a class="content-button" href="${ctaHref}">${ctaText}</a><a class="content-button secondary" href="/devis-peniche.html">Devis personnalisé en 2 minutes</a><a class="content-button secondary" href="https://wa.me/33663659679?text=Bonjour,%20je%20souhaite%20des%20renseignements%20pour%20privatiser%20la%20p%C3%A9niche%20Florentine" target="_blank" rel="noopener noreferrer">Échanger sur WhatsApp</a></div>
       <div class="article-end"><a href="/blog.html">Tous les articles</a></div>
     </article>
   </main>
