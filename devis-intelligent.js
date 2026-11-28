@@ -51,7 +51,7 @@ emailButton?.addEventListener('click',async()=>{
   const result=await response.json();
   if(!response.ok||!(result.success===true||result.success==='true')){
    if(/activat/i.test(String(result.message||''))){
-    status.textContent='L’envoi par e-mail est temporairement indisponible. Vos informations sont conservées : vous pouvez nous transmettre la demande sur WhatsApp ou nous appeler au 06 63 65 96 79.';
+    status.textContent='L’envoi par e-mail est temporairement indisponible. Vos informations sont conservées : vous pouvez nous transmettre la demande sur WhatsApp via le formulaire de contact.';
     return;
    }
    throw new Error('Email submission not confirmed');

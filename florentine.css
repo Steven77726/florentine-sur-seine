@@ -33,3 +33,5 @@ body.f-legacy{background:linear-gradient(160deg,var(--night),var(--deep))!import
  @media(prefers-reduced-motion:reduce){.f-whatsapp{transition:none}.f-whatsapp:hover{transform:none}}
  @media print{.f-whatsapp{display:none}}
  
+/* Full-width quote action after removing the public call link. */
+@media(max-width:800px){.f-mobile-contact{grid-template-columns:1fr}}
