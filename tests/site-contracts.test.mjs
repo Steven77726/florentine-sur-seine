@@ -8,7 +8,7 @@ function estimator(){
  const output={},description={},quote={},error={};let slot='journee';
  const fields={'[name=date]':date,'[data-estimate-price]':output,'[data-estimate-description]':description,'[data-estimate-quote]':quote,'[data-estimate-error]':error};
  const form={querySelector:s=>s==='[name=slot]:checked'?{value:slot}:fields[s],addEventListener:(k,v)=>events[k]=v};
- const document={querySelector:()=>null,querySelectorAll:s=>s==='[data-estimate]'?[form]:[],getElementById:()=>null};const location={};
+ const document={querySelector:()=>null,querySelectorAll:s=>s==='[data-estimate]'?[form]:[],getElementById:()=>null,createElement:()=>({setAttribute(){}}),head:{appendChild(){}},body:{appendChild(){}}};const location={};
  const NativeDate=Date;class FixedDate extends NativeDate{constructor(...args){super(...(args.length?args:['2026-11-27T12:00:00Z']))}}
  vm.runInNewContext(source,{document,Date:FixedDate,Intl,URLSearchParams,location});
  return {date,output,description,quote,error,events,location,setSlot:v=>slot=v};
