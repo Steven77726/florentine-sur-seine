@@ -3,8 +3,8 @@ const form=document.getElementById('smart-quote');if(!form)return;
 const boat=form.querySelector('#q-boat'),date=form.querySelector('#q-date'),slot=form.querySelector('#q-slot');
 const contactPhone=document.getElementById('q-contact-phone'),phoneField=document.getElementById('q-contact-phone-field'),phoneInput=form.querySelector('#q-phone');
 if(contactPhone&&phoneField&&phoneInput){
- const updateContact=()=>{phoneField.hidden=!contactPhone.checked;phoneInput.required=contactPhone.checked;};
- contactPhone.addEventListener('change',updateContact);updateContact();
+ const updateContact=()=>{phoneField.hidden=!contactPhone.checked;phoneInput.required=contactPhone.checked;phoneInput.setCustomValidity('');};
+ contactPhone.addEventListener('change',updateContact);phoneInput.addEventListener('input',()=>phoneInput.setCustomValidity(''));phoneInput.addEventListener('invalid',validatePhone);updateContact();
 }
 const params=new URLSearchParams(location.search),known={florentine:'Florentine sur Seine',mistinguett:'Mistinguett',alize:'Alizé'};
 if(known[params.get('peniche')])boat.value=known[params.get('peniche')];
@@ -20,7 +20,13 @@ function validateDate(){
  else if(value&&Date.parse(value+'T00:00:00Z')<Date.parse(today+'T00:00:00Z'))error='Choisissez une date à partir d’aujourd’hui.';
  date.setCustomValidity(error);
 }
-function valid(){validateDate();return form.reportValidity()}
+function validatePhone(){
+ if(!phoneInput)return;
+ const value=phoneInput.value.trim();
+ const validNumber=/^[0-9\s.\-]+$/.test(value)&&value.replace(/\D/g,'').length===10;
+ phoneInput.setCustomValidity(contactPhone?.checked&&!validNumber?'Indiquez un numéro à 10 chiffres, par exemple 06 12 34 56 78.':'');
+}
+function valid(){validateDate();validatePhone();return form.reportValidity()}
 date.addEventListener('invalid',validateDate);
 date.addEventListener('input',()=>date.setCustomValidity(''));
 function message(){const entries=Array.from(new FormData(form).entries()).filter(([k,v])=>!k.startsWith('_')&&String(v).trim()).map(([k,v])=>k+' : '+String(v).trim());if(!date.value)entries.push('Date : à définir');return 'Bonjour, je souhaite un devis de privatisation.\n\n'+entries.join('\n')+'\n\nMerci de me confirmer les disponibilités et les prestations.'}
