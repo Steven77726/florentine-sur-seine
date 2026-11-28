@@ -31,7 +31,7 @@ function quoteForm(response={success:'true'},networkError=false){
  const form={querySelector:s=>fields[s],reportValidity:()=>valid&&!fields['#q-date'].error,addEventListener:(k,v)=>events[k]=v,setAttribute(k,v){this[k]=v}};
  const email={textContent:'Envoyer par e-mail',addEventListener(k,fn){this.click=fn}},status={};
  const location={search:'?peniche=alize&creneau=soiree',assign(v){this.target=v}};
- const document={getElementById:id=>({'smart-quote':form,'quote-email-button':email,'quote-status':status}[id])};
+ const document={getElementById:id=>({'smart-quote':form,'quote-email-button':email,'quote-status':status}[id]),createElement:()=>({style:{},setAttribute(){},appendChild(){},addEventListener(){},remove(){}}),body:{appendChild(){}}};
  class FormData{entries(){return [['Nom','Test local'],['email','test@example.invalid'],['Événement','Anniversaire'],['_honey','']][Symbol.iterator]()}}
  const fetch=async(url,options)=>{requests.push({url,options});if(networkError)throw new Error('Network unavailable');return {ok:true,json:async()=>response}};
  vm.runInNewContext(src,{document,location,FormData,Intl,Date,URLSearchParams,encodeURIComponent,fetch,AbortController,setTimeout,clearTimeout});
