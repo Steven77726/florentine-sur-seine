@@ -4,10 +4,19 @@ const boat=form.querySelector('#q-boat'),date=form.querySelector('#q-date'),slot
 const params=new URLSearchParams(location.search),known={florentine:'Florentine sur Seine',mistinguett:'Mistinguett',alize:'Alizé'};
 if(known[params.get('peniche')])boat.value=known[params.get('peniche')];
 const parts=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Paris',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
-const d=Object.fromEntries(parts.map(p=>[p.type,p.value]));const today=d.year+'-'+d.month+'-'+d.day;date.min=today;
+const d=Object.fromEntries(parts.map(p=>[p.type,p.value]));const today=d.year+'-'+d.month+'-'+d.day;date.min=today;date.max='9999-12-31';
 if(/^\d{4}-\d{2}-\d{2}$/.test(params.get('date')||'')&&params.get('date')>=today)date.value=params.get('date');
 if(params.get('creneau')==='journee')slot.value='Journée';else if(params.get('creneau')==='soiree')slot.value='Soirée';
-function valid(){date.setCustomValidity(date.value&&date.value<today?'Choisissez une date à partir d’aujourd’hui.':'');return form.reportValidity()}
+function validateDate(){
+ const value=date.value;
+ let error='';
+ if(value&&!/^\d{4}-\d{2}-\d{2}$/.test(value))error='Indiquez une année sur 4 chiffres, par exemple 2027.';
+ else if(date.validity?.badInput)error='Complétez la date au format jour / mois / année (4 chiffres).';
+ else if(value&&Date.parse(value+'T00:00:00Z')<Date.parse(today+'T00:00:00Z'))error='Choisissez une date à partir d’aujourd’hui.';
+ date.setCustomValidity(error);
+}
+function valid(){validateDate();return form.reportValidity()}
+date.addEventListener('invalid',validateDate);
 date.addEventListener('input',()=>date.setCustomValidity(''));
 function message(){const entries=Array.from(new FormData(form).entries()).filter(([k,v])=>!k.startsWith('_')&&String(v).trim()).map(([k,v])=>k+' : '+String(v).trim());if(!date.value)entries.push('Date : à définir');return 'Bonjour, je souhaite un devis de privatisation.\n\n'+entries.join('\n')+'\n\nMerci de me confirmer les disponibilités et les prestations.'}
 let sending=false;

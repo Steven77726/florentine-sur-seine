@@ -28,7 +28,7 @@ function quoteForm(response={success:'true'},networkError=false){
  const src=fs.readFileSync(new URL('../devis-intelligent.js',import.meta.url),'utf8');
  const fields={'#q-boat':{value:'À conseiller'},'#q-date':{value:'',setCustomValidity(v){this.error=v},addEventListener(){}},'#q-slot':{value:'À définir'}};
  let valid=false;const events={},requests=[];
- const form={querySelector:s=>fields[s],reportValidity:()=>valid,addEventListener:(k,v)=>events[k]=v,setAttribute(k,v){this[k]=v}};
+ const form={querySelector:s=>fields[s],reportValidity:()=>valid&&!fields['#q-date'].error,addEventListener:(k,v)=>events[k]=v,setAttribute(k,v){this[k]=v}};
  const email={textContent:'Envoyer par e-mail',addEventListener(k,fn){this.click=fn}},status={};
  const location={search:'?peniche=alize&creneau=soiree',assign(v){this.target=v}};
  const document={getElementById:id=>({'smart-quote':form,'quote-email-button':email,'quote-status':status}[id])};
@@ -52,4 +52,12 @@ test('activation required, HTTP failures and network errors never claim an email
   assert.doesNotMatch(q.status.textContent,/transmise par e-mail/);assert.match(q.status.textContent,/WhatsApp/);
   assert.equal(q.email.disabled,false);assert.equal(q.email.textContent,'Envoyer par e-mail');assert.equal(q.form['aria-busy'],'false');
  }
+});
+
+test('quote date accepts a future date, remains optional, and distinguishes a five-digit year from a past date',async()=>{
+ const q=quoteForm();q.setValid(true);const date=q.fields['#q-date'];
+ date.value='20026-12-01';await q.email.click();assert.match(date.error,/année sur 4 chiffres/);assert.equal(q.requests.length,0);
+ date.value='2020-12-01';await q.email.click();assert.match(date.error,/aujourd’hui/);assert.equal(q.requests.length,0);
+ date.value='2027-12-01';await q.email.click();assert.equal(date.error,'');
+ date.value='';await q.email.click();assert.equal(date.error,'');assert.equal(date.max,'9999-12-31');
 });
