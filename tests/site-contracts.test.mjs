@@ -42,7 +42,7 @@ test('validation sends nothing; WhatsApp still prepares the quote and email post
  q.events.submit({preventDefault(){}});await q.email.click();assert.equal(q.requests.length,0);assert.equal(q.location.target,undefined);
  q.setValid(true);q.events.submit({preventDefault(){}});const target=new URL(q.location.target);assert.equal(target.hostname,'wa.me');assert.match(target.searchParams.get('text'),/test@example.invalid/);assert.match(target.searchParams.get('text'),/Date : à définir/);
  const pending=q.email.click();assert.equal(q.email.disabled,true);await q.email.click();assert.equal(q.requests.length,1);await pending;
- assert.equal(q.requests[0].url,'https://formsubmit.co/ajax/contact@florentine-sur-seine.com');
+ assert.equal(q.requests[0].url,'https://formsubmit.co/ajax/contact@florentine-sur-seine.fr');
  const data=JSON.parse(q.requests[0].options.body);assert.equal(data.email,'test@example.invalid');assert.match(data.message,/Date : à définir/);
  assert.match(q.status.textContent,/transmise par e-mail/);assert.equal(q.email.disabled,false);assert.equal(q.location.href,undefined);
 });

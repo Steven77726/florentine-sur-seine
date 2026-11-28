@@ -1,6 +1,6 @@
 (()=>{'use strict';
 const WA='33663659679';
-const EMAIL='contact@florentine-sur-seine.com';
+const EMAIL='contact@florentine-sur-seine.fr';
 const fmt=new Intl.NumberFormat('fr-FR',{style:'currency',currency:'EUR',maximumFractionDigits:0});
 const parisToday=()=>{const parts=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Paris',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());const by=Object.fromEntries(parts.map(p=>[p.type,p.value]));return by.year+'-'+by.month+'-'+by.day};
 const today=parisToday();

@@ -24,7 +24,7 @@ emailButton?.addEventListener('click',async()=>{
  sending=true;emailButton.disabled=true;emailButton.textContent='Envoi en cours…';form.setAttribute('aria-busy','true');
  status.textContent='Envoi de votre demande…';
  try{
-  const response=await fetch('https://formsubmit.co/ajax/contact@florentine-sur-seine.com',{
+  const response=await fetch('https://formsubmit.co/ajax/contact@florentine-sur-seine.fr',{
    method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},signal:controller.signal,
    body:JSON.stringify({...data,_subject:'Demande de devis Florentine · '+boat.value,_template:'table',_url:'https://florentine-sur-seine.fr/devis-peniche.html',message:message()})
   });
