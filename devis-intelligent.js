@@ -1,6 +1,11 @@
 (()=>{'use strict';
 const form=document.getElementById('smart-quote');if(!form)return;
 const boat=form.querySelector('#q-boat'),date=form.querySelector('#q-date'),slot=form.querySelector('#q-slot');
+const contactPhone=document.getElementById('q-contact-phone'),phoneField=document.getElementById('q-contact-phone-field'),phoneInput=form.querySelector('#q-phone');
+if(contactPhone&&phoneField&&phoneInput){
+ const updateContact=()=>{phoneField.hidden=!contactPhone.checked;phoneInput.required=contactPhone.checked;};
+ contactPhone.addEventListener('change',updateContact);updateContact();
+}
 const params=new URLSearchParams(location.search),known={florentine:'Florentine sur Seine',mistinguett:'Mistinguett',alize:'Alizé'};
 if(known[params.get('peniche')])boat.value=known[params.get('peniche')];
 const parts=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Paris',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
