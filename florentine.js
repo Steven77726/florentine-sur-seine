@@ -3,9 +3,10 @@
 if(!document.getElementById('florentine-whatsapp')){
  const style=document.createElement('style');
  style.textContent=`
- .f-whatsapp{position:fixed;right:max(20px,env(safe-area-inset-right));bottom:calc(20px + env(safe-area-inset-bottom));z-index:90;display:flex;align-items:center;justify-content:center;width:60px;height:60px;border:2px solid #fff;border-radius:50%;background:#25d366;color:#fff;box-shadow:0 5px 20px #0005;text-decoration:none;transition:background .15s,transform .15s}
+ .f-whatsapp{position:fixed;right:max(20px,env(safe-area-inset-right));bottom:calc(20px + env(safe-area-inset-bottom));z-index:1000;display:flex;align-items:center;justify-content:center;width:60px;height:60px;border:2px solid #fff;border-radius:50%;background:#25d366;color:#fff;box-shadow:0 5px 20px #0005;text-decoration:none;transition:background .15s,transform .15s}
  .f-whatsapp:hover{background:#128c7e;transform:translateY(-2px)}
  .f-whatsapp:focus-visible{outline:3px solid #fff;outline-offset:4px}
+ .f-whatsapp-label{position:absolute;right:0;bottom:calc(100% + 9px);white-space:nowrap;padding:5px 10px;border-radius:5px;background:#10202a;color:#fff;font:400 14px/1.4 Arial,sans-serif;box-shadow:0 2px 9px #0003}
  .f-whatsapp svg{display:block;width:34px;height:34px;fill:currentColor}
  @media(max-width:800px){.f-whatsapp{width:56px;height:56px;right:max(16px,env(safe-area-inset-right))}.has-mobile-contact .f-whatsapp{bottom:calc(88px + env(safe-area-inset-bottom))}}
  @media(prefers-reduced-motion:reduce){.f-whatsapp{transition:none}.f-whatsapp:hover{transform:none}}
@@ -14,11 +15,11 @@ if(!document.getElementById('florentine-whatsapp')){
  document.head.appendChild(style);
  const whatsapp=document.createElement('a');
  whatsapp.id='florentine-whatsapp';whatsapp.className='f-whatsapp';
- whatsapp.href='https://wa.me/33663659679?text='+encodeURIComponent('Bonjour, je souhaite des renseignements pour privatiser une péniche avec Florentine sur Seine.');
+ whatsapp.href='https://wa.me/33663659679?text='+encodeURIComponent('Bonjour, je souhaite organiser une visite de la péniche Florentine sur Seine. Quels créneaux pouvez-vous me proposer ?');
  whatsapp.target='_blank';whatsapp.rel='noopener noreferrer';
- whatsapp.setAttribute('aria-label','Contacter Florentine sur Seine sur WhatsApp');
+ whatsapp.setAttribute('aria-label','Demandez une visite sur WhatsApp');
  whatsapp.title='Écrivez-nous sur WhatsApp';
- whatsapp.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.52 3.48A11.89 11.89 0 0 0 12.04 0C5.43 0 .05 5.38.05 11.99c0 2.11.55 4.17 1.6 5.99L0 24l6.16-1.62a12 12 0 0 0 5.88 1.5h.01C18.66 23.88 24 18.5 24 11.89c0-3.2-1.24-6.21-3.48-8.41ZM12.05 21.86h-.01a9.92 9.92 0 0 1-5.06-1.39l-.36-.21-3.66.96.98-3.57-.24-.37a9.9 9.9 0 0 1-1.52-5.29c0-5.5 4.48-9.98 9.99-9.98a9.89 9.89 0 0 1 7.06 2.93 9.9 9.9 0 0 1 2.92 7.06c0 5.5-4.48 9.98-10.1 9.86Zm5.48-7.41c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.11 3.22 5.11 4.51.72.31 1.28.49 1.72.63.72.23 1.38.2 1.9.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35Z"/></svg>';
+ whatsapp.innerHTML='<span class="f-whatsapp-label">Demandez une visite</span><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.52 3.48A11.89 11.89 0 0 0 12.04 0C5.43 0 .05 5.38.05 11.99c0 2.11.55 4.17 1.6 5.99L0 24l6.16-1.62a12 12 0 0 0 5.88 1.5h.01C18.66 23.88 24 18.5 24 11.89c0-3.2-1.24-6.21-3.48-8.41ZM12.05 21.86h-.01a9.92 9.92 0 0 1-5.06-1.39l-.36-.21-3.66.96.98-3.57-.24-.37a9.9 9.9 0 0 1-1.52-5.29c0-5.5 4.48-9.98 9.99-9.98a9.89 9.89 0 0 1 7.06 2.93 9.9 9.9 0 0 1 2.92 7.06c0 5.5-4.48 9.98-10.1 9.86Zm5.48-7.41c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.11 3.22 5.11 4.51.72.31 1.28.49 1.72.63.72.23 1.38.2 1.9.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35Z"/></svg>';
  document.body.appendChild(whatsapp);
 }
 const menu=document.querySelector('.f-menu');

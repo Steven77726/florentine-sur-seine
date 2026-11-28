@@ -21,3 +21,15 @@ body.f-legacy:before{display:none}.f-legacy .content-page{max-width:1050px;paddi
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
 body.f-legacy{background:linear-gradient(160deg,var(--night),var(--deep))!important}.f-legacy .legal-footer,.f-legacy .document-footer{background:var(--deep)!important;border-color:var(--line)}.f-legacy .f-header .f-brand{font-size:1rem}.f-legacy .f-header a{line-height:1.5}.f-legacy .f-header summary{line-height:1.5}.f-legacy .skip{display:none}
 .header-short{display:none}@media(max-width:800px){.header-long{display:none}.header-short{display:inline}}
+
+/* Persistent WhatsApp visit contact */
+
+ .f-whatsapp{position:fixed;right:max(20px,env(safe-area-inset-right));bottom:calc(20px + env(safe-area-inset-bottom));z-index:1000;display:flex;align-items:center;justify-content:center;width:60px;height:60px;border:2px solid #fff;border-radius:50%;background:#25d366;color:#fff;box-shadow:0 5px 20px #0005;text-decoration:none;transition:background .15s,transform .15s}
+ .f-whatsapp:hover{background:#128c7e;transform:translateY(-2px)}
+ .f-whatsapp:focus-visible{outline:3px solid #fff;outline-offset:4px}
+ .f-whatsapp-label{position:absolute;right:0;bottom:calc(100% + 9px);white-space:nowrap;padding:5px 10px;border-radius:5px;background:#10202a;color:#fff;font:400 14px/1.4 Arial,sans-serif;box-shadow:0 2px 9px #0003}
+ .f-whatsapp svg{display:block;width:34px;height:34px;fill:currentColor}
+ @media(max-width:800px){.f-whatsapp{width:56px;height:56px;right:max(16px,env(safe-area-inset-right))}.has-mobile-contact .f-whatsapp{bottom:calc(88px + env(safe-area-inset-bottom))}}
+ @media(prefers-reduced-motion:reduce){.f-whatsapp{transition:none}.f-whatsapp:hover{transform:none}}
+ @media print{.f-whatsapp{display:none}}
+ 
