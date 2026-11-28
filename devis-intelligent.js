@@ -26,17 +26,6 @@ date.addEventListener('input',()=>date.setCustomValidity(''));
 function message(){const entries=Array.from(new FormData(form).entries()).filter(([k,v])=>!k.startsWith('_')&&String(v).trim()).map(([k,v])=>k+' : '+String(v).trim());if(!date.value)entries.push('Date : à définir');return 'Bonjour, je souhaite un devis de privatisation.\n\n'+entries.join('\n')+'\n\nMerci de me confirmer les disponibilités et les prestations.'}
 let sending=false;
 form.addEventListener('submit',e=>{e.preventDefault();if(sending||!valid())return;document.getElementById('quote-status').textContent='Votre message est prêt. Relisez-le et envoyez-le dans WhatsApp.';location.assign('https://wa.me/33663659679?text='+encodeURIComponent(message()))});
-function showMailSent(){
- document.getElementById('quote-mail-sent')?.remove();
- const popup=document.createElement('div');
- popup.id='quote-mail-sent';popup.setAttribute('role','status');popup.setAttribute('aria-live','polite');
- popup.style.cssText='position:fixed;top:110px;left:50%;transform:translateX(-50%);z-index:1100;display:flex;align-items:center;gap:24px;max-width:calc(100vw - 32px);padding:16px 20px;border:1px solid #a9c5bd;border-radius:10px;background:#102a25;color:#fff;box-shadow:0 8px 30px #0006;font:600 16px/1.4 Arial,sans-serif';
- const label=document.createElement('span');label.textContent='Mail envoyé !';popup.appendChild(label);
- const close=document.createElement('button');close.type='button';close.textContent='×';close.setAttribute('aria-label','Fermer la confirmation');
- close.style.cssText='border:0;background:transparent;color:inherit;font-size:24px;line-height:1;min-width:32px;min-height:32px;cursor:pointer';
- close.addEventListener('click',()=>popup.remove());popup.appendChild(close);
- document.body.appendChild(popup);setTimeout(()=>popup.remove(),5000);
-}
 const emailButton=document.getElementById('quote-email-button');
 emailButton?.addEventListener('click',async()=>{
  if(sending||!valid())return;
@@ -47,7 +36,7 @@ emailButton?.addEventListener('click',async()=>{
  const controller=new AbortController();
  const timeout=setTimeout(()=>controller.abort(),20000);
  sending=true;emailButton.disabled=true;emailButton.textContent='Envoi en cours…';form.setAttribute('aria-busy','true');
- status.textContent='Envoi de votre demande…';
+ status.textContent='Envoi en cours…';
  try{
   const response=await fetch('https://formsubmit.co/ajax/contact@florentine-sur-seine.fr',{
    method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},signal:controller.signal,
@@ -61,8 +50,7 @@ emailButton?.addEventListener('click',async()=>{
    }
    throw new Error('Email submission not confirmed');
   }
-  showMailSent();
-  status.textContent='Votre demande a été transmise par e-mail. Merci ! Notre équipe reviendra vers vous pour confirmer les disponibilités.';
+  status.textContent='Mail envoyé !';
  }catch(error){
   status.textContent='L’envoi n’a pas pu être confirmé. Vos informations sont conservées. Vous pouvez réessayer ou continuer sur WhatsApp.';
  }finally{

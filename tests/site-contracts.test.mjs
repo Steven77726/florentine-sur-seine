@@ -44,12 +44,12 @@ test('validation sends nothing; WhatsApp still prepares the quote and email post
  const pending=q.email.click();assert.equal(q.email.disabled,true);await q.email.click();assert.equal(q.requests.length,1);await pending;
  assert.equal(q.requests[0].url,'https://formsubmit.co/ajax/contact@florentine-sur-seine.fr');
  const data=JSON.parse(q.requests[0].options.body);assert.equal(data.email,'test@example.invalid');assert.match(data.message,/Date : à définir/);
- assert.match(q.status.textContent,/transmise par e-mail/);assert.equal(q.email.disabled,false);assert.equal(q.location.href,undefined);
+ assert.equal(q.status.textContent,'Mail envoyé !');assert.equal(q.email.disabled,false);assert.equal(q.location.href,undefined);
 });
 test('activation required, HTTP failures and network errors never claim an email was sent',async()=>{
  for(const [result,offline] of [[{success:'false',message:'This form needs Activation'},false],[{success:false,message:'Rejected'},false],[{success:true},true]]){
   const q=quoteForm(result,offline);q.setValid(true);await q.email.click();
-  assert.doesNotMatch(q.status.textContent,/transmise par e-mail/);assert.match(q.status.textContent,/WhatsApp/);
+  assert.notEqual(q.status.textContent,'Mail envoyé !');assert.match(q.status.textContent,/WhatsApp/);
   assert.equal(q.email.disabled,false);assert.equal(q.email.textContent,'Envoyer par e-mail');assert.equal(q.form['aria-busy'],'false');
  }
 });
